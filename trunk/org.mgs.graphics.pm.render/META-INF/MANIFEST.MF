@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Render
+Bundle-SymbolicName: org.mgs.graphics.pm.render; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.mgs.graphics.pm.render.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.mgs.graphics.pm.ui,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.console
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

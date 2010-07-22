@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.mgs.graphics.pm/src-gen"
+    editDirectory="/org.mgs.graphics.pm.edit/src" editorDirectory="/org.mgs.graphics.pm.editor/src"
+    modelPluginID="org.mgs.graphics.pm" forceOverwrite="true" modelName="PmDsl" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="org.mgs.graphics.pm.edit" editorPluginID="org.mgs.graphics.pm.editor">
+  <genPackages prefix="PmDsl" basePackage="org.mgs.graphics.pm" disposableProviderFactory="true"
+      ecorePackage="PmDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="PmDsl.ecore#//Variant">
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/X"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/Y"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/Z"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/U"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/V"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/W"/>
+      <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/T"/>
+    </genEnums>
+    <genClasses ecoreClass="PmDsl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Model/stage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Model/defs"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//Stage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/depth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/fps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Stage/output"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ModuleDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ModuleDef/name"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ColorDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//ColorDef/def"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ColorFloatDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorFloatDef/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorFloatDef/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorFloatDef/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorFloatDef/a"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ColorIntDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorIntDef/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorIntDef/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorIntDef/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorIntDef/a"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ColorHexaDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//ColorHexaDef/s"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//OperationDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//OperationDef/output"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//NoiseDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//NoiseDef/seed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//NoiseDef/frequency"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//PerlinDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//PerlinDef/seed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//PerlinDef/iterations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//PerlinDef/turbulence"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//MarbleDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//MarbleDef/seed"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//Expression"/>
+    <genClasses ecoreClass="PmDsl.ecore#//BuiltInCall"/>
+    <genClasses ecoreClass="PmDsl.ecore#//Operation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Operation/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Operation/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Operation/right"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//ModuleCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PmDsl.ecore#//ModuleCall/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//VariantExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//VariantExpression/variant"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//LiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//LiteralExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//INV">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//INV/a"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//MIX">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//MIX/a"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//MIX/b"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//MIX/t"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//SIN">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//SIN/a"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//BOOL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//BOOL/a"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//SCALE">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//SCALE/rate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//SCALE/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//RADIAL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//RADIAL/expression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
