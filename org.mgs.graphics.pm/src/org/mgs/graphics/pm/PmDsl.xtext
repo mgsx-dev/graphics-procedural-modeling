@@ -1,0 +1,102 @@
+grammar org.mgs.graphics.pm.PmDsl with org.eclipse.xtext.common.Terminals
+
+generate pmDsl "http://www.mgs.org/graphics/pm/PmDsl"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Model:
+	(stage=Stage)? & (defs+=ModuleDef)*
+;
+
+Stage :
+	'Stage' '{'
+	'width' width=INT
+	'height' height=INT
+	('depth' depth=INT)?
+	('duration' duration=INT 'fps' fps=INT)?
+	'output' output=Expression
+	'}'
+;
+
+ModuleDef:
+	ColorDef | OperationDef | NoiseDef | PerlinDef | MarbleDef
+;
+
+ColorDef :
+	'Color' name=ID '{'
+	def=(ColorFloatDef | ColorIntDef | ColorHexaDef)
+	'}'
+;
+
+ColorFloatDef:
+	r=DECIMAL (g=DECIMAL b=DECIMAL (a=DECIMAL)?)?
+;
+
+ColorIntDef:
+	r=INT (g=INT b=INT (a=INT)?)?
+;
+
+ColorHexaDef:
+	'#' s=STRING
+;
+
+OperationDef :
+	'Operation' name=ID '{'
+	'output' output=Expression
+	'}'
+;
+
+NoiseDef :
+	'Noise' name=ID '{'
+	'seed' seed=INT
+	'frequency' frequency=INT
+	'}'
+;
+
+PerlinDef :
+	'Perlin' name=ID '{'
+	'seed' seed=INT
+	'iterations' iterations=INT
+	'turbulence' turbulence=DECIMAL
+	'}'
+;
+
+MarbleDef :
+	'Marble' name=ID '{'
+	'seed' seed=INT
+	'}'
+;
+
+enum Variant :
+	X | Y | Z | U | V | W | T
+;
+
+terminal DECIMAL returns ecore::EFloat :
+	('0'..'9')* '.' ('0'..'9')*
+;
+
+
+Expression :
+	TerminalExpression ({Operation.left=current} op=BOP right=Expression)?
+;
+
+TerminalExpression returns Expression:
+	'(' Expression ')' | 
+	{ModuleCall} ref=[ModuleDef] | 
+	BuiltInCall | 
+	{VariantExpression} variant=Variant | 
+	{LiteralExpression} value=DECIMAL
+;
+
+BuiltInCall :
+	{INV} 'INV' '(' a=Expression ')' |
+	{MIX} 'MIX' '(' a=Expression ',' b=Expression ',' t=Expression ')' |
+	{SIN} 'SIN' '(' a=Expression ')' |
+	{BOOL} 'BOOL' '(' a=Expression ')' |
+	{SCALE} 'SCALE' '(' rate=Expression ',' expression=Expression')' |
+	{RADIAL} 'RADIAL' '(' expression=Expression')'
+;
+
+
+BOP:
+	'+' | '-' | '*';
