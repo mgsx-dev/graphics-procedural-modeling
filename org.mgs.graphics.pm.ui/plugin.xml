@@ -180,5 +180,17 @@
             class="org.mgs.graphics.pm.ui.PmDslExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
       </markerResolutionGenerator>
    </extension>
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.xtext.projectwiz"
+            class="org.mgs.graphics.pm.ui.PmDslExecutableExtensionFactory:org.mgs.graphics.pm.ui.wizard.PmDslNewProjectWizard"
+            icon="icons/sample.gif"
+            id="org.mgs.graphics.pm.ui.wizard.PmDslNewProjectWizard"
+            name="PmDsl Project"
+            project="true">
+      </wizard>
+   </extension>
 
 </plugin>

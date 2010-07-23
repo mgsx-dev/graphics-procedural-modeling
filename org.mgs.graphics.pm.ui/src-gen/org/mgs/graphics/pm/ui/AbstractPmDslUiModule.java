@@ -113,5 +113,10 @@ public abstract class AbstractPmDslUiModule extends DefaultUiModule {
 		binder.bind(org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer.class).annotatedWith(com.google.inject.name.Names.named(org.eclipse.xtext.ui.LexerUIBindings.CONTENT_ASSIST)).to(org.mgs.graphics.pm.ui.contentassist.antlr.internal.InternalPmDslLexer.class);
 	}
 
+	// contributed by org.eclipse.xtext.ui.generator.projectWizard.SimpleProjectWizardFragment
+	public Class<? extends org.eclipse.xtext.ui.wizard.IProjectCreator> bindIProjectCreator() {
+		return org.mgs.graphics.pm.ui.wizard.PmDslProjectCreator.class;
+	}
+
 
 }

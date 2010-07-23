@@ -1,0 +1,23 @@
+«IMPORT org::mgs::graphics::pm::ui::wizard»
+
+«DEFINE main FOR PmDslProjectInfo»
+«EXPAND model FOR this»
+«ENDDEFINE»
+
+«DEFINE model FOR PmDslProjectInfo»
+«FILE "src/Model.pm"-»
+/*
+ * This is an example model
+ */
+Stage MyStage {
+	width 256
+	height 256
+	output SCALE(8.0, MyMarble)
+}
+
+Marble MyMarble {
+	seed 123456
+}
+
+«ENDFILE»
+«ENDDEFINE»
