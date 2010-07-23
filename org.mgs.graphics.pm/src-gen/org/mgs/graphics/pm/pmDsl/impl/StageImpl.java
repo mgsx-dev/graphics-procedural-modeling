@@ -25,6 +25,7 @@ import org.mgs.graphics.pm.pmDsl.Stage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl#getDepth <em>Depth</em>}</li>
@@ -38,6 +39,26 @@ import org.mgs.graphics.pm.pmDsl.Stage;
  */
 public class StageImpl extends MinimalEObjectImpl.Container implements Stage
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -167,6 +188,29 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
   protected EClass eStaticClass()
   {
     return PmDslPackage.Literals.STAGE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PmDslPackage.STAGE__NAME, oldName, name));
   }
 
   /**
@@ -358,6 +402,8 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
   {
     switch (featureID)
     {
+      case PmDslPackage.STAGE__NAME:
+        return getName();
       case PmDslPackage.STAGE__WIDTH:
         return getWidth();
       case PmDslPackage.STAGE__HEIGHT:
@@ -384,6 +430,9 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
   {
     switch (featureID)
     {
+      case PmDslPackage.STAGE__NAME:
+        setName((String)newValue);
+        return;
       case PmDslPackage.STAGE__WIDTH:
         setWidth((Integer)newValue);
         return;
@@ -416,6 +465,9 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
   {
     switch (featureID)
     {
+      case PmDslPackage.STAGE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case PmDslPackage.STAGE__WIDTH:
         setWidth(WIDTH_EDEFAULT);
         return;
@@ -448,6 +500,8 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
   {
     switch (featureID)
     {
+      case PmDslPackage.STAGE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case PmDslPackage.STAGE__WIDTH:
         return width != WIDTH_EDEFAULT;
       case PmDslPackage.STAGE__HEIGHT:
@@ -475,7 +529,9 @@ public class StageImpl extends MinimalEObjectImpl.Container implements Stage
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (width: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", width: ");
     result.append(width);
     result.append(", height: ");
     result.append(height);
