@@ -318,7 +318,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStage_Width()
+  public EAttribute getStage_Name()
   {
     return (EAttribute)stageEClass.getEStructuralFeatures().get(0);
   }
@@ -328,7 +328,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStage_Height()
+  public EAttribute getStage_Width()
   {
     return (EAttribute)stageEClass.getEStructuralFeatures().get(1);
   }
@@ -338,7 +338,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStage_Depth()
+  public EAttribute getStage_Height()
   {
     return (EAttribute)stageEClass.getEStructuralFeatures().get(2);
   }
@@ -348,7 +348,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStage_Duration()
+  public EAttribute getStage_Depth()
   {
     return (EAttribute)stageEClass.getEStructuralFeatures().get(3);
   }
@@ -358,7 +358,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStage_Fps()
+  public EAttribute getStage_Duration()
   {
     return (EAttribute)stageEClass.getEStructuralFeatures().get(4);
   }
@@ -368,9 +368,19 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getStage_Fps()
+  {
+    return (EAttribute)stageEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getStage_Output()
   {
-    return (EReference)stageEClass.getEStructuralFeatures().get(5);
+    return (EReference)stageEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -958,6 +968,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
     createEReference(modelEClass, MODEL__DEFS);
 
     stageEClass = createEClass(STAGE);
+    createEAttribute(stageEClass, STAGE__NAME);
     createEAttribute(stageEClass, STAGE__WIDTH);
     createEAttribute(stageEClass, STAGE__HEIGHT);
     createEAttribute(stageEClass, STAGE__DEPTH);
@@ -1096,6 +1107,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
     initEReference(getModel_Defs(), this.getModuleDef(), null, "defs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stageEClass, Stage.class, "Stage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStage_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStage_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getStage_Depth(), ecorePackage.getEInt(), "depth", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

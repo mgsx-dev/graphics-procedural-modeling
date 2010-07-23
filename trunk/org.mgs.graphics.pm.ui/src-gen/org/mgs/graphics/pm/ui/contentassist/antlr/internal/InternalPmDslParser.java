@@ -23,12 +23,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPmDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_DECIMAL", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'+'", "'-'", "'*'", "'X'", "'Y'", "'Z'", "'U'", "'V'", "'W'", "'T'", "'Stage'", "'{'", "'width'", "'height'", "'output'", "'}'", "'depth'", "'duration'", "'fps'", "'Color'", "'#'", "'Operation'", "'Noise'", "'seed'", "'frequency'", "'Perlin'", "'iterations'", "'turbulence'", "'Marble'", "'('", "')'", "'INV'", "'MIX'", "','", "'SIN'", "'BOOL'", "'SCALE'", "'RADIAL'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_DECIMAL", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'+'", "'-'", "'*'", "'X'", "'Y'", "'Z'", "'U'", "'V'", "'W'", "'T'", "'Stage'", "'{'", "'width'", "'height'", "'output'", "'}'", "'depth'", "'duration'", "'fps'", "'Color'", "'#'", "'Operation'", "'Noise'", "'seed'", "'frequency'", "'Perlin'", "'iterations'", "'turbulence'", "'Marble'", "'('", "')'", "'INV'", "'MIX'", "','", "'SIN'", "'BOOL'", "'SCALE'", "'RADIAL'"
     };
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int RULE_STRING=7;
     public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_INT=4;
+    public static final int RULE_INT=5;
     public static final int RULE_WS=10;
     public static final int RULE_DECIMAL=6;
     public static final int RULE_SL_COMMENT=9;
@@ -2305,21 +2305,30 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:792:1: rule__Stage__Group__1__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:792:1: rule__Stage__Group__1__Impl : ( ( rule__Stage__NameAssignment_1 ) ) ;
     public final void rule__Stage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:796:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:797:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:796:1: ( ( ( rule__Stage__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:797:1: ( ( rule__Stage__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:797:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:798:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:797:1: ( ( rule__Stage__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:798:1: ( rule__Stage__NameAssignment_1 )
             {
-             before(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,23,FOLLOW_23_in_rule__Stage__Group__1__Impl1727); 
-             after(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_1()); 
+             before(grammarAccess.getStageAccess().getNameAssignment_1()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:799:1: ( rule__Stage__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:799:2: rule__Stage__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Stage__NameAssignment_1_in_rule__Stage__Group__1__Impl1726);
+            rule__Stage__NameAssignment_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getStageAccess().getNameAssignment_1()); 
 
             }
 
@@ -2342,20 +2351,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:811:1: rule__Stage__Group__2 : rule__Stage__Group__2__Impl rule__Stage__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:809:1: rule__Stage__Group__2 : rule__Stage__Group__2__Impl rule__Stage__Group__3 ;
     public final void rule__Stage__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:815:1: ( rule__Stage__Group__2__Impl rule__Stage__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:816:2: rule__Stage__Group__2__Impl rule__Stage__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:813:1: ( rule__Stage__Group__2__Impl rule__Stage__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:814:2: rule__Stage__Group__2__Impl rule__Stage__Group__3
             {
-            pushFollow(FOLLOW_rule__Stage__Group__2__Impl_in_rule__Stage__Group__21758);
+            pushFollow(FOLLOW_rule__Stage__Group__2__Impl_in_rule__Stage__Group__21756);
             rule__Stage__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__3_in_rule__Stage__Group__21761);
+            pushFollow(FOLLOW_rule__Stage__Group__3_in_rule__Stage__Group__21759);
             rule__Stage__Group__3();
             _fsp--;
 
@@ -2378,21 +2387,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:823:1: rule__Stage__Group__2__Impl : ( 'width' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:821:1: rule__Stage__Group__2__Impl : ( '{' ) ;
     public final void rule__Stage__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:827:1: ( ( 'width' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:828:1: ( 'width' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:825:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:826:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:828:1: ( 'width' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:829:1: 'width'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:826:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:827:1: '{'
             {
-             before(grammarAccess.getStageAccess().getWidthKeyword_2()); 
-            match(input,24,FOLLOW_24_in_rule__Stage__Group__2__Impl1789); 
-             after(grammarAccess.getStageAccess().getWidthKeyword_2()); 
+             before(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,23,FOLLOW_23_in_rule__Stage__Group__2__Impl1787); 
+             after(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -2415,20 +2424,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:842:1: rule__Stage__Group__3 : rule__Stage__Group__3__Impl rule__Stage__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:840:1: rule__Stage__Group__3 : rule__Stage__Group__3__Impl rule__Stage__Group__4 ;
     public final void rule__Stage__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:846:1: ( rule__Stage__Group__3__Impl rule__Stage__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:847:2: rule__Stage__Group__3__Impl rule__Stage__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:844:1: ( rule__Stage__Group__3__Impl rule__Stage__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:845:2: rule__Stage__Group__3__Impl rule__Stage__Group__4
             {
-            pushFollow(FOLLOW_rule__Stage__Group__3__Impl_in_rule__Stage__Group__31820);
+            pushFollow(FOLLOW_rule__Stage__Group__3__Impl_in_rule__Stage__Group__31818);
             rule__Stage__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__4_in_rule__Stage__Group__31823);
+            pushFollow(FOLLOW_rule__Stage__Group__4_in_rule__Stage__Group__31821);
             rule__Stage__Group__4();
             _fsp--;
 
@@ -2451,30 +2460,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:854:1: rule__Stage__Group__3__Impl : ( ( rule__Stage__WidthAssignment_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:852:1: rule__Stage__Group__3__Impl : ( 'width' ) ;
     public final void rule__Stage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:858:1: ( ( ( rule__Stage__WidthAssignment_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:859:1: ( ( rule__Stage__WidthAssignment_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:856:1: ( ( 'width' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:857:1: ( 'width' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:859:1: ( ( rule__Stage__WidthAssignment_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:860:1: ( rule__Stage__WidthAssignment_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:857:1: ( 'width' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:858:1: 'width'
             {
-             before(grammarAccess.getStageAccess().getWidthAssignment_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:861:1: ( rule__Stage__WidthAssignment_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:861:2: rule__Stage__WidthAssignment_3
-            {
-            pushFollow(FOLLOW_rule__Stage__WidthAssignment_3_in_rule__Stage__Group__3__Impl1850);
-            rule__Stage__WidthAssignment_3();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getStageAccess().getWidthAssignment_3()); 
+             before(grammarAccess.getStageAccess().getWidthKeyword_3()); 
+            match(input,24,FOLLOW_24_in_rule__Stage__Group__3__Impl1849); 
+             after(grammarAccess.getStageAccess().getWidthKeyword_3()); 
 
             }
 
@@ -2533,21 +2533,30 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:883:1: rule__Stage__Group__4__Impl : ( 'height' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:883:1: rule__Stage__Group__4__Impl : ( ( rule__Stage__WidthAssignment_4 ) ) ;
     public final void rule__Stage__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:887:1: ( ( 'height' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:888:1: ( 'height' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:887:1: ( ( ( rule__Stage__WidthAssignment_4 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:888:1: ( ( rule__Stage__WidthAssignment_4 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:888:1: ( 'height' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:889:1: 'height'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:888:1: ( ( rule__Stage__WidthAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:889:1: ( rule__Stage__WidthAssignment_4 )
             {
-             before(grammarAccess.getStageAccess().getHeightKeyword_4()); 
-            match(input,25,FOLLOW_25_in_rule__Stage__Group__4__Impl1911); 
-             after(grammarAccess.getStageAccess().getHeightKeyword_4()); 
+             before(grammarAccess.getStageAccess().getWidthAssignment_4()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:890:1: ( rule__Stage__WidthAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:890:2: rule__Stage__WidthAssignment_4
+            {
+            pushFollow(FOLLOW_rule__Stage__WidthAssignment_4_in_rule__Stage__Group__4__Impl1910);
+            rule__Stage__WidthAssignment_4();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getStageAccess().getWidthAssignment_4()); 
 
             }
 
@@ -2570,20 +2579,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:902:1: rule__Stage__Group__5 : rule__Stage__Group__5__Impl rule__Stage__Group__6 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:900:1: rule__Stage__Group__5 : rule__Stage__Group__5__Impl rule__Stage__Group__6 ;
     public final void rule__Stage__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:906:1: ( rule__Stage__Group__5__Impl rule__Stage__Group__6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:907:2: rule__Stage__Group__5__Impl rule__Stage__Group__6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:904:1: ( rule__Stage__Group__5__Impl rule__Stage__Group__6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:905:2: rule__Stage__Group__5__Impl rule__Stage__Group__6
             {
-            pushFollow(FOLLOW_rule__Stage__Group__5__Impl_in_rule__Stage__Group__51942);
+            pushFollow(FOLLOW_rule__Stage__Group__5__Impl_in_rule__Stage__Group__51940);
             rule__Stage__Group__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__6_in_rule__Stage__Group__51945);
+            pushFollow(FOLLOW_rule__Stage__Group__6_in_rule__Stage__Group__51943);
             rule__Stage__Group__6();
             _fsp--;
 
@@ -2606,30 +2615,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:914:1: rule__Stage__Group__5__Impl : ( ( rule__Stage__HeightAssignment_5 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:912:1: rule__Stage__Group__5__Impl : ( 'height' ) ;
     public final void rule__Stage__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:918:1: ( ( ( rule__Stage__HeightAssignment_5 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:919:1: ( ( rule__Stage__HeightAssignment_5 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:916:1: ( ( 'height' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:917:1: ( 'height' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:919:1: ( ( rule__Stage__HeightAssignment_5 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:920:1: ( rule__Stage__HeightAssignment_5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:917:1: ( 'height' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:918:1: 'height'
             {
-             before(grammarAccess.getStageAccess().getHeightAssignment_5()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:921:1: ( rule__Stage__HeightAssignment_5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:921:2: rule__Stage__HeightAssignment_5
-            {
-            pushFollow(FOLLOW_rule__Stage__HeightAssignment_5_in_rule__Stage__Group__5__Impl1972);
-            rule__Stage__HeightAssignment_5();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getStageAccess().getHeightAssignment_5()); 
+             before(grammarAccess.getStageAccess().getHeightKeyword_5()); 
+            match(input,25,FOLLOW_25_in_rule__Stage__Group__5__Impl1971); 
+             after(grammarAccess.getStageAccess().getHeightKeyword_5()); 
 
             }
 
@@ -2688,41 +2688,30 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__6__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:943:1: rule__Stage__Group__6__Impl : ( ( rule__Stage__Group_6__0 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:943:1: rule__Stage__Group__6__Impl : ( ( rule__Stage__HeightAssignment_6 ) ) ;
     public final void rule__Stage__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:947:1: ( ( ( rule__Stage__Group_6__0 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:948:1: ( ( rule__Stage__Group_6__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:947:1: ( ( ( rule__Stage__HeightAssignment_6 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:948:1: ( ( rule__Stage__HeightAssignment_6 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:948:1: ( ( rule__Stage__Group_6__0 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:949:1: ( rule__Stage__Group_6__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:948:1: ( ( rule__Stage__HeightAssignment_6 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:949:1: ( rule__Stage__HeightAssignment_6 )
             {
-             before(grammarAccess.getStageAccess().getGroup_6()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:950:1: ( rule__Stage__Group_6__0 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+             before(grammarAccess.getStageAccess().getHeightAssignment_6()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:950:1: ( rule__Stage__HeightAssignment_6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:950:2: rule__Stage__HeightAssignment_6
+            {
+            pushFollow(FOLLOW_rule__Stage__HeightAssignment_6_in_rule__Stage__Group__6__Impl2032);
+            rule__Stage__HeightAssignment_6();
+            _fsp--;
 
-            if ( (LA7_0==28) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:950:2: rule__Stage__Group_6__0
-                    {
-                    pushFollow(FOLLOW_rule__Stage__Group_6__0_in_rule__Stage__Group__6__Impl2032);
-                    rule__Stage__Group_6__0();
-                    _fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getStageAccess().getGroup_6()); 
+             after(grammarAccess.getStageAccess().getHeightAssignment_6()); 
 
             }
 
@@ -2754,11 +2743,11 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:964:1: ( rule__Stage__Group__7__Impl rule__Stage__Group__8 )
             // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:965:2: rule__Stage__Group__7__Impl rule__Stage__Group__8
             {
-            pushFollow(FOLLOW_rule__Stage__Group__7__Impl_in_rule__Stage__Group__72063);
+            pushFollow(FOLLOW_rule__Stage__Group__7__Impl_in_rule__Stage__Group__72062);
             rule__Stage__Group__7__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__8_in_rule__Stage__Group__72066);
+            pushFollow(FOLLOW_rule__Stage__Group__8_in_rule__Stage__Group__72065);
             rule__Stage__Group__8();
             _fsp--;
 
@@ -2795,17 +2784,17 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             {
              before(grammarAccess.getStageAccess().getGroup_7()); 
             // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:979:1: ( rule__Stage__Group_7__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA8_0==29) ) {
-                alt8=1;
+            if ( (LA7_0==28) ) {
+                alt7=1;
             }
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
                     // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:979:2: rule__Stage__Group_7__0
                     {
-                    pushFollow(FOLLOW_rule__Stage__Group_7__0_in_rule__Stage__Group__7__Impl2093);
+                    pushFollow(FOLLOW_rule__Stage__Group_7__0_in_rule__Stage__Group__7__Impl2092);
                     rule__Stage__Group_7__0();
                     _fsp--;
 
@@ -2847,11 +2836,11 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:993:1: ( rule__Stage__Group__8__Impl rule__Stage__Group__9 )
             // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:994:2: rule__Stage__Group__8__Impl rule__Stage__Group__9
             {
-            pushFollow(FOLLOW_rule__Stage__Group__8__Impl_in_rule__Stage__Group__82124);
+            pushFollow(FOLLOW_rule__Stage__Group__8__Impl_in_rule__Stage__Group__82123);
             rule__Stage__Group__8__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__9_in_rule__Stage__Group__82127);
+            pushFollow(FOLLOW_rule__Stage__Group__9_in_rule__Stage__Group__82126);
             rule__Stage__Group__9();
             _fsp--;
 
@@ -2874,21 +2863,41 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__8__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1001:1: rule__Stage__Group__8__Impl : ( 'output' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1001:1: rule__Stage__Group__8__Impl : ( ( rule__Stage__Group_8__0 )? ) ;
     public final void rule__Stage__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1005:1: ( ( 'output' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1006:1: ( 'output' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1005:1: ( ( ( rule__Stage__Group_8__0 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1006:1: ( ( rule__Stage__Group_8__0 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1006:1: ( 'output' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1007:1: 'output'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1006:1: ( ( rule__Stage__Group_8__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1007:1: ( rule__Stage__Group_8__0 )?
             {
-             before(grammarAccess.getStageAccess().getOutputKeyword_8()); 
-            match(input,26,FOLLOW_26_in_rule__Stage__Group__8__Impl2155); 
-             after(grammarAccess.getStageAccess().getOutputKeyword_8()); 
+             before(grammarAccess.getStageAccess().getGroup_8()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1008:1: ( rule__Stage__Group_8__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==29) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1008:2: rule__Stage__Group_8__0
+                    {
+                    pushFollow(FOLLOW_rule__Stage__Group_8__0_in_rule__Stage__Group__8__Impl2153);
+                    rule__Stage__Group_8__0();
+                    _fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getStageAccess().getGroup_8()); 
 
             }
 
@@ -2911,20 +2920,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__9
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1020:1: rule__Stage__Group__9 : rule__Stage__Group__9__Impl rule__Stage__Group__10 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1018:1: rule__Stage__Group__9 : rule__Stage__Group__9__Impl rule__Stage__Group__10 ;
     public final void rule__Stage__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1024:1: ( rule__Stage__Group__9__Impl rule__Stage__Group__10 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1025:2: rule__Stage__Group__9__Impl rule__Stage__Group__10
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1022:1: ( rule__Stage__Group__9__Impl rule__Stage__Group__10 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1023:2: rule__Stage__Group__9__Impl rule__Stage__Group__10
             {
-            pushFollow(FOLLOW_rule__Stage__Group__9__Impl_in_rule__Stage__Group__92186);
+            pushFollow(FOLLOW_rule__Stage__Group__9__Impl_in_rule__Stage__Group__92184);
             rule__Stage__Group__9__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group__10_in_rule__Stage__Group__92189);
+            pushFollow(FOLLOW_rule__Stage__Group__10_in_rule__Stage__Group__92187);
             rule__Stage__Group__10();
             _fsp--;
 
@@ -2947,30 +2956,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__9__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1032:1: rule__Stage__Group__9__Impl : ( ( rule__Stage__OutputAssignment_9 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1030:1: rule__Stage__Group__9__Impl : ( 'output' ) ;
     public final void rule__Stage__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1036:1: ( ( ( rule__Stage__OutputAssignment_9 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1037:1: ( ( rule__Stage__OutputAssignment_9 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1034:1: ( ( 'output' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1035:1: ( 'output' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1037:1: ( ( rule__Stage__OutputAssignment_9 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1038:1: ( rule__Stage__OutputAssignment_9 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1035:1: ( 'output' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1036:1: 'output'
             {
-             before(grammarAccess.getStageAccess().getOutputAssignment_9()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1039:1: ( rule__Stage__OutputAssignment_9 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1039:2: rule__Stage__OutputAssignment_9
-            {
-            pushFollow(FOLLOW_rule__Stage__OutputAssignment_9_in_rule__Stage__Group__9__Impl2216);
-            rule__Stage__OutputAssignment_9();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getStageAccess().getOutputAssignment_9()); 
+             before(grammarAccess.getStageAccess().getOutputKeyword_9()); 
+            match(input,26,FOLLOW_26_in_rule__Stage__Group__9__Impl2215); 
+             after(grammarAccess.getStageAccess().getOutputKeyword_9()); 
 
             }
 
@@ -2993,17 +2993,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__10
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1049:1: rule__Stage__Group__10 : rule__Stage__Group__10__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1049:1: rule__Stage__Group__10 : rule__Stage__Group__10__Impl rule__Stage__Group__11 ;
     public final void rule__Stage__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1053:1: ( rule__Stage__Group__10__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1054:2: rule__Stage__Group__10__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1053:1: ( rule__Stage__Group__10__Impl rule__Stage__Group__11 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1054:2: rule__Stage__Group__10__Impl rule__Stage__Group__11
             {
             pushFollow(FOLLOW_rule__Stage__Group__10__Impl_in_rule__Stage__Group__102246);
             rule__Stage__Group__10__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__Stage__Group__11_in_rule__Stage__Group__102249);
+            rule__Stage__Group__11();
             _fsp--;
 
 
@@ -3025,21 +3029,30 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group__10__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1060:1: rule__Stage__Group__10__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1061:1: rule__Stage__Group__10__Impl : ( ( rule__Stage__OutputAssignment_10 ) ) ;
     public final void rule__Stage__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1064:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1065:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1065:1: ( ( ( rule__Stage__OutputAssignment_10 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1066:1: ( ( rule__Stage__OutputAssignment_10 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1065:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1066:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1066:1: ( ( rule__Stage__OutputAssignment_10 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1067:1: ( rule__Stage__OutputAssignment_10 )
             {
-             before(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_10()); 
-            match(input,27,FOLLOW_27_in_rule__Stage__Group__10__Impl2274); 
-             after(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_10()); 
+             before(grammarAccess.getStageAccess().getOutputAssignment_10()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1068:1: ( rule__Stage__OutputAssignment_10 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1068:2: rule__Stage__OutputAssignment_10
+            {
+            pushFollow(FOLLOW_rule__Stage__OutputAssignment_10_in_rule__Stage__Group__10__Impl2276);
+            rule__Stage__OutputAssignment_10();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getStageAccess().getOutputAssignment_10()); 
 
             }
 
@@ -3061,22 +3074,18 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Stage__Group__10__Impl
 
 
-    // $ANTLR start rule__Stage__Group_6__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1101:1: rule__Stage__Group_6__0 : rule__Stage__Group_6__0__Impl rule__Stage__Group_6__1 ;
-    public final void rule__Stage__Group_6__0() throws RecognitionException {
+    // $ANTLR start rule__Stage__Group__11
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1078:1: rule__Stage__Group__11 : rule__Stage__Group__11__Impl ;
+    public final void rule__Stage__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1105:1: ( rule__Stage__Group_6__0__Impl rule__Stage__Group_6__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1106:2: rule__Stage__Group_6__0__Impl rule__Stage__Group_6__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1082:1: ( rule__Stage__Group__11__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1083:2: rule__Stage__Group__11__Impl
             {
-            pushFollow(FOLLOW_rule__Stage__Group_6__0__Impl_in_rule__Stage__Group_6__02327);
-            rule__Stage__Group_6__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__Stage__Group_6__1_in_rule__Stage__Group_6__02330);
-            rule__Stage__Group_6__1();
+            pushFollow(FOLLOW_rule__Stage__Group__11__Impl_in_rule__Stage__Group__112306);
+            rule__Stage__Group__11__Impl();
             _fsp--;
 
 
@@ -3094,103 +3103,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__Group_6__0
+    // $ANTLR end rule__Stage__Group__11
 
 
-    // $ANTLR start rule__Stage__Group_6__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1113:1: rule__Stage__Group_6__0__Impl : ( 'depth' ) ;
-    public final void rule__Stage__Group_6__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1117:1: ( ( 'depth' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1118:1: ( 'depth' )
-            {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1118:1: ( 'depth' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1119:1: 'depth'
-            {
-             before(grammarAccess.getStageAccess().getDepthKeyword_6_0()); 
-            match(input,28,FOLLOW_28_in_rule__Stage__Group_6__0__Impl2358); 
-             after(grammarAccess.getStageAccess().getDepthKeyword_6_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Stage__Group_6__0__Impl
-
-
-    // $ANTLR start rule__Stage__Group_6__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1132:1: rule__Stage__Group_6__1 : rule__Stage__Group_6__1__Impl ;
-    public final void rule__Stage__Group_6__1() throws RecognitionException {
+    // $ANTLR start rule__Stage__Group__11__Impl
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1089:1: rule__Stage__Group__11__Impl : ( '}' ) ;
+    public final void rule__Stage__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1136:1: ( rule__Stage__Group_6__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1137:2: rule__Stage__Group_6__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1093:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1094:1: ( '}' )
             {
-            pushFollow(FOLLOW_rule__Stage__Group_6__1__Impl_in_rule__Stage__Group_6__12389);
-            rule__Stage__Group_6__1__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Stage__Group_6__1
-
-
-    // $ANTLR start rule__Stage__Group_6__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1143:1: rule__Stage__Group_6__1__Impl : ( ( rule__Stage__DepthAssignment_6_1 ) ) ;
-    public final void rule__Stage__Group_6__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1147:1: ( ( ( rule__Stage__DepthAssignment_6_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1148:1: ( ( rule__Stage__DepthAssignment_6_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1094:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1095:1: '}'
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1148:1: ( ( rule__Stage__DepthAssignment_6_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1149:1: ( rule__Stage__DepthAssignment_6_1 )
-            {
-             before(grammarAccess.getStageAccess().getDepthAssignment_6_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1150:1: ( rule__Stage__DepthAssignment_6_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1150:2: rule__Stage__DepthAssignment_6_1
-            {
-            pushFollow(FOLLOW_rule__Stage__DepthAssignment_6_1_in_rule__Stage__Group_6__1__Impl2416);
-            rule__Stage__DepthAssignment_6_1();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getStageAccess().getDepthAssignment_6_1()); 
+             before(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_11()); 
+            match(input,27,FOLLOW_27_in_rule__Stage__Group__11__Impl2334); 
+             after(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_11()); 
 
             }
 
@@ -3209,24 +3140,24 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__Group_6__1__Impl
+    // $ANTLR end rule__Stage__Group__11__Impl
 
 
     // $ANTLR start rule__Stage__Group_7__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1164:1: rule__Stage__Group_7__0 : rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1132:1: rule__Stage__Group_7__0 : rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1 ;
     public final void rule__Stage__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1168:1: ( rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1169:2: rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1136:1: ( rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1137:2: rule__Stage__Group_7__0__Impl rule__Stage__Group_7__1
             {
-            pushFollow(FOLLOW_rule__Stage__Group_7__0__Impl_in_rule__Stage__Group_7__02450);
+            pushFollow(FOLLOW_rule__Stage__Group_7__0__Impl_in_rule__Stage__Group_7__02389);
             rule__Stage__Group_7__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group_7__1_in_rule__Stage__Group_7__02453);
+            pushFollow(FOLLOW_rule__Stage__Group_7__1_in_rule__Stage__Group_7__02392);
             rule__Stage__Group_7__1();
             _fsp--;
 
@@ -3249,21 +3180,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group_7__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1176:1: rule__Stage__Group_7__0__Impl : ( 'duration' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1144:1: rule__Stage__Group_7__0__Impl : ( 'depth' ) ;
     public final void rule__Stage__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1180:1: ( ( 'duration' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1181:1: ( 'duration' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1148:1: ( ( 'depth' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1149:1: ( 'depth' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1181:1: ( 'duration' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1182:1: 'duration'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1149:1: ( 'depth' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1150:1: 'depth'
             {
-             before(grammarAccess.getStageAccess().getDurationKeyword_7_0()); 
-            match(input,29,FOLLOW_29_in_rule__Stage__Group_7__0__Impl2481); 
-             after(grammarAccess.getStageAccess().getDurationKeyword_7_0()); 
+             before(grammarAccess.getStageAccess().getDepthKeyword_7_0()); 
+            match(input,28,FOLLOW_28_in_rule__Stage__Group_7__0__Impl2420); 
+             after(grammarAccess.getStageAccess().getDepthKeyword_7_0()); 
 
             }
 
@@ -3286,21 +3217,17 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group_7__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1195:1: rule__Stage__Group_7__1 : rule__Stage__Group_7__1__Impl rule__Stage__Group_7__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1163:1: rule__Stage__Group_7__1 : rule__Stage__Group_7__1__Impl ;
     public final void rule__Stage__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1199:1: ( rule__Stage__Group_7__1__Impl rule__Stage__Group_7__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1200:2: rule__Stage__Group_7__1__Impl rule__Stage__Group_7__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1167:1: ( rule__Stage__Group_7__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1168:2: rule__Stage__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_rule__Stage__Group_7__1__Impl_in_rule__Stage__Group_7__12512);
+            pushFollow(FOLLOW_rule__Stage__Group_7__1__Impl_in_rule__Stage__Group_7__12451);
             rule__Stage__Group_7__1__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__Stage__Group_7__2_in_rule__Stage__Group_7__12515);
-            rule__Stage__Group_7__2();
             _fsp--;
 
 
@@ -3322,30 +3249,30 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Stage__Group_7__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1207:1: rule__Stage__Group_7__1__Impl : ( ( rule__Stage__DurationAssignment_7_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1174:1: rule__Stage__Group_7__1__Impl : ( ( rule__Stage__DepthAssignment_7_1 ) ) ;
     public final void rule__Stage__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1211:1: ( ( ( rule__Stage__DurationAssignment_7_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1212:1: ( ( rule__Stage__DurationAssignment_7_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1178:1: ( ( ( rule__Stage__DepthAssignment_7_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1179:1: ( ( rule__Stage__DepthAssignment_7_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1212:1: ( ( rule__Stage__DurationAssignment_7_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1213:1: ( rule__Stage__DurationAssignment_7_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1179:1: ( ( rule__Stage__DepthAssignment_7_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1180:1: ( rule__Stage__DepthAssignment_7_1 )
             {
-             before(grammarAccess.getStageAccess().getDurationAssignment_7_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1214:1: ( rule__Stage__DurationAssignment_7_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1214:2: rule__Stage__DurationAssignment_7_1
+             before(grammarAccess.getStageAccess().getDepthAssignment_7_1()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1181:1: ( rule__Stage__DepthAssignment_7_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1181:2: rule__Stage__DepthAssignment_7_1
             {
-            pushFollow(FOLLOW_rule__Stage__DurationAssignment_7_1_in_rule__Stage__Group_7__1__Impl2542);
-            rule__Stage__DurationAssignment_7_1();
+            pushFollow(FOLLOW_rule__Stage__DepthAssignment_7_1_in_rule__Stage__Group_7__1__Impl2478);
+            rule__Stage__DepthAssignment_7_1();
             _fsp--;
 
 
             }
 
-             after(grammarAccess.getStageAccess().getDurationAssignment_7_1()); 
+             after(grammarAccess.getStageAccess().getDepthAssignment_7_1()); 
 
             }
 
@@ -3367,91 +3294,22 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Stage__Group_7__1__Impl
 
 
-    // $ANTLR start rule__Stage__Group_7__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1224:1: rule__Stage__Group_7__2 : rule__Stage__Group_7__2__Impl rule__Stage__Group_7__3 ;
-    public final void rule__Stage__Group_7__2() throws RecognitionException {
+    // $ANTLR start rule__Stage__Group_8__0
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1195:1: rule__Stage__Group_8__0 : rule__Stage__Group_8__0__Impl rule__Stage__Group_8__1 ;
+    public final void rule__Stage__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1228:1: ( rule__Stage__Group_7__2__Impl rule__Stage__Group_7__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1229:2: rule__Stage__Group_7__2__Impl rule__Stage__Group_7__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1199:1: ( rule__Stage__Group_8__0__Impl rule__Stage__Group_8__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1200:2: rule__Stage__Group_8__0__Impl rule__Stage__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Stage__Group_7__2__Impl_in_rule__Stage__Group_7__22572);
-            rule__Stage__Group_7__2__Impl();
+            pushFollow(FOLLOW_rule__Stage__Group_8__0__Impl_in_rule__Stage__Group_8__02512);
+            rule__Stage__Group_8__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Stage__Group_7__3_in_rule__Stage__Group_7__22575);
-            rule__Stage__Group_7__3();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Stage__Group_7__2
-
-
-    // $ANTLR start rule__Stage__Group_7__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1236:1: rule__Stage__Group_7__2__Impl : ( 'fps' ) ;
-    public final void rule__Stage__Group_7__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1240:1: ( ( 'fps' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1241:1: ( 'fps' )
-            {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1241:1: ( 'fps' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1242:1: 'fps'
-            {
-             before(grammarAccess.getStageAccess().getFpsKeyword_7_2()); 
-            match(input,30,FOLLOW_30_in_rule__Stage__Group_7__2__Impl2603); 
-             after(grammarAccess.getStageAccess().getFpsKeyword_7_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__Stage__Group_7__2__Impl
-
-
-    // $ANTLR start rule__Stage__Group_7__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1255:1: rule__Stage__Group_7__3 : rule__Stage__Group_7__3__Impl ;
-    public final void rule__Stage__Group_7__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1259:1: ( rule__Stage__Group_7__3__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1260:2: rule__Stage__Group_7__3__Impl
-            {
-            pushFollow(FOLLOW_rule__Stage__Group_7__3__Impl_in_rule__Stage__Group_7__32634);
-            rule__Stage__Group_7__3__Impl();
+            pushFollow(FOLLOW_rule__Stage__Group_8__1_in_rule__Stage__Group_8__02515);
+            rule__Stage__Group_8__1();
             _fsp--;
 
 
@@ -3469,34 +3327,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__Group_7__3
+    // $ANTLR end rule__Stage__Group_8__0
 
 
-    // $ANTLR start rule__Stage__Group_7__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1266:1: rule__Stage__Group_7__3__Impl : ( ( rule__Stage__FpsAssignment_7_3 ) ) ;
-    public final void rule__Stage__Group_7__3__Impl() throws RecognitionException {
+    // $ANTLR start rule__Stage__Group_8__0__Impl
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1207:1: rule__Stage__Group_8__0__Impl : ( 'duration' ) ;
+    public final void rule__Stage__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1270:1: ( ( ( rule__Stage__FpsAssignment_7_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1271:1: ( ( rule__Stage__FpsAssignment_7_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1211:1: ( ( 'duration' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1212:1: ( 'duration' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1271:1: ( ( rule__Stage__FpsAssignment_7_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1272:1: ( rule__Stage__FpsAssignment_7_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1212:1: ( 'duration' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1213:1: 'duration'
             {
-             before(grammarAccess.getStageAccess().getFpsAssignment_7_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1273:1: ( rule__Stage__FpsAssignment_7_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1273:2: rule__Stage__FpsAssignment_7_3
-            {
-            pushFollow(FOLLOW_rule__Stage__FpsAssignment_7_3_in_rule__Stage__Group_7__3__Impl2661);
-            rule__Stage__FpsAssignment_7_3();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getStageAccess().getFpsAssignment_7_3()); 
+             before(grammarAccess.getStageAccess().getDurationKeyword_8_0()); 
+            match(input,29,FOLLOW_29_in_rule__Stage__Group_8__0__Impl2543); 
+             after(grammarAccess.getStageAccess().getDurationKeyword_8_0()); 
 
             }
 
@@ -3515,24 +3364,257 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__Group_7__3__Impl
+    // $ANTLR end rule__Stage__Group_8__0__Impl
+
+
+    // $ANTLR start rule__Stage__Group_8__1
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1226:1: rule__Stage__Group_8__1 : rule__Stage__Group_8__1__Impl rule__Stage__Group_8__2 ;
+    public final void rule__Stage__Group_8__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1230:1: ( rule__Stage__Group_8__1__Impl rule__Stage__Group_8__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1231:2: rule__Stage__Group_8__1__Impl rule__Stage__Group_8__2
+            {
+            pushFollow(FOLLOW_rule__Stage__Group_8__1__Impl_in_rule__Stage__Group_8__12574);
+            rule__Stage__Group_8__1__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__Stage__Group_8__2_in_rule__Stage__Group_8__12577);
+            rule__Stage__Group_8__2();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__1
+
+
+    // $ANTLR start rule__Stage__Group_8__1__Impl
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1238:1: rule__Stage__Group_8__1__Impl : ( ( rule__Stage__DurationAssignment_8_1 ) ) ;
+    public final void rule__Stage__Group_8__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1242:1: ( ( ( rule__Stage__DurationAssignment_8_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1243:1: ( ( rule__Stage__DurationAssignment_8_1 ) )
+            {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1243:1: ( ( rule__Stage__DurationAssignment_8_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1244:1: ( rule__Stage__DurationAssignment_8_1 )
+            {
+             before(grammarAccess.getStageAccess().getDurationAssignment_8_1()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1245:1: ( rule__Stage__DurationAssignment_8_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1245:2: rule__Stage__DurationAssignment_8_1
+            {
+            pushFollow(FOLLOW_rule__Stage__DurationAssignment_8_1_in_rule__Stage__Group_8__1__Impl2604);
+            rule__Stage__DurationAssignment_8_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getStageAccess().getDurationAssignment_8_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__1__Impl
+
+
+    // $ANTLR start rule__Stage__Group_8__2
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1255:1: rule__Stage__Group_8__2 : rule__Stage__Group_8__2__Impl rule__Stage__Group_8__3 ;
+    public final void rule__Stage__Group_8__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1259:1: ( rule__Stage__Group_8__2__Impl rule__Stage__Group_8__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1260:2: rule__Stage__Group_8__2__Impl rule__Stage__Group_8__3
+            {
+            pushFollow(FOLLOW_rule__Stage__Group_8__2__Impl_in_rule__Stage__Group_8__22634);
+            rule__Stage__Group_8__2__Impl();
+            _fsp--;
+
+            pushFollow(FOLLOW_rule__Stage__Group_8__3_in_rule__Stage__Group_8__22637);
+            rule__Stage__Group_8__3();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__2
+
+
+    // $ANTLR start rule__Stage__Group_8__2__Impl
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1267:1: rule__Stage__Group_8__2__Impl : ( 'fps' ) ;
+    public final void rule__Stage__Group_8__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1271:1: ( ( 'fps' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1272:1: ( 'fps' )
+            {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1272:1: ( 'fps' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1273:1: 'fps'
+            {
+             before(grammarAccess.getStageAccess().getFpsKeyword_8_2()); 
+            match(input,30,FOLLOW_30_in_rule__Stage__Group_8__2__Impl2665); 
+             after(grammarAccess.getStageAccess().getFpsKeyword_8_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__2__Impl
+
+
+    // $ANTLR start rule__Stage__Group_8__3
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1286:1: rule__Stage__Group_8__3 : rule__Stage__Group_8__3__Impl ;
+    public final void rule__Stage__Group_8__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1290:1: ( rule__Stage__Group_8__3__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1291:2: rule__Stage__Group_8__3__Impl
+            {
+            pushFollow(FOLLOW_rule__Stage__Group_8__3__Impl_in_rule__Stage__Group_8__32696);
+            rule__Stage__Group_8__3__Impl();
+            _fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__3
+
+
+    // $ANTLR start rule__Stage__Group_8__3__Impl
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1297:1: rule__Stage__Group_8__3__Impl : ( ( rule__Stage__FpsAssignment_8_3 ) ) ;
+    public final void rule__Stage__Group_8__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1301:1: ( ( ( rule__Stage__FpsAssignment_8_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1302:1: ( ( rule__Stage__FpsAssignment_8_3 ) )
+            {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1302:1: ( ( rule__Stage__FpsAssignment_8_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1303:1: ( rule__Stage__FpsAssignment_8_3 )
+            {
+             before(grammarAccess.getStageAccess().getFpsAssignment_8_3()); 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1304:1: ( rule__Stage__FpsAssignment_8_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1304:2: rule__Stage__FpsAssignment_8_3
+            {
+            pushFollow(FOLLOW_rule__Stage__FpsAssignment_8_3_in_rule__Stage__Group_8__3__Impl2723);
+            rule__Stage__FpsAssignment_8_3();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getStageAccess().getFpsAssignment_8_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__Group_8__3__Impl
 
 
     // $ANTLR start rule__ColorDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1291:1: rule__ColorDef__Group__0 : rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1322:1: rule__ColorDef__Group__0 : rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1 ;
     public final void rule__ColorDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1295:1: ( rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1296:2: rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1326:1: ( rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1327:2: rule__ColorDef__Group__0__Impl rule__ColorDef__Group__1
             {
-            pushFollow(FOLLOW_rule__ColorDef__Group__0__Impl_in_rule__ColorDef__Group__02699);
+            pushFollow(FOLLOW_rule__ColorDef__Group__0__Impl_in_rule__ColorDef__Group__02761);
             rule__ColorDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorDef__Group__1_in_rule__ColorDef__Group__02702);
+            pushFollow(FOLLOW_rule__ColorDef__Group__1_in_rule__ColorDef__Group__02764);
             rule__ColorDef__Group__1();
             _fsp--;
 
@@ -3555,20 +3637,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1303:1: rule__ColorDef__Group__0__Impl : ( 'Color' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1334:1: rule__ColorDef__Group__0__Impl : ( 'Color' ) ;
     public final void rule__ColorDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1307:1: ( ( 'Color' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1308:1: ( 'Color' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1338:1: ( ( 'Color' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1339:1: ( 'Color' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1308:1: ( 'Color' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1309:1: 'Color'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1339:1: ( 'Color' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1340:1: 'Color'
             {
              before(grammarAccess.getColorDefAccess().getColorKeyword_0()); 
-            match(input,31,FOLLOW_31_in_rule__ColorDef__Group__0__Impl2730); 
+            match(input,31,FOLLOW_31_in_rule__ColorDef__Group__0__Impl2792); 
              after(grammarAccess.getColorDefAccess().getColorKeyword_0()); 
 
             }
@@ -3592,20 +3674,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1322:1: rule__ColorDef__Group__1 : rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1353:1: rule__ColorDef__Group__1 : rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2 ;
     public final void rule__ColorDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1326:1: ( rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1327:2: rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1357:1: ( rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1358:2: rule__ColorDef__Group__1__Impl rule__ColorDef__Group__2
             {
-            pushFollow(FOLLOW_rule__ColorDef__Group__1__Impl_in_rule__ColorDef__Group__12761);
+            pushFollow(FOLLOW_rule__ColorDef__Group__1__Impl_in_rule__ColorDef__Group__12823);
             rule__ColorDef__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorDef__Group__2_in_rule__ColorDef__Group__12764);
+            pushFollow(FOLLOW_rule__ColorDef__Group__2_in_rule__ColorDef__Group__12826);
             rule__ColorDef__Group__2();
             _fsp--;
 
@@ -3628,23 +3710,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1334:1: rule__ColorDef__Group__1__Impl : ( ( rule__ColorDef__NameAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1365:1: rule__ColorDef__Group__1__Impl : ( ( rule__ColorDef__NameAssignment_1 ) ) ;
     public final void rule__ColorDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1338:1: ( ( ( rule__ColorDef__NameAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1339:1: ( ( rule__ColorDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1369:1: ( ( ( rule__ColorDef__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1370:1: ( ( rule__ColorDef__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1339:1: ( ( rule__ColorDef__NameAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1340:1: ( rule__ColorDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1370:1: ( ( rule__ColorDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1371:1: ( rule__ColorDef__NameAssignment_1 )
             {
              before(grammarAccess.getColorDefAccess().getNameAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1341:1: ( rule__ColorDef__NameAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1341:2: rule__ColorDef__NameAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1372:1: ( rule__ColorDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1372:2: rule__ColorDef__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__ColorDef__NameAssignment_1_in_rule__ColorDef__Group__1__Impl2791);
+            pushFollow(FOLLOW_rule__ColorDef__NameAssignment_1_in_rule__ColorDef__Group__1__Impl2853);
             rule__ColorDef__NameAssignment_1();
             _fsp--;
 
@@ -3674,20 +3756,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1351:1: rule__ColorDef__Group__2 : rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1382:1: rule__ColorDef__Group__2 : rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3 ;
     public final void rule__ColorDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1355:1: ( rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1356:2: rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1386:1: ( rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1387:2: rule__ColorDef__Group__2__Impl rule__ColorDef__Group__3
             {
-            pushFollow(FOLLOW_rule__ColorDef__Group__2__Impl_in_rule__ColorDef__Group__22821);
+            pushFollow(FOLLOW_rule__ColorDef__Group__2__Impl_in_rule__ColorDef__Group__22883);
             rule__ColorDef__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorDef__Group__3_in_rule__ColorDef__Group__22824);
+            pushFollow(FOLLOW_rule__ColorDef__Group__3_in_rule__ColorDef__Group__22886);
             rule__ColorDef__Group__3();
             _fsp--;
 
@@ -3710,20 +3792,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1363:1: rule__ColorDef__Group__2__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1394:1: rule__ColorDef__Group__2__Impl : ( '{' ) ;
     public final void rule__ColorDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1367:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1368:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1398:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1399:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1368:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1369:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1399:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1400:1: '{'
             {
              before(grammarAccess.getColorDefAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__ColorDef__Group__2__Impl2852); 
+            match(input,23,FOLLOW_23_in_rule__ColorDef__Group__2__Impl2914); 
              after(grammarAccess.getColorDefAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -3747,20 +3829,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1382:1: rule__ColorDef__Group__3 : rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1413:1: rule__ColorDef__Group__3 : rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4 ;
     public final void rule__ColorDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1386:1: ( rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1387:2: rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1417:1: ( rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1418:2: rule__ColorDef__Group__3__Impl rule__ColorDef__Group__4
             {
-            pushFollow(FOLLOW_rule__ColorDef__Group__3__Impl_in_rule__ColorDef__Group__32883);
+            pushFollow(FOLLOW_rule__ColorDef__Group__3__Impl_in_rule__ColorDef__Group__32945);
             rule__ColorDef__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorDef__Group__4_in_rule__ColorDef__Group__32886);
+            pushFollow(FOLLOW_rule__ColorDef__Group__4_in_rule__ColorDef__Group__32948);
             rule__ColorDef__Group__4();
             _fsp--;
 
@@ -3783,23 +3865,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1394:1: rule__ColorDef__Group__3__Impl : ( ( rule__ColorDef__DefAssignment_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1425:1: rule__ColorDef__Group__3__Impl : ( ( rule__ColorDef__DefAssignment_3 ) ) ;
     public final void rule__ColorDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1398:1: ( ( ( rule__ColorDef__DefAssignment_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1399:1: ( ( rule__ColorDef__DefAssignment_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1429:1: ( ( ( rule__ColorDef__DefAssignment_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1430:1: ( ( rule__ColorDef__DefAssignment_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1399:1: ( ( rule__ColorDef__DefAssignment_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1400:1: ( rule__ColorDef__DefAssignment_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1430:1: ( ( rule__ColorDef__DefAssignment_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1431:1: ( rule__ColorDef__DefAssignment_3 )
             {
              before(grammarAccess.getColorDefAccess().getDefAssignment_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1401:1: ( rule__ColorDef__DefAssignment_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1401:2: rule__ColorDef__DefAssignment_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1432:1: ( rule__ColorDef__DefAssignment_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1432:2: rule__ColorDef__DefAssignment_3
             {
-            pushFollow(FOLLOW_rule__ColorDef__DefAssignment_3_in_rule__ColorDef__Group__3__Impl2913);
+            pushFollow(FOLLOW_rule__ColorDef__DefAssignment_3_in_rule__ColorDef__Group__3__Impl2975);
             rule__ColorDef__DefAssignment_3();
             _fsp--;
 
@@ -3829,16 +3911,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1411:1: rule__ColorDef__Group__4 : rule__ColorDef__Group__4__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1442:1: rule__ColorDef__Group__4 : rule__ColorDef__Group__4__Impl ;
     public final void rule__ColorDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1415:1: ( rule__ColorDef__Group__4__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1416:2: rule__ColorDef__Group__4__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1446:1: ( rule__ColorDef__Group__4__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1447:2: rule__ColorDef__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ColorDef__Group__4__Impl_in_rule__ColorDef__Group__42943);
+            pushFollow(FOLLOW_rule__ColorDef__Group__4__Impl_in_rule__ColorDef__Group__43005);
             rule__ColorDef__Group__4__Impl();
             _fsp--;
 
@@ -3861,20 +3943,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1422:1: rule__ColorDef__Group__4__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1453:1: rule__ColorDef__Group__4__Impl : ( '}' ) ;
     public final void rule__ColorDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1426:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1427:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1457:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1458:1: ( '}' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1427:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1428:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1458:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1459:1: '}'
             {
              before(grammarAccess.getColorDefAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,27,FOLLOW_27_in_rule__ColorDef__Group__4__Impl2971); 
+            match(input,27,FOLLOW_27_in_rule__ColorDef__Group__4__Impl3033); 
              after(grammarAccess.getColorDefAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -3898,20 +3980,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1451:1: rule__ColorFloatDef__Group__0 : rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1482:1: rule__ColorFloatDef__Group__0 : rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1 ;
     public final void rule__ColorFloatDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1455:1: ( rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1456:2: rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1486:1: ( rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1487:2: rule__ColorFloatDef__Group__0__Impl rule__ColorFloatDef__Group__1
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group__0__Impl_in_rule__ColorFloatDef__Group__03012);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group__0__Impl_in_rule__ColorFloatDef__Group__03074);
             rule__ColorFloatDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group__1_in_rule__ColorFloatDef__Group__03015);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group__1_in_rule__ColorFloatDef__Group__03077);
             rule__ColorFloatDef__Group__1();
             _fsp--;
 
@@ -3934,23 +4016,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1463:1: rule__ColorFloatDef__Group__0__Impl : ( ( rule__ColorFloatDef__RAssignment_0 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1494:1: rule__ColorFloatDef__Group__0__Impl : ( ( rule__ColorFloatDef__RAssignment_0 ) ) ;
     public final void rule__ColorFloatDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1467:1: ( ( ( rule__ColorFloatDef__RAssignment_0 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1468:1: ( ( rule__ColorFloatDef__RAssignment_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1498:1: ( ( ( rule__ColorFloatDef__RAssignment_0 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1499:1: ( ( rule__ColorFloatDef__RAssignment_0 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1468:1: ( ( rule__ColorFloatDef__RAssignment_0 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1469:1: ( rule__ColorFloatDef__RAssignment_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1499:1: ( ( rule__ColorFloatDef__RAssignment_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1500:1: ( rule__ColorFloatDef__RAssignment_0 )
             {
              before(grammarAccess.getColorFloatDefAccess().getRAssignment_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1470:1: ( rule__ColorFloatDef__RAssignment_0 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1470:2: rule__ColorFloatDef__RAssignment_0
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1501:1: ( rule__ColorFloatDef__RAssignment_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1501:2: rule__ColorFloatDef__RAssignment_0
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__RAssignment_0_in_rule__ColorFloatDef__Group__0__Impl3042);
+            pushFollow(FOLLOW_rule__ColorFloatDef__RAssignment_0_in_rule__ColorFloatDef__Group__0__Impl3104);
             rule__ColorFloatDef__RAssignment_0();
             _fsp--;
 
@@ -3980,16 +4062,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1480:1: rule__ColorFloatDef__Group__1 : rule__ColorFloatDef__Group__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1511:1: rule__ColorFloatDef__Group__1 : rule__ColorFloatDef__Group__1__Impl ;
     public final void rule__ColorFloatDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1484:1: ( rule__ColorFloatDef__Group__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1485:2: rule__ColorFloatDef__Group__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1515:1: ( rule__ColorFloatDef__Group__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1516:2: rule__ColorFloatDef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group__1__Impl_in_rule__ColorFloatDef__Group__13072);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group__1__Impl_in_rule__ColorFloatDef__Group__13134);
             rule__ColorFloatDef__Group__1__Impl();
             _fsp--;
 
@@ -4012,20 +4094,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1491:1: rule__ColorFloatDef__Group__1__Impl : ( ( rule__ColorFloatDef__Group_1__0 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1522:1: rule__ColorFloatDef__Group__1__Impl : ( ( rule__ColorFloatDef__Group_1__0 )? ) ;
     public final void rule__ColorFloatDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1495:1: ( ( ( rule__ColorFloatDef__Group_1__0 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1496:1: ( ( rule__ColorFloatDef__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1526:1: ( ( ( rule__ColorFloatDef__Group_1__0 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1527:1: ( ( rule__ColorFloatDef__Group_1__0 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1496:1: ( ( rule__ColorFloatDef__Group_1__0 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1497:1: ( rule__ColorFloatDef__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1527:1: ( ( rule__ColorFloatDef__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1528:1: ( rule__ColorFloatDef__Group_1__0 )?
             {
              before(grammarAccess.getColorFloatDefAccess().getGroup_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1498:1: ( rule__ColorFloatDef__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1529:1: ( rule__ColorFloatDef__Group_1__0 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -4034,9 +4116,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1498:2: rule__ColorFloatDef__Group_1__0
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1529:2: rule__ColorFloatDef__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__0_in_rule__ColorFloatDef__Group__1__Impl3099);
+                    pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__0_in_rule__ColorFloatDef__Group__1__Impl3161);
                     rule__ColorFloatDef__Group_1__0();
                     _fsp--;
 
@@ -4069,20 +4151,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1512:1: rule__ColorFloatDef__Group_1__0 : rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1543:1: rule__ColorFloatDef__Group_1__0 : rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1 ;
     public final void rule__ColorFloatDef__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1516:1: ( rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1517:2: rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1547:1: ( rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1548:2: rule__ColorFloatDef__Group_1__0__Impl rule__ColorFloatDef__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__0__Impl_in_rule__ColorFloatDef__Group_1__03134);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__0__Impl_in_rule__ColorFloatDef__Group_1__03196);
             rule__ColorFloatDef__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__1_in_rule__ColorFloatDef__Group_1__03137);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__1_in_rule__ColorFloatDef__Group_1__03199);
             rule__ColorFloatDef__Group_1__1();
             _fsp--;
 
@@ -4105,23 +4187,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1524:1: rule__ColorFloatDef__Group_1__0__Impl : ( ( rule__ColorFloatDef__GAssignment_1_0 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1555:1: rule__ColorFloatDef__Group_1__0__Impl : ( ( rule__ColorFloatDef__GAssignment_1_0 ) ) ;
     public final void rule__ColorFloatDef__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1528:1: ( ( ( rule__ColorFloatDef__GAssignment_1_0 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1529:1: ( ( rule__ColorFloatDef__GAssignment_1_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1559:1: ( ( ( rule__ColorFloatDef__GAssignment_1_0 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1560:1: ( ( rule__ColorFloatDef__GAssignment_1_0 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1529:1: ( ( rule__ColorFloatDef__GAssignment_1_0 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1530:1: ( rule__ColorFloatDef__GAssignment_1_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1560:1: ( ( rule__ColorFloatDef__GAssignment_1_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1561:1: ( rule__ColorFloatDef__GAssignment_1_0 )
             {
              before(grammarAccess.getColorFloatDefAccess().getGAssignment_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1531:1: ( rule__ColorFloatDef__GAssignment_1_0 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1531:2: rule__ColorFloatDef__GAssignment_1_0
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1562:1: ( rule__ColorFloatDef__GAssignment_1_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1562:2: rule__ColorFloatDef__GAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__GAssignment_1_0_in_rule__ColorFloatDef__Group_1__0__Impl3164);
+            pushFollow(FOLLOW_rule__ColorFloatDef__GAssignment_1_0_in_rule__ColorFloatDef__Group_1__0__Impl3226);
             rule__ColorFloatDef__GAssignment_1_0();
             _fsp--;
 
@@ -4151,20 +4233,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1541:1: rule__ColorFloatDef__Group_1__1 : rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1572:1: rule__ColorFloatDef__Group_1__1 : rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2 ;
     public final void rule__ColorFloatDef__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1545:1: ( rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1546:2: rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1576:1: ( rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1577:2: rule__ColorFloatDef__Group_1__1__Impl rule__ColorFloatDef__Group_1__2
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__1__Impl_in_rule__ColorFloatDef__Group_1__13194);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__1__Impl_in_rule__ColorFloatDef__Group_1__13256);
             rule__ColorFloatDef__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__2_in_rule__ColorFloatDef__Group_1__13197);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__2_in_rule__ColorFloatDef__Group_1__13259);
             rule__ColorFloatDef__Group_1__2();
             _fsp--;
 
@@ -4187,23 +4269,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1553:1: rule__ColorFloatDef__Group_1__1__Impl : ( ( rule__ColorFloatDef__BAssignment_1_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1584:1: rule__ColorFloatDef__Group_1__1__Impl : ( ( rule__ColorFloatDef__BAssignment_1_1 ) ) ;
     public final void rule__ColorFloatDef__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1557:1: ( ( ( rule__ColorFloatDef__BAssignment_1_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1558:1: ( ( rule__ColorFloatDef__BAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1588:1: ( ( ( rule__ColorFloatDef__BAssignment_1_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1589:1: ( ( rule__ColorFloatDef__BAssignment_1_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1558:1: ( ( rule__ColorFloatDef__BAssignment_1_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1559:1: ( rule__ColorFloatDef__BAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1589:1: ( ( rule__ColorFloatDef__BAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1590:1: ( rule__ColorFloatDef__BAssignment_1_1 )
             {
              before(grammarAccess.getColorFloatDefAccess().getBAssignment_1_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1560:1: ( rule__ColorFloatDef__BAssignment_1_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1560:2: rule__ColorFloatDef__BAssignment_1_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1591:1: ( rule__ColorFloatDef__BAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1591:2: rule__ColorFloatDef__BAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__BAssignment_1_1_in_rule__ColorFloatDef__Group_1__1__Impl3224);
+            pushFollow(FOLLOW_rule__ColorFloatDef__BAssignment_1_1_in_rule__ColorFloatDef__Group_1__1__Impl3286);
             rule__ColorFloatDef__BAssignment_1_1();
             _fsp--;
 
@@ -4233,16 +4315,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1570:1: rule__ColorFloatDef__Group_1__2 : rule__ColorFloatDef__Group_1__2__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1601:1: rule__ColorFloatDef__Group_1__2 : rule__ColorFloatDef__Group_1__2__Impl ;
     public final void rule__ColorFloatDef__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1574:1: ( rule__ColorFloatDef__Group_1__2__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1575:2: rule__ColorFloatDef__Group_1__2__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1605:1: ( rule__ColorFloatDef__Group_1__2__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1606:2: rule__ColorFloatDef__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__2__Impl_in_rule__ColorFloatDef__Group_1__23254);
+            pushFollow(FOLLOW_rule__ColorFloatDef__Group_1__2__Impl_in_rule__ColorFloatDef__Group_1__23316);
             rule__ColorFloatDef__Group_1__2__Impl();
             _fsp--;
 
@@ -4265,20 +4347,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__Group_1__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1581:1: rule__ColorFloatDef__Group_1__2__Impl : ( ( rule__ColorFloatDef__AAssignment_1_2 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1612:1: rule__ColorFloatDef__Group_1__2__Impl : ( ( rule__ColorFloatDef__AAssignment_1_2 )? ) ;
     public final void rule__ColorFloatDef__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1585:1: ( ( ( rule__ColorFloatDef__AAssignment_1_2 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1586:1: ( ( rule__ColorFloatDef__AAssignment_1_2 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1616:1: ( ( ( rule__ColorFloatDef__AAssignment_1_2 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1617:1: ( ( rule__ColorFloatDef__AAssignment_1_2 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1586:1: ( ( rule__ColorFloatDef__AAssignment_1_2 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1587:1: ( rule__ColorFloatDef__AAssignment_1_2 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1617:1: ( ( rule__ColorFloatDef__AAssignment_1_2 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1618:1: ( rule__ColorFloatDef__AAssignment_1_2 )?
             {
              before(grammarAccess.getColorFloatDefAccess().getAAssignment_1_2()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1588:1: ( rule__ColorFloatDef__AAssignment_1_2 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1619:1: ( rule__ColorFloatDef__AAssignment_1_2 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -4287,9 +4369,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1588:2: rule__ColorFloatDef__AAssignment_1_2
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1619:2: rule__ColorFloatDef__AAssignment_1_2
                     {
-                    pushFollow(FOLLOW_rule__ColorFloatDef__AAssignment_1_2_in_rule__ColorFloatDef__Group_1__2__Impl3281);
+                    pushFollow(FOLLOW_rule__ColorFloatDef__AAssignment_1_2_in_rule__ColorFloatDef__Group_1__2__Impl3343);
                     rule__ColorFloatDef__AAssignment_1_2();
                     _fsp--;
 
@@ -4322,20 +4404,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1604:1: rule__ColorIntDef__Group__0 : rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1635:1: rule__ColorIntDef__Group__0 : rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1 ;
     public final void rule__ColorIntDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1608:1: ( rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1609:2: rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1639:1: ( rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1640:2: rule__ColorIntDef__Group__0__Impl rule__ColorIntDef__Group__1
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__Group__0__Impl_in_rule__ColorIntDef__Group__03318);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group__0__Impl_in_rule__ColorIntDef__Group__03380);
             rule__ColorIntDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorIntDef__Group__1_in_rule__ColorIntDef__Group__03321);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group__1_in_rule__ColorIntDef__Group__03383);
             rule__ColorIntDef__Group__1();
             _fsp--;
 
@@ -4358,23 +4440,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1616:1: rule__ColorIntDef__Group__0__Impl : ( ( rule__ColorIntDef__RAssignment_0 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1647:1: rule__ColorIntDef__Group__0__Impl : ( ( rule__ColorIntDef__RAssignment_0 ) ) ;
     public final void rule__ColorIntDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1620:1: ( ( ( rule__ColorIntDef__RAssignment_0 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1621:1: ( ( rule__ColorIntDef__RAssignment_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1651:1: ( ( ( rule__ColorIntDef__RAssignment_0 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1652:1: ( ( rule__ColorIntDef__RAssignment_0 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1621:1: ( ( rule__ColorIntDef__RAssignment_0 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1622:1: ( rule__ColorIntDef__RAssignment_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1652:1: ( ( rule__ColorIntDef__RAssignment_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1653:1: ( rule__ColorIntDef__RAssignment_0 )
             {
              before(grammarAccess.getColorIntDefAccess().getRAssignment_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1623:1: ( rule__ColorIntDef__RAssignment_0 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1623:2: rule__ColorIntDef__RAssignment_0
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1654:1: ( rule__ColorIntDef__RAssignment_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1654:2: rule__ColorIntDef__RAssignment_0
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__RAssignment_0_in_rule__ColorIntDef__Group__0__Impl3348);
+            pushFollow(FOLLOW_rule__ColorIntDef__RAssignment_0_in_rule__ColorIntDef__Group__0__Impl3410);
             rule__ColorIntDef__RAssignment_0();
             _fsp--;
 
@@ -4404,16 +4486,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1633:1: rule__ColorIntDef__Group__1 : rule__ColorIntDef__Group__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1664:1: rule__ColorIntDef__Group__1 : rule__ColorIntDef__Group__1__Impl ;
     public final void rule__ColorIntDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1637:1: ( rule__ColorIntDef__Group__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1638:2: rule__ColorIntDef__Group__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1668:1: ( rule__ColorIntDef__Group__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1669:2: rule__ColorIntDef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__Group__1__Impl_in_rule__ColorIntDef__Group__13378);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group__1__Impl_in_rule__ColorIntDef__Group__13440);
             rule__ColorIntDef__Group__1__Impl();
             _fsp--;
 
@@ -4436,20 +4518,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1644:1: rule__ColorIntDef__Group__1__Impl : ( ( rule__ColorIntDef__Group_1__0 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1675:1: rule__ColorIntDef__Group__1__Impl : ( ( rule__ColorIntDef__Group_1__0 )? ) ;
     public final void rule__ColorIntDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1648:1: ( ( ( rule__ColorIntDef__Group_1__0 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1649:1: ( ( rule__ColorIntDef__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1679:1: ( ( ( rule__ColorIntDef__Group_1__0 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1680:1: ( ( rule__ColorIntDef__Group_1__0 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1649:1: ( ( rule__ColorIntDef__Group_1__0 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1650:1: ( rule__ColorIntDef__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1680:1: ( ( rule__ColorIntDef__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1681:1: ( rule__ColorIntDef__Group_1__0 )?
             {
              before(grammarAccess.getColorIntDefAccess().getGroup_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1651:1: ( rule__ColorIntDef__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1682:1: ( rule__ColorIntDef__Group_1__0 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -4458,9 +4540,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1651:2: rule__ColorIntDef__Group_1__0
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1682:2: rule__ColorIntDef__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__ColorIntDef__Group_1__0_in_rule__ColorIntDef__Group__1__Impl3405);
+                    pushFollow(FOLLOW_rule__ColorIntDef__Group_1__0_in_rule__ColorIntDef__Group__1__Impl3467);
                     rule__ColorIntDef__Group_1__0();
                     _fsp--;
 
@@ -4493,20 +4575,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1665:1: rule__ColorIntDef__Group_1__0 : rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1696:1: rule__ColorIntDef__Group_1__0 : rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1 ;
     public final void rule__ColorIntDef__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1669:1: ( rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1670:2: rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1700:1: ( rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1701:2: rule__ColorIntDef__Group_1__0__Impl rule__ColorIntDef__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__0__Impl_in_rule__ColorIntDef__Group_1__03440);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__0__Impl_in_rule__ColorIntDef__Group_1__03502);
             rule__ColorIntDef__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__1_in_rule__ColorIntDef__Group_1__03443);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__1_in_rule__ColorIntDef__Group_1__03505);
             rule__ColorIntDef__Group_1__1();
             _fsp--;
 
@@ -4529,23 +4611,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1677:1: rule__ColorIntDef__Group_1__0__Impl : ( ( rule__ColorIntDef__GAssignment_1_0 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1708:1: rule__ColorIntDef__Group_1__0__Impl : ( ( rule__ColorIntDef__GAssignment_1_0 ) ) ;
     public final void rule__ColorIntDef__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1681:1: ( ( ( rule__ColorIntDef__GAssignment_1_0 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1682:1: ( ( rule__ColorIntDef__GAssignment_1_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1712:1: ( ( ( rule__ColorIntDef__GAssignment_1_0 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1713:1: ( ( rule__ColorIntDef__GAssignment_1_0 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1682:1: ( ( rule__ColorIntDef__GAssignment_1_0 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1683:1: ( rule__ColorIntDef__GAssignment_1_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1713:1: ( ( rule__ColorIntDef__GAssignment_1_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1714:1: ( rule__ColorIntDef__GAssignment_1_0 )
             {
              before(grammarAccess.getColorIntDefAccess().getGAssignment_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1684:1: ( rule__ColorIntDef__GAssignment_1_0 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1684:2: rule__ColorIntDef__GAssignment_1_0
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1715:1: ( rule__ColorIntDef__GAssignment_1_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1715:2: rule__ColorIntDef__GAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__GAssignment_1_0_in_rule__ColorIntDef__Group_1__0__Impl3470);
+            pushFollow(FOLLOW_rule__ColorIntDef__GAssignment_1_0_in_rule__ColorIntDef__Group_1__0__Impl3532);
             rule__ColorIntDef__GAssignment_1_0();
             _fsp--;
 
@@ -4575,20 +4657,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1694:1: rule__ColorIntDef__Group_1__1 : rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1725:1: rule__ColorIntDef__Group_1__1 : rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2 ;
     public final void rule__ColorIntDef__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1698:1: ( rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1699:2: rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1729:1: ( rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1730:2: rule__ColorIntDef__Group_1__1__Impl rule__ColorIntDef__Group_1__2
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__1__Impl_in_rule__ColorIntDef__Group_1__13500);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__1__Impl_in_rule__ColorIntDef__Group_1__13562);
             rule__ColorIntDef__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__2_in_rule__ColorIntDef__Group_1__13503);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__2_in_rule__ColorIntDef__Group_1__13565);
             rule__ColorIntDef__Group_1__2();
             _fsp--;
 
@@ -4611,23 +4693,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1706:1: rule__ColorIntDef__Group_1__1__Impl : ( ( rule__ColorIntDef__BAssignment_1_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1737:1: rule__ColorIntDef__Group_1__1__Impl : ( ( rule__ColorIntDef__BAssignment_1_1 ) ) ;
     public final void rule__ColorIntDef__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1710:1: ( ( ( rule__ColorIntDef__BAssignment_1_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1711:1: ( ( rule__ColorIntDef__BAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1741:1: ( ( ( rule__ColorIntDef__BAssignment_1_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1742:1: ( ( rule__ColorIntDef__BAssignment_1_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1711:1: ( ( rule__ColorIntDef__BAssignment_1_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1712:1: ( rule__ColorIntDef__BAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1742:1: ( ( rule__ColorIntDef__BAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1743:1: ( rule__ColorIntDef__BAssignment_1_1 )
             {
              before(grammarAccess.getColorIntDefAccess().getBAssignment_1_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1713:1: ( rule__ColorIntDef__BAssignment_1_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1713:2: rule__ColorIntDef__BAssignment_1_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1744:1: ( rule__ColorIntDef__BAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1744:2: rule__ColorIntDef__BAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__BAssignment_1_1_in_rule__ColorIntDef__Group_1__1__Impl3530);
+            pushFollow(FOLLOW_rule__ColorIntDef__BAssignment_1_1_in_rule__ColorIntDef__Group_1__1__Impl3592);
             rule__ColorIntDef__BAssignment_1_1();
             _fsp--;
 
@@ -4657,16 +4739,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1723:1: rule__ColorIntDef__Group_1__2 : rule__ColorIntDef__Group_1__2__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1754:1: rule__ColorIntDef__Group_1__2 : rule__ColorIntDef__Group_1__2__Impl ;
     public final void rule__ColorIntDef__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1727:1: ( rule__ColorIntDef__Group_1__2__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1728:2: rule__ColorIntDef__Group_1__2__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1758:1: ( rule__ColorIntDef__Group_1__2__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1759:2: rule__ColorIntDef__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__2__Impl_in_rule__ColorIntDef__Group_1__23560);
+            pushFollow(FOLLOW_rule__ColorIntDef__Group_1__2__Impl_in_rule__ColorIntDef__Group_1__23622);
             rule__ColorIntDef__Group_1__2__Impl();
             _fsp--;
 
@@ -4689,20 +4771,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__Group_1__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1734:1: rule__ColorIntDef__Group_1__2__Impl : ( ( rule__ColorIntDef__AAssignment_1_2 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1765:1: rule__ColorIntDef__Group_1__2__Impl : ( ( rule__ColorIntDef__AAssignment_1_2 )? ) ;
     public final void rule__ColorIntDef__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1738:1: ( ( ( rule__ColorIntDef__AAssignment_1_2 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1739:1: ( ( rule__ColorIntDef__AAssignment_1_2 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1769:1: ( ( ( rule__ColorIntDef__AAssignment_1_2 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1770:1: ( ( rule__ColorIntDef__AAssignment_1_2 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1739:1: ( ( rule__ColorIntDef__AAssignment_1_2 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1740:1: ( rule__ColorIntDef__AAssignment_1_2 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1770:1: ( ( rule__ColorIntDef__AAssignment_1_2 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1771:1: ( rule__ColorIntDef__AAssignment_1_2 )?
             {
              before(grammarAccess.getColorIntDefAccess().getAAssignment_1_2()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1741:1: ( rule__ColorIntDef__AAssignment_1_2 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1772:1: ( rule__ColorIntDef__AAssignment_1_2 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -4711,9 +4793,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1741:2: rule__ColorIntDef__AAssignment_1_2
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1772:2: rule__ColorIntDef__AAssignment_1_2
                     {
-                    pushFollow(FOLLOW_rule__ColorIntDef__AAssignment_1_2_in_rule__ColorIntDef__Group_1__2__Impl3587);
+                    pushFollow(FOLLOW_rule__ColorIntDef__AAssignment_1_2_in_rule__ColorIntDef__Group_1__2__Impl3649);
                     rule__ColorIntDef__AAssignment_1_2();
                     _fsp--;
 
@@ -4746,20 +4828,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorHexaDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1757:1: rule__ColorHexaDef__Group__0 : rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1788:1: rule__ColorHexaDef__Group__0 : rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1 ;
     public final void rule__ColorHexaDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1761:1: ( rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1762:2: rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1792:1: ( rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1793:2: rule__ColorHexaDef__Group__0__Impl rule__ColorHexaDef__Group__1
             {
-            pushFollow(FOLLOW_rule__ColorHexaDef__Group__0__Impl_in_rule__ColorHexaDef__Group__03624);
+            pushFollow(FOLLOW_rule__ColorHexaDef__Group__0__Impl_in_rule__ColorHexaDef__Group__03686);
             rule__ColorHexaDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ColorHexaDef__Group__1_in_rule__ColorHexaDef__Group__03627);
+            pushFollow(FOLLOW_rule__ColorHexaDef__Group__1_in_rule__ColorHexaDef__Group__03689);
             rule__ColorHexaDef__Group__1();
             _fsp--;
 
@@ -4782,20 +4864,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorHexaDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1769:1: rule__ColorHexaDef__Group__0__Impl : ( '#' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1800:1: rule__ColorHexaDef__Group__0__Impl : ( '#' ) ;
     public final void rule__ColorHexaDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1773:1: ( ( '#' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1774:1: ( '#' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1804:1: ( ( '#' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1805:1: ( '#' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1774:1: ( '#' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1775:1: '#'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1805:1: ( '#' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1806:1: '#'
             {
              before(grammarAccess.getColorHexaDefAccess().getNumberSignKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__ColorHexaDef__Group__0__Impl3655); 
+            match(input,32,FOLLOW_32_in_rule__ColorHexaDef__Group__0__Impl3717); 
              after(grammarAccess.getColorHexaDefAccess().getNumberSignKeyword_0()); 
 
             }
@@ -4819,16 +4901,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorHexaDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1788:1: rule__ColorHexaDef__Group__1 : rule__ColorHexaDef__Group__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1819:1: rule__ColorHexaDef__Group__1 : rule__ColorHexaDef__Group__1__Impl ;
     public final void rule__ColorHexaDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1792:1: ( rule__ColorHexaDef__Group__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1793:2: rule__ColorHexaDef__Group__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1823:1: ( rule__ColorHexaDef__Group__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1824:2: rule__ColorHexaDef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ColorHexaDef__Group__1__Impl_in_rule__ColorHexaDef__Group__13686);
+            pushFollow(FOLLOW_rule__ColorHexaDef__Group__1__Impl_in_rule__ColorHexaDef__Group__13748);
             rule__ColorHexaDef__Group__1__Impl();
             _fsp--;
 
@@ -4851,23 +4933,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorHexaDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1799:1: rule__ColorHexaDef__Group__1__Impl : ( ( rule__ColorHexaDef__SAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1830:1: rule__ColorHexaDef__Group__1__Impl : ( ( rule__ColorHexaDef__SAssignment_1 ) ) ;
     public final void rule__ColorHexaDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1803:1: ( ( ( rule__ColorHexaDef__SAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1804:1: ( ( rule__ColorHexaDef__SAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1834:1: ( ( ( rule__ColorHexaDef__SAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1835:1: ( ( rule__ColorHexaDef__SAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1804:1: ( ( rule__ColorHexaDef__SAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1805:1: ( rule__ColorHexaDef__SAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1835:1: ( ( rule__ColorHexaDef__SAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1836:1: ( rule__ColorHexaDef__SAssignment_1 )
             {
              before(grammarAccess.getColorHexaDefAccess().getSAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1806:1: ( rule__ColorHexaDef__SAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1806:2: rule__ColorHexaDef__SAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1837:1: ( rule__ColorHexaDef__SAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1837:2: rule__ColorHexaDef__SAssignment_1
             {
-            pushFollow(FOLLOW_rule__ColorHexaDef__SAssignment_1_in_rule__ColorHexaDef__Group__1__Impl3713);
+            pushFollow(FOLLOW_rule__ColorHexaDef__SAssignment_1_in_rule__ColorHexaDef__Group__1__Impl3775);
             rule__ColorHexaDef__SAssignment_1();
             _fsp--;
 
@@ -4897,20 +4979,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1820:1: rule__OperationDef__Group__0 : rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1851:1: rule__OperationDef__Group__0 : rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1 ;
     public final void rule__OperationDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1824:1: ( rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1825:2: rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1855:1: ( rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1856:2: rule__OperationDef__Group__0__Impl rule__OperationDef__Group__1
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__0__Impl_in_rule__OperationDef__Group__03747);
+            pushFollow(FOLLOW_rule__OperationDef__Group__0__Impl_in_rule__OperationDef__Group__03809);
             rule__OperationDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OperationDef__Group__1_in_rule__OperationDef__Group__03750);
+            pushFollow(FOLLOW_rule__OperationDef__Group__1_in_rule__OperationDef__Group__03812);
             rule__OperationDef__Group__1();
             _fsp--;
 
@@ -4933,20 +5015,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1832:1: rule__OperationDef__Group__0__Impl : ( 'Operation' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1863:1: rule__OperationDef__Group__0__Impl : ( 'Operation' ) ;
     public final void rule__OperationDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1836:1: ( ( 'Operation' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1837:1: ( 'Operation' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1867:1: ( ( 'Operation' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1868:1: ( 'Operation' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1837:1: ( 'Operation' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1838:1: 'Operation'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1868:1: ( 'Operation' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1869:1: 'Operation'
             {
              before(grammarAccess.getOperationDefAccess().getOperationKeyword_0()); 
-            match(input,33,FOLLOW_33_in_rule__OperationDef__Group__0__Impl3778); 
+            match(input,33,FOLLOW_33_in_rule__OperationDef__Group__0__Impl3840); 
              after(grammarAccess.getOperationDefAccess().getOperationKeyword_0()); 
 
             }
@@ -4970,20 +5052,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1851:1: rule__OperationDef__Group__1 : rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1882:1: rule__OperationDef__Group__1 : rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2 ;
     public final void rule__OperationDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1855:1: ( rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1856:2: rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1886:1: ( rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1887:2: rule__OperationDef__Group__1__Impl rule__OperationDef__Group__2
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__1__Impl_in_rule__OperationDef__Group__13809);
+            pushFollow(FOLLOW_rule__OperationDef__Group__1__Impl_in_rule__OperationDef__Group__13871);
             rule__OperationDef__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OperationDef__Group__2_in_rule__OperationDef__Group__13812);
+            pushFollow(FOLLOW_rule__OperationDef__Group__2_in_rule__OperationDef__Group__13874);
             rule__OperationDef__Group__2();
             _fsp--;
 
@@ -5006,23 +5088,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1863:1: rule__OperationDef__Group__1__Impl : ( ( rule__OperationDef__NameAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1894:1: rule__OperationDef__Group__1__Impl : ( ( rule__OperationDef__NameAssignment_1 ) ) ;
     public final void rule__OperationDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1867:1: ( ( ( rule__OperationDef__NameAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1868:1: ( ( rule__OperationDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1898:1: ( ( ( rule__OperationDef__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1899:1: ( ( rule__OperationDef__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1868:1: ( ( rule__OperationDef__NameAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1869:1: ( rule__OperationDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1899:1: ( ( rule__OperationDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1900:1: ( rule__OperationDef__NameAssignment_1 )
             {
              before(grammarAccess.getOperationDefAccess().getNameAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1870:1: ( rule__OperationDef__NameAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1870:2: rule__OperationDef__NameAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1901:1: ( rule__OperationDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1901:2: rule__OperationDef__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__OperationDef__NameAssignment_1_in_rule__OperationDef__Group__1__Impl3839);
+            pushFollow(FOLLOW_rule__OperationDef__NameAssignment_1_in_rule__OperationDef__Group__1__Impl3901);
             rule__OperationDef__NameAssignment_1();
             _fsp--;
 
@@ -5052,20 +5134,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1880:1: rule__OperationDef__Group__2 : rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1911:1: rule__OperationDef__Group__2 : rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3 ;
     public final void rule__OperationDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1884:1: ( rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1885:2: rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1915:1: ( rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1916:2: rule__OperationDef__Group__2__Impl rule__OperationDef__Group__3
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__2__Impl_in_rule__OperationDef__Group__23869);
+            pushFollow(FOLLOW_rule__OperationDef__Group__2__Impl_in_rule__OperationDef__Group__23931);
             rule__OperationDef__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OperationDef__Group__3_in_rule__OperationDef__Group__23872);
+            pushFollow(FOLLOW_rule__OperationDef__Group__3_in_rule__OperationDef__Group__23934);
             rule__OperationDef__Group__3();
             _fsp--;
 
@@ -5088,20 +5170,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1892:1: rule__OperationDef__Group__2__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1923:1: rule__OperationDef__Group__2__Impl : ( '{' ) ;
     public final void rule__OperationDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1896:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1897:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1927:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1928:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1897:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1898:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1928:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1929:1: '{'
             {
              before(grammarAccess.getOperationDefAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__OperationDef__Group__2__Impl3900); 
+            match(input,23,FOLLOW_23_in_rule__OperationDef__Group__2__Impl3962); 
              after(grammarAccess.getOperationDefAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -5125,20 +5207,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1911:1: rule__OperationDef__Group__3 : rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1942:1: rule__OperationDef__Group__3 : rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4 ;
     public final void rule__OperationDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1915:1: ( rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1916:2: rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1946:1: ( rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1947:2: rule__OperationDef__Group__3__Impl rule__OperationDef__Group__4
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__3__Impl_in_rule__OperationDef__Group__33931);
+            pushFollow(FOLLOW_rule__OperationDef__Group__3__Impl_in_rule__OperationDef__Group__33993);
             rule__OperationDef__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OperationDef__Group__4_in_rule__OperationDef__Group__33934);
+            pushFollow(FOLLOW_rule__OperationDef__Group__4_in_rule__OperationDef__Group__33996);
             rule__OperationDef__Group__4();
             _fsp--;
 
@@ -5161,20 +5243,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1923:1: rule__OperationDef__Group__3__Impl : ( 'output' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1954:1: rule__OperationDef__Group__3__Impl : ( 'output' ) ;
     public final void rule__OperationDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1927:1: ( ( 'output' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1928:1: ( 'output' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1958:1: ( ( 'output' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1959:1: ( 'output' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1928:1: ( 'output' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1929:1: 'output'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1959:1: ( 'output' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1960:1: 'output'
             {
              before(grammarAccess.getOperationDefAccess().getOutputKeyword_3()); 
-            match(input,26,FOLLOW_26_in_rule__OperationDef__Group__3__Impl3962); 
+            match(input,26,FOLLOW_26_in_rule__OperationDef__Group__3__Impl4024); 
              after(grammarAccess.getOperationDefAccess().getOutputKeyword_3()); 
 
             }
@@ -5198,20 +5280,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1942:1: rule__OperationDef__Group__4 : rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1973:1: rule__OperationDef__Group__4 : rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5 ;
     public final void rule__OperationDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1946:1: ( rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1947:2: rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1977:1: ( rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1978:2: rule__OperationDef__Group__4__Impl rule__OperationDef__Group__5
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__4__Impl_in_rule__OperationDef__Group__43993);
+            pushFollow(FOLLOW_rule__OperationDef__Group__4__Impl_in_rule__OperationDef__Group__44055);
             rule__OperationDef__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__OperationDef__Group__5_in_rule__OperationDef__Group__43996);
+            pushFollow(FOLLOW_rule__OperationDef__Group__5_in_rule__OperationDef__Group__44058);
             rule__OperationDef__Group__5();
             _fsp--;
 
@@ -5234,23 +5316,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1954:1: rule__OperationDef__Group__4__Impl : ( ( rule__OperationDef__OutputAssignment_4 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1985:1: rule__OperationDef__Group__4__Impl : ( ( rule__OperationDef__OutputAssignment_4 ) ) ;
     public final void rule__OperationDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1958:1: ( ( ( rule__OperationDef__OutputAssignment_4 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1959:1: ( ( rule__OperationDef__OutputAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1989:1: ( ( ( rule__OperationDef__OutputAssignment_4 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1990:1: ( ( rule__OperationDef__OutputAssignment_4 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1959:1: ( ( rule__OperationDef__OutputAssignment_4 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1960:1: ( rule__OperationDef__OutputAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1990:1: ( ( rule__OperationDef__OutputAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1991:1: ( rule__OperationDef__OutputAssignment_4 )
             {
              before(grammarAccess.getOperationDefAccess().getOutputAssignment_4()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1961:1: ( rule__OperationDef__OutputAssignment_4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1961:2: rule__OperationDef__OutputAssignment_4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1992:1: ( rule__OperationDef__OutputAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1992:2: rule__OperationDef__OutputAssignment_4
             {
-            pushFollow(FOLLOW_rule__OperationDef__OutputAssignment_4_in_rule__OperationDef__Group__4__Impl4023);
+            pushFollow(FOLLOW_rule__OperationDef__OutputAssignment_4_in_rule__OperationDef__Group__4__Impl4085);
             rule__OperationDef__OutputAssignment_4();
             _fsp--;
 
@@ -5280,16 +5362,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1971:1: rule__OperationDef__Group__5 : rule__OperationDef__Group__5__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2002:1: rule__OperationDef__Group__5 : rule__OperationDef__Group__5__Impl ;
     public final void rule__OperationDef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1975:1: ( rule__OperationDef__Group__5__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1976:2: rule__OperationDef__Group__5__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2006:1: ( rule__OperationDef__Group__5__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2007:2: rule__OperationDef__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__OperationDef__Group__5__Impl_in_rule__OperationDef__Group__54053);
+            pushFollow(FOLLOW_rule__OperationDef__Group__5__Impl_in_rule__OperationDef__Group__54115);
             rule__OperationDef__Group__5__Impl();
             _fsp--;
 
@@ -5312,20 +5394,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__Group__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1982:1: rule__OperationDef__Group__5__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2013:1: rule__OperationDef__Group__5__Impl : ( '}' ) ;
     public final void rule__OperationDef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1986:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1987:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2017:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2018:1: ( '}' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1987:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:1988:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2018:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2019:1: '}'
             {
              before(grammarAccess.getOperationDefAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,27,FOLLOW_27_in_rule__OperationDef__Group__5__Impl4081); 
+            match(input,27,FOLLOW_27_in_rule__OperationDef__Group__5__Impl4143); 
              after(grammarAccess.getOperationDefAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -5349,20 +5431,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2013:1: rule__NoiseDef__Group__0 : rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2044:1: rule__NoiseDef__Group__0 : rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1 ;
     public final void rule__NoiseDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2017:1: ( rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2018:2: rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2048:1: ( rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2049:2: rule__NoiseDef__Group__0__Impl rule__NoiseDef__Group__1
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__0__Impl_in_rule__NoiseDef__Group__04124);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__0__Impl_in_rule__NoiseDef__Group__04186);
             rule__NoiseDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__1_in_rule__NoiseDef__Group__04127);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__1_in_rule__NoiseDef__Group__04189);
             rule__NoiseDef__Group__1();
             _fsp--;
 
@@ -5385,20 +5467,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2025:1: rule__NoiseDef__Group__0__Impl : ( 'Noise' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2056:1: rule__NoiseDef__Group__0__Impl : ( 'Noise' ) ;
     public final void rule__NoiseDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2029:1: ( ( 'Noise' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2030:1: ( 'Noise' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2060:1: ( ( 'Noise' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2061:1: ( 'Noise' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2030:1: ( 'Noise' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2031:1: 'Noise'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2061:1: ( 'Noise' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2062:1: 'Noise'
             {
              before(grammarAccess.getNoiseDefAccess().getNoiseKeyword_0()); 
-            match(input,34,FOLLOW_34_in_rule__NoiseDef__Group__0__Impl4155); 
+            match(input,34,FOLLOW_34_in_rule__NoiseDef__Group__0__Impl4217); 
              after(grammarAccess.getNoiseDefAccess().getNoiseKeyword_0()); 
 
             }
@@ -5422,20 +5504,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2044:1: rule__NoiseDef__Group__1 : rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2075:1: rule__NoiseDef__Group__1 : rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2 ;
     public final void rule__NoiseDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2048:1: ( rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2049:2: rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2079:1: ( rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2080:2: rule__NoiseDef__Group__1__Impl rule__NoiseDef__Group__2
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__1__Impl_in_rule__NoiseDef__Group__14186);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__1__Impl_in_rule__NoiseDef__Group__14248);
             rule__NoiseDef__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__2_in_rule__NoiseDef__Group__14189);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__2_in_rule__NoiseDef__Group__14251);
             rule__NoiseDef__Group__2();
             _fsp--;
 
@@ -5458,23 +5540,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2056:1: rule__NoiseDef__Group__1__Impl : ( ( rule__NoiseDef__NameAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2087:1: rule__NoiseDef__Group__1__Impl : ( ( rule__NoiseDef__NameAssignment_1 ) ) ;
     public final void rule__NoiseDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2060:1: ( ( ( rule__NoiseDef__NameAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2061:1: ( ( rule__NoiseDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2091:1: ( ( ( rule__NoiseDef__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2092:1: ( ( rule__NoiseDef__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2061:1: ( ( rule__NoiseDef__NameAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2062:1: ( rule__NoiseDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2092:1: ( ( rule__NoiseDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2093:1: ( rule__NoiseDef__NameAssignment_1 )
             {
              before(grammarAccess.getNoiseDefAccess().getNameAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2063:1: ( rule__NoiseDef__NameAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2063:2: rule__NoiseDef__NameAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2094:1: ( rule__NoiseDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2094:2: rule__NoiseDef__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__NoiseDef__NameAssignment_1_in_rule__NoiseDef__Group__1__Impl4216);
+            pushFollow(FOLLOW_rule__NoiseDef__NameAssignment_1_in_rule__NoiseDef__Group__1__Impl4278);
             rule__NoiseDef__NameAssignment_1();
             _fsp--;
 
@@ -5504,20 +5586,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2073:1: rule__NoiseDef__Group__2 : rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2104:1: rule__NoiseDef__Group__2 : rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3 ;
     public final void rule__NoiseDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2077:1: ( rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2078:2: rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2108:1: ( rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2109:2: rule__NoiseDef__Group__2__Impl rule__NoiseDef__Group__3
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__2__Impl_in_rule__NoiseDef__Group__24246);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__2__Impl_in_rule__NoiseDef__Group__24308);
             rule__NoiseDef__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__3_in_rule__NoiseDef__Group__24249);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__3_in_rule__NoiseDef__Group__24311);
             rule__NoiseDef__Group__3();
             _fsp--;
 
@@ -5540,20 +5622,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2085:1: rule__NoiseDef__Group__2__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2116:1: rule__NoiseDef__Group__2__Impl : ( '{' ) ;
     public final void rule__NoiseDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2089:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2090:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2120:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2121:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2090:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2091:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2121:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2122:1: '{'
             {
              before(grammarAccess.getNoiseDefAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__NoiseDef__Group__2__Impl4277); 
+            match(input,23,FOLLOW_23_in_rule__NoiseDef__Group__2__Impl4339); 
              after(grammarAccess.getNoiseDefAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -5577,20 +5659,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2104:1: rule__NoiseDef__Group__3 : rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2135:1: rule__NoiseDef__Group__3 : rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4 ;
     public final void rule__NoiseDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2108:1: ( rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2109:2: rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2139:1: ( rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2140:2: rule__NoiseDef__Group__3__Impl rule__NoiseDef__Group__4
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__3__Impl_in_rule__NoiseDef__Group__34308);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__3__Impl_in_rule__NoiseDef__Group__34370);
             rule__NoiseDef__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__4_in_rule__NoiseDef__Group__34311);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__4_in_rule__NoiseDef__Group__34373);
             rule__NoiseDef__Group__4();
             _fsp--;
 
@@ -5613,20 +5695,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2116:1: rule__NoiseDef__Group__3__Impl : ( 'seed' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2147:1: rule__NoiseDef__Group__3__Impl : ( 'seed' ) ;
     public final void rule__NoiseDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2120:1: ( ( 'seed' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2121:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2151:1: ( ( 'seed' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2152:1: ( 'seed' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2121:1: ( 'seed' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2122:1: 'seed'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2152:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2153:1: 'seed'
             {
              before(grammarAccess.getNoiseDefAccess().getSeedKeyword_3()); 
-            match(input,35,FOLLOW_35_in_rule__NoiseDef__Group__3__Impl4339); 
+            match(input,35,FOLLOW_35_in_rule__NoiseDef__Group__3__Impl4401); 
              after(grammarAccess.getNoiseDefAccess().getSeedKeyword_3()); 
 
             }
@@ -5650,20 +5732,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2135:1: rule__NoiseDef__Group__4 : rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2166:1: rule__NoiseDef__Group__4 : rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5 ;
     public final void rule__NoiseDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2139:1: ( rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2140:2: rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2170:1: ( rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2171:2: rule__NoiseDef__Group__4__Impl rule__NoiseDef__Group__5
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__4__Impl_in_rule__NoiseDef__Group__44370);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__4__Impl_in_rule__NoiseDef__Group__44432);
             rule__NoiseDef__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__5_in_rule__NoiseDef__Group__44373);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__5_in_rule__NoiseDef__Group__44435);
             rule__NoiseDef__Group__5();
             _fsp--;
 
@@ -5686,23 +5768,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2147:1: rule__NoiseDef__Group__4__Impl : ( ( rule__NoiseDef__SeedAssignment_4 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2178:1: rule__NoiseDef__Group__4__Impl : ( ( rule__NoiseDef__SeedAssignment_4 ) ) ;
     public final void rule__NoiseDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2151:1: ( ( ( rule__NoiseDef__SeedAssignment_4 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2152:1: ( ( rule__NoiseDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2182:1: ( ( ( rule__NoiseDef__SeedAssignment_4 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2183:1: ( ( rule__NoiseDef__SeedAssignment_4 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2152:1: ( ( rule__NoiseDef__SeedAssignment_4 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2153:1: ( rule__NoiseDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2183:1: ( ( rule__NoiseDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2184:1: ( rule__NoiseDef__SeedAssignment_4 )
             {
              before(grammarAccess.getNoiseDefAccess().getSeedAssignment_4()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2154:1: ( rule__NoiseDef__SeedAssignment_4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2154:2: rule__NoiseDef__SeedAssignment_4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2185:1: ( rule__NoiseDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2185:2: rule__NoiseDef__SeedAssignment_4
             {
-            pushFollow(FOLLOW_rule__NoiseDef__SeedAssignment_4_in_rule__NoiseDef__Group__4__Impl4400);
+            pushFollow(FOLLOW_rule__NoiseDef__SeedAssignment_4_in_rule__NoiseDef__Group__4__Impl4462);
             rule__NoiseDef__SeedAssignment_4();
             _fsp--;
 
@@ -5732,20 +5814,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2164:1: rule__NoiseDef__Group__5 : rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2195:1: rule__NoiseDef__Group__5 : rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6 ;
     public final void rule__NoiseDef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2168:1: ( rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2169:2: rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2199:1: ( rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2200:2: rule__NoiseDef__Group__5__Impl rule__NoiseDef__Group__6
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__5__Impl_in_rule__NoiseDef__Group__54430);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__5__Impl_in_rule__NoiseDef__Group__54492);
             rule__NoiseDef__Group__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__6_in_rule__NoiseDef__Group__54433);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__6_in_rule__NoiseDef__Group__54495);
             rule__NoiseDef__Group__6();
             _fsp--;
 
@@ -5768,20 +5850,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2176:1: rule__NoiseDef__Group__5__Impl : ( 'frequency' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2207:1: rule__NoiseDef__Group__5__Impl : ( 'frequency' ) ;
     public final void rule__NoiseDef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2180:1: ( ( 'frequency' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2181:1: ( 'frequency' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2211:1: ( ( 'frequency' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2212:1: ( 'frequency' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2181:1: ( 'frequency' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2182:1: 'frequency'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2212:1: ( 'frequency' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2213:1: 'frequency'
             {
              before(grammarAccess.getNoiseDefAccess().getFrequencyKeyword_5()); 
-            match(input,36,FOLLOW_36_in_rule__NoiseDef__Group__5__Impl4461); 
+            match(input,36,FOLLOW_36_in_rule__NoiseDef__Group__5__Impl4523); 
              after(grammarAccess.getNoiseDefAccess().getFrequencyKeyword_5()); 
 
             }
@@ -5805,20 +5887,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2195:1: rule__NoiseDef__Group__6 : rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2226:1: rule__NoiseDef__Group__6 : rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7 ;
     public final void rule__NoiseDef__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2199:1: ( rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2200:2: rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2230:1: ( rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2231:2: rule__NoiseDef__Group__6__Impl rule__NoiseDef__Group__7
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__6__Impl_in_rule__NoiseDef__Group__64492);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__6__Impl_in_rule__NoiseDef__Group__64554);
             rule__NoiseDef__Group__6__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__NoiseDef__Group__7_in_rule__NoiseDef__Group__64495);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__7_in_rule__NoiseDef__Group__64557);
             rule__NoiseDef__Group__7();
             _fsp--;
 
@@ -5841,23 +5923,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__6__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2207:1: rule__NoiseDef__Group__6__Impl : ( ( rule__NoiseDef__FrequencyAssignment_6 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2238:1: rule__NoiseDef__Group__6__Impl : ( ( rule__NoiseDef__FrequencyAssignment_6 ) ) ;
     public final void rule__NoiseDef__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2211:1: ( ( ( rule__NoiseDef__FrequencyAssignment_6 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2212:1: ( ( rule__NoiseDef__FrequencyAssignment_6 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2242:1: ( ( ( rule__NoiseDef__FrequencyAssignment_6 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2243:1: ( ( rule__NoiseDef__FrequencyAssignment_6 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2212:1: ( ( rule__NoiseDef__FrequencyAssignment_6 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2213:1: ( rule__NoiseDef__FrequencyAssignment_6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2243:1: ( ( rule__NoiseDef__FrequencyAssignment_6 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2244:1: ( rule__NoiseDef__FrequencyAssignment_6 )
             {
              before(grammarAccess.getNoiseDefAccess().getFrequencyAssignment_6()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2214:1: ( rule__NoiseDef__FrequencyAssignment_6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2214:2: rule__NoiseDef__FrequencyAssignment_6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2245:1: ( rule__NoiseDef__FrequencyAssignment_6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2245:2: rule__NoiseDef__FrequencyAssignment_6
             {
-            pushFollow(FOLLOW_rule__NoiseDef__FrequencyAssignment_6_in_rule__NoiseDef__Group__6__Impl4522);
+            pushFollow(FOLLOW_rule__NoiseDef__FrequencyAssignment_6_in_rule__NoiseDef__Group__6__Impl4584);
             rule__NoiseDef__FrequencyAssignment_6();
             _fsp--;
 
@@ -5887,16 +5969,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__7
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2224:1: rule__NoiseDef__Group__7 : rule__NoiseDef__Group__7__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2255:1: rule__NoiseDef__Group__7 : rule__NoiseDef__Group__7__Impl ;
     public final void rule__NoiseDef__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2228:1: ( rule__NoiseDef__Group__7__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2229:2: rule__NoiseDef__Group__7__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2259:1: ( rule__NoiseDef__Group__7__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2260:2: rule__NoiseDef__Group__7__Impl
             {
-            pushFollow(FOLLOW_rule__NoiseDef__Group__7__Impl_in_rule__NoiseDef__Group__74552);
+            pushFollow(FOLLOW_rule__NoiseDef__Group__7__Impl_in_rule__NoiseDef__Group__74614);
             rule__NoiseDef__Group__7__Impl();
             _fsp--;
 
@@ -5919,20 +6001,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__Group__7__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2235:1: rule__NoiseDef__Group__7__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2266:1: rule__NoiseDef__Group__7__Impl : ( '}' ) ;
     public final void rule__NoiseDef__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2239:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2240:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2270:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2271:1: ( '}' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2240:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2241:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2271:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2272:1: '}'
             {
              before(grammarAccess.getNoiseDefAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,27,FOLLOW_27_in_rule__NoiseDef__Group__7__Impl4580); 
+            match(input,27,FOLLOW_27_in_rule__NoiseDef__Group__7__Impl4642); 
              after(grammarAccess.getNoiseDefAccess().getRightCurlyBracketKeyword_7()); 
 
             }
@@ -5956,20 +6038,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2270:1: rule__PerlinDef__Group__0 : rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2301:1: rule__PerlinDef__Group__0 : rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1 ;
     public final void rule__PerlinDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2274:1: ( rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2275:2: rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2305:1: ( rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2306:2: rule__PerlinDef__Group__0__Impl rule__PerlinDef__Group__1
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__0__Impl_in_rule__PerlinDef__Group__04627);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__0__Impl_in_rule__PerlinDef__Group__04689);
             rule__PerlinDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__1_in_rule__PerlinDef__Group__04630);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__1_in_rule__PerlinDef__Group__04692);
             rule__PerlinDef__Group__1();
             _fsp--;
 
@@ -5992,20 +6074,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2282:1: rule__PerlinDef__Group__0__Impl : ( 'Perlin' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2313:1: rule__PerlinDef__Group__0__Impl : ( 'Perlin' ) ;
     public final void rule__PerlinDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2286:1: ( ( 'Perlin' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2287:1: ( 'Perlin' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2317:1: ( ( 'Perlin' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2318:1: ( 'Perlin' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2287:1: ( 'Perlin' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2288:1: 'Perlin'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2318:1: ( 'Perlin' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2319:1: 'Perlin'
             {
              before(grammarAccess.getPerlinDefAccess().getPerlinKeyword_0()); 
-            match(input,37,FOLLOW_37_in_rule__PerlinDef__Group__0__Impl4658); 
+            match(input,37,FOLLOW_37_in_rule__PerlinDef__Group__0__Impl4720); 
              after(grammarAccess.getPerlinDefAccess().getPerlinKeyword_0()); 
 
             }
@@ -6029,20 +6111,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2301:1: rule__PerlinDef__Group__1 : rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2332:1: rule__PerlinDef__Group__1 : rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2 ;
     public final void rule__PerlinDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2305:1: ( rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2306:2: rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2336:1: ( rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2337:2: rule__PerlinDef__Group__1__Impl rule__PerlinDef__Group__2
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__1__Impl_in_rule__PerlinDef__Group__14689);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__1__Impl_in_rule__PerlinDef__Group__14751);
             rule__PerlinDef__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__2_in_rule__PerlinDef__Group__14692);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__2_in_rule__PerlinDef__Group__14754);
             rule__PerlinDef__Group__2();
             _fsp--;
 
@@ -6065,23 +6147,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2313:1: rule__PerlinDef__Group__1__Impl : ( ( rule__PerlinDef__NameAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2344:1: rule__PerlinDef__Group__1__Impl : ( ( rule__PerlinDef__NameAssignment_1 ) ) ;
     public final void rule__PerlinDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2317:1: ( ( ( rule__PerlinDef__NameAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2318:1: ( ( rule__PerlinDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2348:1: ( ( ( rule__PerlinDef__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2349:1: ( ( rule__PerlinDef__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2318:1: ( ( rule__PerlinDef__NameAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2319:1: ( rule__PerlinDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2349:1: ( ( rule__PerlinDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2350:1: ( rule__PerlinDef__NameAssignment_1 )
             {
              before(grammarAccess.getPerlinDefAccess().getNameAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2320:1: ( rule__PerlinDef__NameAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2320:2: rule__PerlinDef__NameAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2351:1: ( rule__PerlinDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2351:2: rule__PerlinDef__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__PerlinDef__NameAssignment_1_in_rule__PerlinDef__Group__1__Impl4719);
+            pushFollow(FOLLOW_rule__PerlinDef__NameAssignment_1_in_rule__PerlinDef__Group__1__Impl4781);
             rule__PerlinDef__NameAssignment_1();
             _fsp--;
 
@@ -6111,20 +6193,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2330:1: rule__PerlinDef__Group__2 : rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2361:1: rule__PerlinDef__Group__2 : rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3 ;
     public final void rule__PerlinDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2334:1: ( rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2335:2: rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2365:1: ( rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2366:2: rule__PerlinDef__Group__2__Impl rule__PerlinDef__Group__3
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__2__Impl_in_rule__PerlinDef__Group__24749);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__2__Impl_in_rule__PerlinDef__Group__24811);
             rule__PerlinDef__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__3_in_rule__PerlinDef__Group__24752);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__3_in_rule__PerlinDef__Group__24814);
             rule__PerlinDef__Group__3();
             _fsp--;
 
@@ -6147,20 +6229,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2342:1: rule__PerlinDef__Group__2__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2373:1: rule__PerlinDef__Group__2__Impl : ( '{' ) ;
     public final void rule__PerlinDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2346:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2347:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2377:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2378:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2347:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2348:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2378:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2379:1: '{'
             {
              before(grammarAccess.getPerlinDefAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__PerlinDef__Group__2__Impl4780); 
+            match(input,23,FOLLOW_23_in_rule__PerlinDef__Group__2__Impl4842); 
              after(grammarAccess.getPerlinDefAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -6184,20 +6266,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2361:1: rule__PerlinDef__Group__3 : rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2392:1: rule__PerlinDef__Group__3 : rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4 ;
     public final void rule__PerlinDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2365:1: ( rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2366:2: rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2396:1: ( rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2397:2: rule__PerlinDef__Group__3__Impl rule__PerlinDef__Group__4
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__3__Impl_in_rule__PerlinDef__Group__34811);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__3__Impl_in_rule__PerlinDef__Group__34873);
             rule__PerlinDef__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__4_in_rule__PerlinDef__Group__34814);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__4_in_rule__PerlinDef__Group__34876);
             rule__PerlinDef__Group__4();
             _fsp--;
 
@@ -6220,20 +6302,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2373:1: rule__PerlinDef__Group__3__Impl : ( 'seed' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2404:1: rule__PerlinDef__Group__3__Impl : ( 'seed' ) ;
     public final void rule__PerlinDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2377:1: ( ( 'seed' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2378:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2408:1: ( ( 'seed' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2409:1: ( 'seed' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2378:1: ( 'seed' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2379:1: 'seed'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2409:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2410:1: 'seed'
             {
              before(grammarAccess.getPerlinDefAccess().getSeedKeyword_3()); 
-            match(input,35,FOLLOW_35_in_rule__PerlinDef__Group__3__Impl4842); 
+            match(input,35,FOLLOW_35_in_rule__PerlinDef__Group__3__Impl4904); 
              after(grammarAccess.getPerlinDefAccess().getSeedKeyword_3()); 
 
             }
@@ -6257,20 +6339,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2392:1: rule__PerlinDef__Group__4 : rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2423:1: rule__PerlinDef__Group__4 : rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5 ;
     public final void rule__PerlinDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2396:1: ( rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2397:2: rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2427:1: ( rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2428:2: rule__PerlinDef__Group__4__Impl rule__PerlinDef__Group__5
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__4__Impl_in_rule__PerlinDef__Group__44873);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__4__Impl_in_rule__PerlinDef__Group__44935);
             rule__PerlinDef__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__5_in_rule__PerlinDef__Group__44876);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__5_in_rule__PerlinDef__Group__44938);
             rule__PerlinDef__Group__5();
             _fsp--;
 
@@ -6293,23 +6375,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2404:1: rule__PerlinDef__Group__4__Impl : ( ( rule__PerlinDef__SeedAssignment_4 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2435:1: rule__PerlinDef__Group__4__Impl : ( ( rule__PerlinDef__SeedAssignment_4 ) ) ;
     public final void rule__PerlinDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2408:1: ( ( ( rule__PerlinDef__SeedAssignment_4 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2409:1: ( ( rule__PerlinDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2439:1: ( ( ( rule__PerlinDef__SeedAssignment_4 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2440:1: ( ( rule__PerlinDef__SeedAssignment_4 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2409:1: ( ( rule__PerlinDef__SeedAssignment_4 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2410:1: ( rule__PerlinDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2440:1: ( ( rule__PerlinDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2441:1: ( rule__PerlinDef__SeedAssignment_4 )
             {
              before(grammarAccess.getPerlinDefAccess().getSeedAssignment_4()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2411:1: ( rule__PerlinDef__SeedAssignment_4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2411:2: rule__PerlinDef__SeedAssignment_4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2442:1: ( rule__PerlinDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2442:2: rule__PerlinDef__SeedAssignment_4
             {
-            pushFollow(FOLLOW_rule__PerlinDef__SeedAssignment_4_in_rule__PerlinDef__Group__4__Impl4903);
+            pushFollow(FOLLOW_rule__PerlinDef__SeedAssignment_4_in_rule__PerlinDef__Group__4__Impl4965);
             rule__PerlinDef__SeedAssignment_4();
             _fsp--;
 
@@ -6339,20 +6421,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2421:1: rule__PerlinDef__Group__5 : rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2452:1: rule__PerlinDef__Group__5 : rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6 ;
     public final void rule__PerlinDef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2425:1: ( rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2426:2: rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2456:1: ( rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2457:2: rule__PerlinDef__Group__5__Impl rule__PerlinDef__Group__6
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__5__Impl_in_rule__PerlinDef__Group__54933);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__5__Impl_in_rule__PerlinDef__Group__54995);
             rule__PerlinDef__Group__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__6_in_rule__PerlinDef__Group__54936);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__6_in_rule__PerlinDef__Group__54998);
             rule__PerlinDef__Group__6();
             _fsp--;
 
@@ -6375,20 +6457,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2433:1: rule__PerlinDef__Group__5__Impl : ( 'iterations' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2464:1: rule__PerlinDef__Group__5__Impl : ( 'iterations' ) ;
     public final void rule__PerlinDef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2437:1: ( ( 'iterations' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2438:1: ( 'iterations' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2468:1: ( ( 'iterations' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2469:1: ( 'iterations' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2438:1: ( 'iterations' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2439:1: 'iterations'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2469:1: ( 'iterations' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2470:1: 'iterations'
             {
              before(grammarAccess.getPerlinDefAccess().getIterationsKeyword_5()); 
-            match(input,38,FOLLOW_38_in_rule__PerlinDef__Group__5__Impl4964); 
+            match(input,38,FOLLOW_38_in_rule__PerlinDef__Group__5__Impl5026); 
              after(grammarAccess.getPerlinDefAccess().getIterationsKeyword_5()); 
 
             }
@@ -6412,20 +6494,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2452:1: rule__PerlinDef__Group__6 : rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2483:1: rule__PerlinDef__Group__6 : rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7 ;
     public final void rule__PerlinDef__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2456:1: ( rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2457:2: rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2487:1: ( rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2488:2: rule__PerlinDef__Group__6__Impl rule__PerlinDef__Group__7
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__6__Impl_in_rule__PerlinDef__Group__64995);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__6__Impl_in_rule__PerlinDef__Group__65057);
             rule__PerlinDef__Group__6__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__7_in_rule__PerlinDef__Group__64998);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__7_in_rule__PerlinDef__Group__65060);
             rule__PerlinDef__Group__7();
             _fsp--;
 
@@ -6448,23 +6530,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__6__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2464:1: rule__PerlinDef__Group__6__Impl : ( ( rule__PerlinDef__IterationsAssignment_6 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2495:1: rule__PerlinDef__Group__6__Impl : ( ( rule__PerlinDef__IterationsAssignment_6 ) ) ;
     public final void rule__PerlinDef__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2468:1: ( ( ( rule__PerlinDef__IterationsAssignment_6 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2469:1: ( ( rule__PerlinDef__IterationsAssignment_6 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2499:1: ( ( ( rule__PerlinDef__IterationsAssignment_6 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2500:1: ( ( rule__PerlinDef__IterationsAssignment_6 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2469:1: ( ( rule__PerlinDef__IterationsAssignment_6 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2470:1: ( rule__PerlinDef__IterationsAssignment_6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2500:1: ( ( rule__PerlinDef__IterationsAssignment_6 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2501:1: ( rule__PerlinDef__IterationsAssignment_6 )
             {
              before(grammarAccess.getPerlinDefAccess().getIterationsAssignment_6()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2471:1: ( rule__PerlinDef__IterationsAssignment_6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2471:2: rule__PerlinDef__IterationsAssignment_6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2502:1: ( rule__PerlinDef__IterationsAssignment_6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2502:2: rule__PerlinDef__IterationsAssignment_6
             {
-            pushFollow(FOLLOW_rule__PerlinDef__IterationsAssignment_6_in_rule__PerlinDef__Group__6__Impl5025);
+            pushFollow(FOLLOW_rule__PerlinDef__IterationsAssignment_6_in_rule__PerlinDef__Group__6__Impl5087);
             rule__PerlinDef__IterationsAssignment_6();
             _fsp--;
 
@@ -6494,20 +6576,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__7
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2481:1: rule__PerlinDef__Group__7 : rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2512:1: rule__PerlinDef__Group__7 : rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8 ;
     public final void rule__PerlinDef__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2485:1: ( rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2486:2: rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2516:1: ( rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2517:2: rule__PerlinDef__Group__7__Impl rule__PerlinDef__Group__8
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__7__Impl_in_rule__PerlinDef__Group__75055);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__7__Impl_in_rule__PerlinDef__Group__75117);
             rule__PerlinDef__Group__7__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__8_in_rule__PerlinDef__Group__75058);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__8_in_rule__PerlinDef__Group__75120);
             rule__PerlinDef__Group__8();
             _fsp--;
 
@@ -6530,20 +6612,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__7__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2493:1: rule__PerlinDef__Group__7__Impl : ( 'turbulence' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2524:1: rule__PerlinDef__Group__7__Impl : ( 'turbulence' ) ;
     public final void rule__PerlinDef__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2497:1: ( ( 'turbulence' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2498:1: ( 'turbulence' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2528:1: ( ( 'turbulence' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2529:1: ( 'turbulence' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2498:1: ( 'turbulence' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2499:1: 'turbulence'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2529:1: ( 'turbulence' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2530:1: 'turbulence'
             {
              before(grammarAccess.getPerlinDefAccess().getTurbulenceKeyword_7()); 
-            match(input,39,FOLLOW_39_in_rule__PerlinDef__Group__7__Impl5086); 
+            match(input,39,FOLLOW_39_in_rule__PerlinDef__Group__7__Impl5148); 
              after(grammarAccess.getPerlinDefAccess().getTurbulenceKeyword_7()); 
 
             }
@@ -6567,20 +6649,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__8
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2512:1: rule__PerlinDef__Group__8 : rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2543:1: rule__PerlinDef__Group__8 : rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9 ;
     public final void rule__PerlinDef__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2516:1: ( rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2517:2: rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2547:1: ( rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2548:2: rule__PerlinDef__Group__8__Impl rule__PerlinDef__Group__9
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__8__Impl_in_rule__PerlinDef__Group__85117);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__8__Impl_in_rule__PerlinDef__Group__85179);
             rule__PerlinDef__Group__8__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PerlinDef__Group__9_in_rule__PerlinDef__Group__85120);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__9_in_rule__PerlinDef__Group__85182);
             rule__PerlinDef__Group__9();
             _fsp--;
 
@@ -6603,23 +6685,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__8__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2524:1: rule__PerlinDef__Group__8__Impl : ( ( rule__PerlinDef__TurbulenceAssignment_8 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2555:1: rule__PerlinDef__Group__8__Impl : ( ( rule__PerlinDef__TurbulenceAssignment_8 ) ) ;
     public final void rule__PerlinDef__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2528:1: ( ( ( rule__PerlinDef__TurbulenceAssignment_8 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2529:1: ( ( rule__PerlinDef__TurbulenceAssignment_8 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2559:1: ( ( ( rule__PerlinDef__TurbulenceAssignment_8 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2560:1: ( ( rule__PerlinDef__TurbulenceAssignment_8 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2529:1: ( ( rule__PerlinDef__TurbulenceAssignment_8 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2530:1: ( rule__PerlinDef__TurbulenceAssignment_8 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2560:1: ( ( rule__PerlinDef__TurbulenceAssignment_8 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2561:1: ( rule__PerlinDef__TurbulenceAssignment_8 )
             {
              before(grammarAccess.getPerlinDefAccess().getTurbulenceAssignment_8()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2531:1: ( rule__PerlinDef__TurbulenceAssignment_8 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2531:2: rule__PerlinDef__TurbulenceAssignment_8
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2562:1: ( rule__PerlinDef__TurbulenceAssignment_8 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2562:2: rule__PerlinDef__TurbulenceAssignment_8
             {
-            pushFollow(FOLLOW_rule__PerlinDef__TurbulenceAssignment_8_in_rule__PerlinDef__Group__8__Impl5147);
+            pushFollow(FOLLOW_rule__PerlinDef__TurbulenceAssignment_8_in_rule__PerlinDef__Group__8__Impl5209);
             rule__PerlinDef__TurbulenceAssignment_8();
             _fsp--;
 
@@ -6649,16 +6731,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__9
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2541:1: rule__PerlinDef__Group__9 : rule__PerlinDef__Group__9__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2572:1: rule__PerlinDef__Group__9 : rule__PerlinDef__Group__9__Impl ;
     public final void rule__PerlinDef__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2545:1: ( rule__PerlinDef__Group__9__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2546:2: rule__PerlinDef__Group__9__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2576:1: ( rule__PerlinDef__Group__9__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2577:2: rule__PerlinDef__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__PerlinDef__Group__9__Impl_in_rule__PerlinDef__Group__95177);
+            pushFollow(FOLLOW_rule__PerlinDef__Group__9__Impl_in_rule__PerlinDef__Group__95239);
             rule__PerlinDef__Group__9__Impl();
             _fsp--;
 
@@ -6681,20 +6763,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__Group__9__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2552:1: rule__PerlinDef__Group__9__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2583:1: rule__PerlinDef__Group__9__Impl : ( '}' ) ;
     public final void rule__PerlinDef__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2556:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2557:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2587:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2588:1: ( '}' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2557:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2558:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2588:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2589:1: '}'
             {
              before(grammarAccess.getPerlinDefAccess().getRightCurlyBracketKeyword_9()); 
-            match(input,27,FOLLOW_27_in_rule__PerlinDef__Group__9__Impl5205); 
+            match(input,27,FOLLOW_27_in_rule__PerlinDef__Group__9__Impl5267); 
              after(grammarAccess.getPerlinDefAccess().getRightCurlyBracketKeyword_9()); 
 
             }
@@ -6718,20 +6800,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2591:1: rule__MarbleDef__Group__0 : rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2622:1: rule__MarbleDef__Group__0 : rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1 ;
     public final void rule__MarbleDef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2595:1: ( rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2596:2: rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2626:1: ( rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2627:2: rule__MarbleDef__Group__0__Impl rule__MarbleDef__Group__1
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__0__Impl_in_rule__MarbleDef__Group__05256);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__0__Impl_in_rule__MarbleDef__Group__05318);
             rule__MarbleDef__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__MarbleDef__Group__1_in_rule__MarbleDef__Group__05259);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__1_in_rule__MarbleDef__Group__05321);
             rule__MarbleDef__Group__1();
             _fsp--;
 
@@ -6754,20 +6836,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2603:1: rule__MarbleDef__Group__0__Impl : ( 'Marble' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2634:1: rule__MarbleDef__Group__0__Impl : ( 'Marble' ) ;
     public final void rule__MarbleDef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2607:1: ( ( 'Marble' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2608:1: ( 'Marble' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2638:1: ( ( 'Marble' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2639:1: ( 'Marble' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2608:1: ( 'Marble' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2609:1: 'Marble'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2639:1: ( 'Marble' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2640:1: 'Marble'
             {
              before(grammarAccess.getMarbleDefAccess().getMarbleKeyword_0()); 
-            match(input,40,FOLLOW_40_in_rule__MarbleDef__Group__0__Impl5287); 
+            match(input,40,FOLLOW_40_in_rule__MarbleDef__Group__0__Impl5349); 
              after(grammarAccess.getMarbleDefAccess().getMarbleKeyword_0()); 
 
             }
@@ -6791,20 +6873,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2622:1: rule__MarbleDef__Group__1 : rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2653:1: rule__MarbleDef__Group__1 : rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2 ;
     public final void rule__MarbleDef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2626:1: ( rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2627:2: rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2657:1: ( rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2658:2: rule__MarbleDef__Group__1__Impl rule__MarbleDef__Group__2
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__1__Impl_in_rule__MarbleDef__Group__15318);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__1__Impl_in_rule__MarbleDef__Group__15380);
             rule__MarbleDef__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__MarbleDef__Group__2_in_rule__MarbleDef__Group__15321);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__2_in_rule__MarbleDef__Group__15383);
             rule__MarbleDef__Group__2();
             _fsp--;
 
@@ -6827,23 +6909,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2634:1: rule__MarbleDef__Group__1__Impl : ( ( rule__MarbleDef__NameAssignment_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2665:1: rule__MarbleDef__Group__1__Impl : ( ( rule__MarbleDef__NameAssignment_1 ) ) ;
     public final void rule__MarbleDef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2638:1: ( ( ( rule__MarbleDef__NameAssignment_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2639:1: ( ( rule__MarbleDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2669:1: ( ( ( rule__MarbleDef__NameAssignment_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2670:1: ( ( rule__MarbleDef__NameAssignment_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2639:1: ( ( rule__MarbleDef__NameAssignment_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2640:1: ( rule__MarbleDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2670:1: ( ( rule__MarbleDef__NameAssignment_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2671:1: ( rule__MarbleDef__NameAssignment_1 )
             {
              before(grammarAccess.getMarbleDefAccess().getNameAssignment_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2641:1: ( rule__MarbleDef__NameAssignment_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2641:2: rule__MarbleDef__NameAssignment_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2672:1: ( rule__MarbleDef__NameAssignment_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2672:2: rule__MarbleDef__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__MarbleDef__NameAssignment_1_in_rule__MarbleDef__Group__1__Impl5348);
+            pushFollow(FOLLOW_rule__MarbleDef__NameAssignment_1_in_rule__MarbleDef__Group__1__Impl5410);
             rule__MarbleDef__NameAssignment_1();
             _fsp--;
 
@@ -6873,20 +6955,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2651:1: rule__MarbleDef__Group__2 : rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2682:1: rule__MarbleDef__Group__2 : rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3 ;
     public final void rule__MarbleDef__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2655:1: ( rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2656:2: rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2686:1: ( rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2687:2: rule__MarbleDef__Group__2__Impl rule__MarbleDef__Group__3
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__2__Impl_in_rule__MarbleDef__Group__25378);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__2__Impl_in_rule__MarbleDef__Group__25440);
             rule__MarbleDef__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__MarbleDef__Group__3_in_rule__MarbleDef__Group__25381);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__3_in_rule__MarbleDef__Group__25443);
             rule__MarbleDef__Group__3();
             _fsp--;
 
@@ -6909,20 +6991,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2663:1: rule__MarbleDef__Group__2__Impl : ( '{' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2694:1: rule__MarbleDef__Group__2__Impl : ( '{' ) ;
     public final void rule__MarbleDef__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2667:1: ( ( '{' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2668:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2698:1: ( ( '{' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2699:1: ( '{' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2668:1: ( '{' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2669:1: '{'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2699:1: ( '{' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2700:1: '{'
             {
              before(grammarAccess.getMarbleDefAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__MarbleDef__Group__2__Impl5409); 
+            match(input,23,FOLLOW_23_in_rule__MarbleDef__Group__2__Impl5471); 
              after(grammarAccess.getMarbleDefAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -6946,20 +7028,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2682:1: rule__MarbleDef__Group__3 : rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2713:1: rule__MarbleDef__Group__3 : rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4 ;
     public final void rule__MarbleDef__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2686:1: ( rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2687:2: rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2717:1: ( rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2718:2: rule__MarbleDef__Group__3__Impl rule__MarbleDef__Group__4
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__3__Impl_in_rule__MarbleDef__Group__35440);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__3__Impl_in_rule__MarbleDef__Group__35502);
             rule__MarbleDef__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__MarbleDef__Group__4_in_rule__MarbleDef__Group__35443);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__4_in_rule__MarbleDef__Group__35505);
             rule__MarbleDef__Group__4();
             _fsp--;
 
@@ -6982,20 +7064,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2694:1: rule__MarbleDef__Group__3__Impl : ( 'seed' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2725:1: rule__MarbleDef__Group__3__Impl : ( 'seed' ) ;
     public final void rule__MarbleDef__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2698:1: ( ( 'seed' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2699:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2729:1: ( ( 'seed' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2730:1: ( 'seed' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2699:1: ( 'seed' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2700:1: 'seed'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2730:1: ( 'seed' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2731:1: 'seed'
             {
              before(grammarAccess.getMarbleDefAccess().getSeedKeyword_3()); 
-            match(input,35,FOLLOW_35_in_rule__MarbleDef__Group__3__Impl5471); 
+            match(input,35,FOLLOW_35_in_rule__MarbleDef__Group__3__Impl5533); 
              after(grammarAccess.getMarbleDefAccess().getSeedKeyword_3()); 
 
             }
@@ -7019,20 +7101,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2713:1: rule__MarbleDef__Group__4 : rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2744:1: rule__MarbleDef__Group__4 : rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5 ;
     public final void rule__MarbleDef__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2717:1: ( rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2718:2: rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2748:1: ( rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2749:2: rule__MarbleDef__Group__4__Impl rule__MarbleDef__Group__5
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__4__Impl_in_rule__MarbleDef__Group__45502);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__4__Impl_in_rule__MarbleDef__Group__45564);
             rule__MarbleDef__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__MarbleDef__Group__5_in_rule__MarbleDef__Group__45505);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__5_in_rule__MarbleDef__Group__45567);
             rule__MarbleDef__Group__5();
             _fsp--;
 
@@ -7055,23 +7137,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2725:1: rule__MarbleDef__Group__4__Impl : ( ( rule__MarbleDef__SeedAssignment_4 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2756:1: rule__MarbleDef__Group__4__Impl : ( ( rule__MarbleDef__SeedAssignment_4 ) ) ;
     public final void rule__MarbleDef__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2729:1: ( ( ( rule__MarbleDef__SeedAssignment_4 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2730:1: ( ( rule__MarbleDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2760:1: ( ( ( rule__MarbleDef__SeedAssignment_4 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2761:1: ( ( rule__MarbleDef__SeedAssignment_4 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2730:1: ( ( rule__MarbleDef__SeedAssignment_4 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2731:1: ( rule__MarbleDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2761:1: ( ( rule__MarbleDef__SeedAssignment_4 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2762:1: ( rule__MarbleDef__SeedAssignment_4 )
             {
              before(grammarAccess.getMarbleDefAccess().getSeedAssignment_4()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2732:1: ( rule__MarbleDef__SeedAssignment_4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2732:2: rule__MarbleDef__SeedAssignment_4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2763:1: ( rule__MarbleDef__SeedAssignment_4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2763:2: rule__MarbleDef__SeedAssignment_4
             {
-            pushFollow(FOLLOW_rule__MarbleDef__SeedAssignment_4_in_rule__MarbleDef__Group__4__Impl5532);
+            pushFollow(FOLLOW_rule__MarbleDef__SeedAssignment_4_in_rule__MarbleDef__Group__4__Impl5594);
             rule__MarbleDef__SeedAssignment_4();
             _fsp--;
 
@@ -7101,16 +7183,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2742:1: rule__MarbleDef__Group__5 : rule__MarbleDef__Group__5__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2773:1: rule__MarbleDef__Group__5 : rule__MarbleDef__Group__5__Impl ;
     public final void rule__MarbleDef__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2746:1: ( rule__MarbleDef__Group__5__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2747:2: rule__MarbleDef__Group__5__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2777:1: ( rule__MarbleDef__Group__5__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2778:2: rule__MarbleDef__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__MarbleDef__Group__5__Impl_in_rule__MarbleDef__Group__55562);
+            pushFollow(FOLLOW_rule__MarbleDef__Group__5__Impl_in_rule__MarbleDef__Group__55624);
             rule__MarbleDef__Group__5__Impl();
             _fsp--;
 
@@ -7133,20 +7215,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__Group__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2753:1: rule__MarbleDef__Group__5__Impl : ( '}' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2784:1: rule__MarbleDef__Group__5__Impl : ( '}' ) ;
     public final void rule__MarbleDef__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2757:1: ( ( '}' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2758:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2788:1: ( ( '}' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2789:1: ( '}' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2758:1: ( '}' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2759:1: '}'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2789:1: ( '}' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2790:1: '}'
             {
              before(grammarAccess.getMarbleDefAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,27,FOLLOW_27_in_rule__MarbleDef__Group__5__Impl5590); 
+            match(input,27,FOLLOW_27_in_rule__MarbleDef__Group__5__Impl5652); 
              after(grammarAccess.getMarbleDefAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -7170,20 +7252,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2784:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2815:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
     public final void rule__Expression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2788:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2789:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2819:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2820:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05633);
+            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05695);
             rule__Expression__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05636);
+            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05698);
             rule__Expression__Group__1();
             _fsp--;
 
@@ -7206,20 +7288,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2796:1: rule__Expression__Group__0__Impl : ( ruleTerminalExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2827:1: rule__Expression__Group__0__Impl : ( ruleTerminalExpression ) ;
     public final void rule__Expression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2800:1: ( ( ruleTerminalExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2801:1: ( ruleTerminalExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2831:1: ( ( ruleTerminalExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2832:1: ( ruleTerminalExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2801:1: ( ruleTerminalExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2802:1: ruleTerminalExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2832:1: ( ruleTerminalExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2833:1: ruleTerminalExpression
             {
              before(grammarAccess.getExpressionAccess().getTerminalExpressionParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__Expression__Group__0__Impl5663);
+            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__Expression__Group__0__Impl5725);
             ruleTerminalExpression();
             _fsp--;
 
@@ -7246,16 +7328,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2813:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2844:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl ;
     public final void rule__Expression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2817:1: ( rule__Expression__Group__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2818:2: rule__Expression__Group__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2848:1: ( rule__Expression__Group__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2849:2: rule__Expression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15692);
+            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15754);
             rule__Expression__Group__1__Impl();
             _fsp--;
 
@@ -7278,20 +7360,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2824:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__Group_1__0 )? ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2855:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__Group_1__0 )? ) ;
     public final void rule__Expression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2828:1: ( ( ( rule__Expression__Group_1__0 )? ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2829:1: ( ( rule__Expression__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2859:1: ( ( ( rule__Expression__Group_1__0 )? ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2860:1: ( ( rule__Expression__Group_1__0 )? )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2829:1: ( ( rule__Expression__Group_1__0 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2830:1: ( rule__Expression__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2860:1: ( ( rule__Expression__Group_1__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2861:1: ( rule__Expression__Group_1__0 )?
             {
              before(grammarAccess.getExpressionAccess().getGroup_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2831:1: ( rule__Expression__Group_1__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2862:1: ( rule__Expression__Group_1__0 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -7300,9 +7382,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2831:2: rule__Expression__Group_1__0
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2862:2: rule__Expression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5719);
+                    pushFollow(FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5781);
                     rule__Expression__Group_1__0();
                     _fsp--;
 
@@ -7335,20 +7417,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2845:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2876:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
     public final void rule__Expression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2849:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2850:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2880:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2881:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05754);
+            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05816);
             rule__Expression__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05757);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05819);
             rule__Expression__Group_1__1();
             _fsp--;
 
@@ -7371,21 +7453,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2857:1: rule__Expression__Group_1__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2888:1: rule__Expression__Group_1__0__Impl : ( () ) ;
     public final void rule__Expression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2861:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2862:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2892:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2893:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2862:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2863:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2893:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2894:1: ()
             {
              before(grammarAccess.getExpressionAccess().getOperationLeftAction_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2864:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2866:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2895:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2897:1: 
             {
             }
 
@@ -7408,20 +7490,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2876:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2907:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 ;
     public final void rule__Expression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2880:1: ( rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2881:2: rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2911:1: ( rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2912:2: rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15815);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15877);
             rule__Expression__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15818);
+            pushFollow(FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15880);
             rule__Expression__Group_1__2();
             _fsp--;
 
@@ -7444,23 +7526,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2888:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__OpAssignment_1_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2919:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__OpAssignment_1_1 ) ) ;
     public final void rule__Expression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2892:1: ( ( ( rule__Expression__OpAssignment_1_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2893:1: ( ( rule__Expression__OpAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2923:1: ( ( ( rule__Expression__OpAssignment_1_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2924:1: ( ( rule__Expression__OpAssignment_1_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2893:1: ( ( rule__Expression__OpAssignment_1_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2894:1: ( rule__Expression__OpAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2924:1: ( ( rule__Expression__OpAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2925:1: ( rule__Expression__OpAssignment_1_1 )
             {
              before(grammarAccess.getExpressionAccess().getOpAssignment_1_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2895:1: ( rule__Expression__OpAssignment_1_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2895:2: rule__Expression__OpAssignment_1_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2926:1: ( rule__Expression__OpAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2926:2: rule__Expression__OpAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5845);
+            pushFollow(FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5907);
             rule__Expression__OpAssignment_1_1();
             _fsp--;
 
@@ -7490,16 +7572,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2905:1: rule__Expression__Group_1__2 : rule__Expression__Group_1__2__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2936:1: rule__Expression__Group_1__2 : rule__Expression__Group_1__2__Impl ;
     public final void rule__Expression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2909:1: ( rule__Expression__Group_1__2__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2910:2: rule__Expression__Group_1__2__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2940:1: ( rule__Expression__Group_1__2__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2941:2: rule__Expression__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25875);
+            pushFollow(FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25937);
             rule__Expression__Group_1__2__Impl();
             _fsp--;
 
@@ -7522,23 +7604,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__Group_1__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2916:1: rule__Expression__Group_1__2__Impl : ( ( rule__Expression__RightAssignment_1_2 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2947:1: rule__Expression__Group_1__2__Impl : ( ( rule__Expression__RightAssignment_1_2 ) ) ;
     public final void rule__Expression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2920:1: ( ( ( rule__Expression__RightAssignment_1_2 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2921:1: ( ( rule__Expression__RightAssignment_1_2 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2951:1: ( ( ( rule__Expression__RightAssignment_1_2 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2952:1: ( ( rule__Expression__RightAssignment_1_2 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2921:1: ( ( rule__Expression__RightAssignment_1_2 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2922:1: ( rule__Expression__RightAssignment_1_2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2952:1: ( ( rule__Expression__RightAssignment_1_2 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2953:1: ( rule__Expression__RightAssignment_1_2 )
             {
              before(grammarAccess.getExpressionAccess().getRightAssignment_1_2()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2923:1: ( rule__Expression__RightAssignment_1_2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2923:2: rule__Expression__RightAssignment_1_2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2954:1: ( rule__Expression__RightAssignment_1_2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2954:2: rule__Expression__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5902);
+            pushFollow(FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5964);
             rule__Expression__RightAssignment_1_2();
             _fsp--;
 
@@ -7568,20 +7650,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2939:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2970:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
     public final void rule__TerminalExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2943:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2944:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2974:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2975:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__05938);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06000);
             rule__TerminalExpression__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__05941);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06003);
             rule__TerminalExpression__Group_0__1();
             _fsp--;
 
@@ -7604,20 +7686,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2951:1: rule__TerminalExpression__Group_0__0__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2982:1: rule__TerminalExpression__Group_0__0__Impl : ( '(' ) ;
     public final void rule__TerminalExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2955:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2956:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2986:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2987:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2956:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2957:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2987:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2988:1: '('
             {
              before(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_0_0()); 
-            match(input,41,FOLLOW_41_in_rule__TerminalExpression__Group_0__0__Impl5969); 
+            match(input,41,FOLLOW_41_in_rule__TerminalExpression__Group_0__0__Impl6031); 
              after(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_0_0()); 
 
             }
@@ -7641,20 +7723,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2970:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3001:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 ;
     public final void rule__TerminalExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2974:1: ( rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2975:2: rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3005:1: ( rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3006:2: rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16000);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16062);
             rule__TerminalExpression__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16003);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16065);
             rule__TerminalExpression__Group_0__2();
             _fsp--;
 
@@ -7677,20 +7759,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2982:1: rule__TerminalExpression__Group_0__1__Impl : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3013:1: rule__TerminalExpression__Group_0__1__Impl : ( ruleExpression ) ;
     public final void rule__TerminalExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2986:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2987:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3017:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3018:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2987:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2988:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3018:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3019:1: ruleExpression
             {
              before(grammarAccess.getTerminalExpressionAccess().getExpressionParserRuleCall_0_1()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6030);
+            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6092);
             ruleExpression();
             _fsp--;
 
@@ -7717,16 +7799,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:2999:1: rule__TerminalExpression__Group_0__2 : rule__TerminalExpression__Group_0__2__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3030:1: rule__TerminalExpression__Group_0__2 : rule__TerminalExpression__Group_0__2__Impl ;
     public final void rule__TerminalExpression__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3003:1: ( rule__TerminalExpression__Group_0__2__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3004:2: rule__TerminalExpression__Group_0__2__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3034:1: ( rule__TerminalExpression__Group_0__2__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3035:2: rule__TerminalExpression__Group_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26059);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26121);
             rule__TerminalExpression__Group_0__2__Impl();
             _fsp--;
 
@@ -7749,20 +7831,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3010:1: rule__TerminalExpression__Group_0__2__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3041:1: rule__TerminalExpression__Group_0__2__Impl : ( ')' ) ;
     public final void rule__TerminalExpression__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3014:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3015:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3045:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3046:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3015:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3016:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3046:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3047:1: ')'
             {
              before(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_0_2()); 
-            match(input,42,FOLLOW_42_in_rule__TerminalExpression__Group_0__2__Impl6087); 
+            match(input,42,FOLLOW_42_in_rule__TerminalExpression__Group_0__2__Impl6149); 
              after(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_0_2()); 
 
             }
@@ -7786,20 +7868,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3035:1: rule__TerminalExpression__Group_1__0 : rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3066:1: rule__TerminalExpression__Group_1__0 : rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 ;
     public final void rule__TerminalExpression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3039:1: ( rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3040:2: rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3070:1: ( rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3071:2: rule__TerminalExpression__Group_1__0__Impl rule__TerminalExpression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__06124);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__06186);
             rule__TerminalExpression__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__06127);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__06189);
             rule__TerminalExpression__Group_1__1();
             _fsp--;
 
@@ -7822,21 +7904,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3047:1: rule__TerminalExpression__Group_1__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3078:1: rule__TerminalExpression__Group_1__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3051:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3052:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3082:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3083:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3052:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3053:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3083:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3084:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getModuleCallAction_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3054:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3056:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3085:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3087:1: 
             {
             }
 
@@ -7859,16 +7941,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3066:1: rule__TerminalExpression__Group_1__1 : rule__TerminalExpression__Group_1__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3097:1: rule__TerminalExpression__Group_1__1 : rule__TerminalExpression__Group_1__1__Impl ;
     public final void rule__TerminalExpression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3070:1: ( rule__TerminalExpression__Group_1__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3071:2: rule__TerminalExpression__Group_1__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3101:1: ( rule__TerminalExpression__Group_1__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3102:2: rule__TerminalExpression__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__16185);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__16247);
             rule__TerminalExpression__Group_1__1__Impl();
             _fsp--;
 
@@ -7891,23 +7973,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_1__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3077:1: rule__TerminalExpression__Group_1__1__Impl : ( ( rule__TerminalExpression__RefAssignment_1_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3108:1: rule__TerminalExpression__Group_1__1__Impl : ( ( rule__TerminalExpression__RefAssignment_1_1 ) ) ;
     public final void rule__TerminalExpression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3081:1: ( ( ( rule__TerminalExpression__RefAssignment_1_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3082:1: ( ( rule__TerminalExpression__RefAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3112:1: ( ( ( rule__TerminalExpression__RefAssignment_1_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3113:1: ( ( rule__TerminalExpression__RefAssignment_1_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3082:1: ( ( rule__TerminalExpression__RefAssignment_1_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3083:1: ( rule__TerminalExpression__RefAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3113:1: ( ( rule__TerminalExpression__RefAssignment_1_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3114:1: ( rule__TerminalExpression__RefAssignment_1_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getRefAssignment_1_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3084:1: ( rule__TerminalExpression__RefAssignment_1_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3084:2: rule__TerminalExpression__RefAssignment_1_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3115:1: ( rule__TerminalExpression__RefAssignment_1_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3115:2: rule__TerminalExpression__RefAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__RefAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl6212);
+            pushFollow(FOLLOW_rule__TerminalExpression__RefAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl6274);
             rule__TerminalExpression__RefAssignment_1_1();
             _fsp--;
 
@@ -7937,20 +8019,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3098:1: rule__TerminalExpression__Group_3__0 : rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3129:1: rule__TerminalExpression__Group_3__0 : rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 ;
     public final void rule__TerminalExpression__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3102:1: ( rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3103:2: rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3133:1: ( rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3134:2: rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06246);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06308);
             rule__TerminalExpression__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06249);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06311);
             rule__TerminalExpression__Group_3__1();
             _fsp--;
 
@@ -7973,21 +8055,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3110:1: rule__TerminalExpression__Group_3__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3141:1: rule__TerminalExpression__Group_3__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3114:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3115:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3145:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3146:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3115:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3116:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3146:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3147:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getVariantExpressionAction_3_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3117:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3119:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3148:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3150:1: 
             {
             }
 
@@ -8010,16 +8092,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3129:1: rule__TerminalExpression__Group_3__1 : rule__TerminalExpression__Group_3__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3160:1: rule__TerminalExpression__Group_3__1 : rule__TerminalExpression__Group_3__1__Impl ;
     public final void rule__TerminalExpression__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3133:1: ( rule__TerminalExpression__Group_3__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3134:2: rule__TerminalExpression__Group_3__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3164:1: ( rule__TerminalExpression__Group_3__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3165:2: rule__TerminalExpression__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16307);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16369);
             rule__TerminalExpression__Group_3__1__Impl();
             _fsp--;
 
@@ -8042,23 +8124,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3140:1: rule__TerminalExpression__Group_3__1__Impl : ( ( rule__TerminalExpression__VariantAssignment_3_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3171:1: rule__TerminalExpression__Group_3__1__Impl : ( ( rule__TerminalExpression__VariantAssignment_3_1 ) ) ;
     public final void rule__TerminalExpression__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3144:1: ( ( ( rule__TerminalExpression__VariantAssignment_3_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3145:1: ( ( rule__TerminalExpression__VariantAssignment_3_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3175:1: ( ( ( rule__TerminalExpression__VariantAssignment_3_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3176:1: ( ( rule__TerminalExpression__VariantAssignment_3_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3145:1: ( ( rule__TerminalExpression__VariantAssignment_3_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3146:1: ( rule__TerminalExpression__VariantAssignment_3_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3176:1: ( ( rule__TerminalExpression__VariantAssignment_3_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3177:1: ( rule__TerminalExpression__VariantAssignment_3_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getVariantAssignment_3_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3147:1: ( rule__TerminalExpression__VariantAssignment_3_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3147:2: rule__TerminalExpression__VariantAssignment_3_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3178:1: ( rule__TerminalExpression__VariantAssignment_3_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3178:2: rule__TerminalExpression__VariantAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__VariantAssignment_3_1_in_rule__TerminalExpression__Group_3__1__Impl6334);
+            pushFollow(FOLLOW_rule__TerminalExpression__VariantAssignment_3_1_in_rule__TerminalExpression__Group_3__1__Impl6396);
             rule__TerminalExpression__VariantAssignment_3_1();
             _fsp--;
 
@@ -8088,20 +8170,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3161:1: rule__TerminalExpression__Group_4__0 : rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3192:1: rule__TerminalExpression__Group_4__0 : rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 ;
     public final void rule__TerminalExpression__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3165:1: ( rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3166:2: rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3196:1: ( rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3197:2: rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06368);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06430);
             rule__TerminalExpression__Group_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06371);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06433);
             rule__TerminalExpression__Group_4__1();
             _fsp--;
 
@@ -8124,21 +8206,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3173:1: rule__TerminalExpression__Group_4__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3204:1: rule__TerminalExpression__Group_4__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3177:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3178:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3208:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3209:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3178:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3179:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3209:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3210:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getLiteralExpressionAction_4_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3180:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3182:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3211:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3213:1: 
             {
             }
 
@@ -8161,16 +8243,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3192:1: rule__TerminalExpression__Group_4__1 : rule__TerminalExpression__Group_4__1__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3223:1: rule__TerminalExpression__Group_4__1 : rule__TerminalExpression__Group_4__1__Impl ;
     public final void rule__TerminalExpression__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3196:1: ( rule__TerminalExpression__Group_4__1__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3197:2: rule__TerminalExpression__Group_4__1__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3227:1: ( rule__TerminalExpression__Group_4__1__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3228:2: rule__TerminalExpression__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16429);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16491);
             rule__TerminalExpression__Group_4__1__Impl();
             _fsp--;
 
@@ -8193,23 +8275,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3203:1: rule__TerminalExpression__Group_4__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_4_1 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3234:1: rule__TerminalExpression__Group_4__1__Impl : ( ( rule__TerminalExpression__ValueAssignment_4_1 ) ) ;
     public final void rule__TerminalExpression__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3207:1: ( ( ( rule__TerminalExpression__ValueAssignment_4_1 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3208:1: ( ( rule__TerminalExpression__ValueAssignment_4_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3238:1: ( ( ( rule__TerminalExpression__ValueAssignment_4_1 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3239:1: ( ( rule__TerminalExpression__ValueAssignment_4_1 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3208:1: ( ( rule__TerminalExpression__ValueAssignment_4_1 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3209:1: ( rule__TerminalExpression__ValueAssignment_4_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3239:1: ( ( rule__TerminalExpression__ValueAssignment_4_1 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3240:1: ( rule__TerminalExpression__ValueAssignment_4_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueAssignment_4_1()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3210:1: ( rule__TerminalExpression__ValueAssignment_4_1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3210:2: rule__TerminalExpression__ValueAssignment_4_1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3241:1: ( rule__TerminalExpression__ValueAssignment_4_1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3241:2: rule__TerminalExpression__ValueAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6456);
+            pushFollow(FOLLOW_rule__TerminalExpression__ValueAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6518);
             rule__TerminalExpression__ValueAssignment_4_1();
             _fsp--;
 
@@ -8239,20 +8321,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3224:1: rule__BuiltInCall__Group_0__0 : rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3255:1: rule__BuiltInCall__Group_0__0 : rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1 ;
     public final void rule__BuiltInCall__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3228:1: ( rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3229:2: rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3259:1: ( rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3260:2: rule__BuiltInCall__Group_0__0__Impl rule__BuiltInCall__Group_0__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__0__Impl_in_rule__BuiltInCall__Group_0__06490);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__0__Impl_in_rule__BuiltInCall__Group_0__06552);
             rule__BuiltInCall__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__1_in_rule__BuiltInCall__Group_0__06493);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__1_in_rule__BuiltInCall__Group_0__06555);
             rule__BuiltInCall__Group_0__1();
             _fsp--;
 
@@ -8275,21 +8357,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3236:1: rule__BuiltInCall__Group_0__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3267:1: rule__BuiltInCall__Group_0__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3240:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3241:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3271:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3272:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3241:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3242:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3272:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3273:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getINVAction_0_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3243:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3245:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3274:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3276:1: 
             {
             }
 
@@ -8312,20 +8394,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3255:1: rule__BuiltInCall__Group_0__1 : rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3286:1: rule__BuiltInCall__Group_0__1 : rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2 ;
     public final void rule__BuiltInCall__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3259:1: ( rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3260:2: rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3290:1: ( rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3291:2: rule__BuiltInCall__Group_0__1__Impl rule__BuiltInCall__Group_0__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__1__Impl_in_rule__BuiltInCall__Group_0__16551);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__1__Impl_in_rule__BuiltInCall__Group_0__16613);
             rule__BuiltInCall__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__2_in_rule__BuiltInCall__Group_0__16554);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__2_in_rule__BuiltInCall__Group_0__16616);
             rule__BuiltInCall__Group_0__2();
             _fsp--;
 
@@ -8348,20 +8430,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3267:1: rule__BuiltInCall__Group_0__1__Impl : ( 'INV' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3298:1: rule__BuiltInCall__Group_0__1__Impl : ( 'INV' ) ;
     public final void rule__BuiltInCall__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3271:1: ( ( 'INV' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3272:1: ( 'INV' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3302:1: ( ( 'INV' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3303:1: ( 'INV' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3272:1: ( 'INV' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3273:1: 'INV'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3303:1: ( 'INV' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3304:1: 'INV'
             {
              before(grammarAccess.getBuiltInCallAccess().getINVKeyword_0_1()); 
-            match(input,43,FOLLOW_43_in_rule__BuiltInCall__Group_0__1__Impl6582); 
+            match(input,43,FOLLOW_43_in_rule__BuiltInCall__Group_0__1__Impl6644); 
              after(grammarAccess.getBuiltInCallAccess().getINVKeyword_0_1()); 
 
             }
@@ -8385,20 +8467,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3286:1: rule__BuiltInCall__Group_0__2 : rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3317:1: rule__BuiltInCall__Group_0__2 : rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3 ;
     public final void rule__BuiltInCall__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3290:1: ( rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3291:2: rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3321:1: ( rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3322:2: rule__BuiltInCall__Group_0__2__Impl rule__BuiltInCall__Group_0__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__2__Impl_in_rule__BuiltInCall__Group_0__26613);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__2__Impl_in_rule__BuiltInCall__Group_0__26675);
             rule__BuiltInCall__Group_0__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__3_in_rule__BuiltInCall__Group_0__26616);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__3_in_rule__BuiltInCall__Group_0__26678);
             rule__BuiltInCall__Group_0__3();
             _fsp--;
 
@@ -8421,20 +8503,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3298:1: rule__BuiltInCall__Group_0__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3329:1: rule__BuiltInCall__Group_0__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3302:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3303:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3333:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3334:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3303:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3304:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3334:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3335:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_0_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_0__2__Impl6644); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_0__2__Impl6706); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_0_2()); 
 
             }
@@ -8458,20 +8540,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3317:1: rule__BuiltInCall__Group_0__3 : rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3348:1: rule__BuiltInCall__Group_0__3 : rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4 ;
     public final void rule__BuiltInCall__Group_0__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3321:1: ( rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3322:2: rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3352:1: ( rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3353:2: rule__BuiltInCall__Group_0__3__Impl rule__BuiltInCall__Group_0__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__3__Impl_in_rule__BuiltInCall__Group_0__36675);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__3__Impl_in_rule__BuiltInCall__Group_0__36737);
             rule__BuiltInCall__Group_0__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__4_in_rule__BuiltInCall__Group_0__36678);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__4_in_rule__BuiltInCall__Group_0__36740);
             rule__BuiltInCall__Group_0__4();
             _fsp--;
 
@@ -8494,23 +8576,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3329:1: rule__BuiltInCall__Group_0__3__Impl : ( ( rule__BuiltInCall__AAssignment_0_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3360:1: rule__BuiltInCall__Group_0__3__Impl : ( ( rule__BuiltInCall__AAssignment_0_3 ) ) ;
     public final void rule__BuiltInCall__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3333:1: ( ( ( rule__BuiltInCall__AAssignment_0_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3334:1: ( ( rule__BuiltInCall__AAssignment_0_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3364:1: ( ( ( rule__BuiltInCall__AAssignment_0_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3365:1: ( ( rule__BuiltInCall__AAssignment_0_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3334:1: ( ( rule__BuiltInCall__AAssignment_0_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3335:1: ( rule__BuiltInCall__AAssignment_0_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3365:1: ( ( rule__BuiltInCall__AAssignment_0_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3366:1: ( rule__BuiltInCall__AAssignment_0_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getAAssignment_0_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3336:1: ( rule__BuiltInCall__AAssignment_0_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3336:2: rule__BuiltInCall__AAssignment_0_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3367:1: ( rule__BuiltInCall__AAssignment_0_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3367:2: rule__BuiltInCall__AAssignment_0_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_0_3_in_rule__BuiltInCall__Group_0__3__Impl6705);
+            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_0_3_in_rule__BuiltInCall__Group_0__3__Impl6767);
             rule__BuiltInCall__AAssignment_0_3();
             _fsp--;
 
@@ -8540,16 +8622,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3346:1: rule__BuiltInCall__Group_0__4 : rule__BuiltInCall__Group_0__4__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3377:1: rule__BuiltInCall__Group_0__4 : rule__BuiltInCall__Group_0__4__Impl ;
     public final void rule__BuiltInCall__Group_0__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3350:1: ( rule__BuiltInCall__Group_0__4__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3351:2: rule__BuiltInCall__Group_0__4__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3381:1: ( rule__BuiltInCall__Group_0__4__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3382:2: rule__BuiltInCall__Group_0__4__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__4__Impl_in_rule__BuiltInCall__Group_0__46735);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_0__4__Impl_in_rule__BuiltInCall__Group_0__46797);
             rule__BuiltInCall__Group_0__4__Impl();
             _fsp--;
 
@@ -8572,20 +8654,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_0__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3357:1: rule__BuiltInCall__Group_0__4__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3388:1: rule__BuiltInCall__Group_0__4__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_0__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3361:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3362:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3392:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3393:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3362:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3363:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3393:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3394:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_0_4()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_0__4__Impl6763); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_0__4__Impl6825); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_0_4()); 
 
             }
@@ -8609,20 +8691,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3386:1: rule__BuiltInCall__Group_1__0 : rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3417:1: rule__BuiltInCall__Group_1__0 : rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1 ;
     public final void rule__BuiltInCall__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3390:1: ( rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3391:2: rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3421:1: ( rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3422:2: rule__BuiltInCall__Group_1__0__Impl rule__BuiltInCall__Group_1__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__0__Impl_in_rule__BuiltInCall__Group_1__06804);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__0__Impl_in_rule__BuiltInCall__Group_1__06866);
             rule__BuiltInCall__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__1_in_rule__BuiltInCall__Group_1__06807);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__1_in_rule__BuiltInCall__Group_1__06869);
             rule__BuiltInCall__Group_1__1();
             _fsp--;
 
@@ -8645,21 +8727,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3398:1: rule__BuiltInCall__Group_1__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3429:1: rule__BuiltInCall__Group_1__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3402:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3403:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3433:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3434:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3403:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3404:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3434:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3435:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getMIXAction_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3405:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3407:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3436:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3438:1: 
             {
             }
 
@@ -8682,20 +8764,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3417:1: rule__BuiltInCall__Group_1__1 : rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3448:1: rule__BuiltInCall__Group_1__1 : rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2 ;
     public final void rule__BuiltInCall__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3421:1: ( rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3422:2: rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3452:1: ( rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3453:2: rule__BuiltInCall__Group_1__1__Impl rule__BuiltInCall__Group_1__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__1__Impl_in_rule__BuiltInCall__Group_1__16865);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__1__Impl_in_rule__BuiltInCall__Group_1__16927);
             rule__BuiltInCall__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__2_in_rule__BuiltInCall__Group_1__16868);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__2_in_rule__BuiltInCall__Group_1__16930);
             rule__BuiltInCall__Group_1__2();
             _fsp--;
 
@@ -8718,20 +8800,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3429:1: rule__BuiltInCall__Group_1__1__Impl : ( 'MIX' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3460:1: rule__BuiltInCall__Group_1__1__Impl : ( 'MIX' ) ;
     public final void rule__BuiltInCall__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3433:1: ( ( 'MIX' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3434:1: ( 'MIX' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3464:1: ( ( 'MIX' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3465:1: ( 'MIX' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3434:1: ( 'MIX' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3435:1: 'MIX'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3465:1: ( 'MIX' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3466:1: 'MIX'
             {
              before(grammarAccess.getBuiltInCallAccess().getMIXKeyword_1_1()); 
-            match(input,44,FOLLOW_44_in_rule__BuiltInCall__Group_1__1__Impl6896); 
+            match(input,44,FOLLOW_44_in_rule__BuiltInCall__Group_1__1__Impl6958); 
              after(grammarAccess.getBuiltInCallAccess().getMIXKeyword_1_1()); 
 
             }
@@ -8755,20 +8837,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3448:1: rule__BuiltInCall__Group_1__2 : rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3479:1: rule__BuiltInCall__Group_1__2 : rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3 ;
     public final void rule__BuiltInCall__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3452:1: ( rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3453:2: rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3483:1: ( rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3484:2: rule__BuiltInCall__Group_1__2__Impl rule__BuiltInCall__Group_1__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__2__Impl_in_rule__BuiltInCall__Group_1__26927);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__2__Impl_in_rule__BuiltInCall__Group_1__26989);
             rule__BuiltInCall__Group_1__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__3_in_rule__BuiltInCall__Group_1__26930);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__3_in_rule__BuiltInCall__Group_1__26992);
             rule__BuiltInCall__Group_1__3();
             _fsp--;
 
@@ -8791,20 +8873,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3460:1: rule__BuiltInCall__Group_1__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3491:1: rule__BuiltInCall__Group_1__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3464:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3465:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3495:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3496:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3465:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3466:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3496:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3497:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_1_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_1__2__Impl6958); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_1__2__Impl7020); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_1_2()); 
 
             }
@@ -8828,20 +8910,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3479:1: rule__BuiltInCall__Group_1__3 : rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3510:1: rule__BuiltInCall__Group_1__3 : rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4 ;
     public final void rule__BuiltInCall__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3483:1: ( rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3484:2: rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3514:1: ( rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3515:2: rule__BuiltInCall__Group_1__3__Impl rule__BuiltInCall__Group_1__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__3__Impl_in_rule__BuiltInCall__Group_1__36989);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__3__Impl_in_rule__BuiltInCall__Group_1__37051);
             rule__BuiltInCall__Group_1__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__4_in_rule__BuiltInCall__Group_1__36992);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__4_in_rule__BuiltInCall__Group_1__37054);
             rule__BuiltInCall__Group_1__4();
             _fsp--;
 
@@ -8864,23 +8946,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3491:1: rule__BuiltInCall__Group_1__3__Impl : ( ( rule__BuiltInCall__AAssignment_1_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3522:1: rule__BuiltInCall__Group_1__3__Impl : ( ( rule__BuiltInCall__AAssignment_1_3 ) ) ;
     public final void rule__BuiltInCall__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3495:1: ( ( ( rule__BuiltInCall__AAssignment_1_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3496:1: ( ( rule__BuiltInCall__AAssignment_1_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3526:1: ( ( ( rule__BuiltInCall__AAssignment_1_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3527:1: ( ( rule__BuiltInCall__AAssignment_1_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3496:1: ( ( rule__BuiltInCall__AAssignment_1_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3497:1: ( rule__BuiltInCall__AAssignment_1_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3527:1: ( ( rule__BuiltInCall__AAssignment_1_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3528:1: ( rule__BuiltInCall__AAssignment_1_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getAAssignment_1_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3498:1: ( rule__BuiltInCall__AAssignment_1_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3498:2: rule__BuiltInCall__AAssignment_1_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3529:1: ( rule__BuiltInCall__AAssignment_1_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3529:2: rule__BuiltInCall__AAssignment_1_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_1_3_in_rule__BuiltInCall__Group_1__3__Impl7019);
+            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_1_3_in_rule__BuiltInCall__Group_1__3__Impl7081);
             rule__BuiltInCall__AAssignment_1_3();
             _fsp--;
 
@@ -8910,20 +8992,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3508:1: rule__BuiltInCall__Group_1__4 : rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3539:1: rule__BuiltInCall__Group_1__4 : rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5 ;
     public final void rule__BuiltInCall__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3512:1: ( rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3513:2: rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3543:1: ( rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3544:2: rule__BuiltInCall__Group_1__4__Impl rule__BuiltInCall__Group_1__5
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__4__Impl_in_rule__BuiltInCall__Group_1__47049);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__4__Impl_in_rule__BuiltInCall__Group_1__47111);
             rule__BuiltInCall__Group_1__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__5_in_rule__BuiltInCall__Group_1__47052);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__5_in_rule__BuiltInCall__Group_1__47114);
             rule__BuiltInCall__Group_1__5();
             _fsp--;
 
@@ -8946,20 +9028,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3520:1: rule__BuiltInCall__Group_1__4__Impl : ( ',' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3551:1: rule__BuiltInCall__Group_1__4__Impl : ( ',' ) ;
     public final void rule__BuiltInCall__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3524:1: ( ( ',' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3525:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3555:1: ( ( ',' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3556:1: ( ',' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3525:1: ( ',' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3526:1: ','
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3556:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3557:1: ','
             {
              before(grammarAccess.getBuiltInCallAccess().getCommaKeyword_1_4()); 
-            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_1__4__Impl7080); 
+            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_1__4__Impl7142); 
              after(grammarAccess.getBuiltInCallAccess().getCommaKeyword_1_4()); 
 
             }
@@ -8983,20 +9065,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3539:1: rule__BuiltInCall__Group_1__5 : rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3570:1: rule__BuiltInCall__Group_1__5 : rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6 ;
     public final void rule__BuiltInCall__Group_1__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3543:1: ( rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3544:2: rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3574:1: ( rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3575:2: rule__BuiltInCall__Group_1__5__Impl rule__BuiltInCall__Group_1__6
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__5__Impl_in_rule__BuiltInCall__Group_1__57111);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__5__Impl_in_rule__BuiltInCall__Group_1__57173);
             rule__BuiltInCall__Group_1__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__6_in_rule__BuiltInCall__Group_1__57114);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__6_in_rule__BuiltInCall__Group_1__57176);
             rule__BuiltInCall__Group_1__6();
             _fsp--;
 
@@ -9019,23 +9101,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3551:1: rule__BuiltInCall__Group_1__5__Impl : ( ( rule__BuiltInCall__BAssignment_1_5 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3582:1: rule__BuiltInCall__Group_1__5__Impl : ( ( rule__BuiltInCall__BAssignment_1_5 ) ) ;
     public final void rule__BuiltInCall__Group_1__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3555:1: ( ( ( rule__BuiltInCall__BAssignment_1_5 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3556:1: ( ( rule__BuiltInCall__BAssignment_1_5 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3586:1: ( ( ( rule__BuiltInCall__BAssignment_1_5 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3587:1: ( ( rule__BuiltInCall__BAssignment_1_5 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3556:1: ( ( rule__BuiltInCall__BAssignment_1_5 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3557:1: ( rule__BuiltInCall__BAssignment_1_5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3587:1: ( ( rule__BuiltInCall__BAssignment_1_5 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3588:1: ( rule__BuiltInCall__BAssignment_1_5 )
             {
              before(grammarAccess.getBuiltInCallAccess().getBAssignment_1_5()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3558:1: ( rule__BuiltInCall__BAssignment_1_5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3558:2: rule__BuiltInCall__BAssignment_1_5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3589:1: ( rule__BuiltInCall__BAssignment_1_5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3589:2: rule__BuiltInCall__BAssignment_1_5
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__BAssignment_1_5_in_rule__BuiltInCall__Group_1__5__Impl7141);
+            pushFollow(FOLLOW_rule__BuiltInCall__BAssignment_1_5_in_rule__BuiltInCall__Group_1__5__Impl7203);
             rule__BuiltInCall__BAssignment_1_5();
             _fsp--;
 
@@ -9065,20 +9147,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3568:1: rule__BuiltInCall__Group_1__6 : rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3599:1: rule__BuiltInCall__Group_1__6 : rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7 ;
     public final void rule__BuiltInCall__Group_1__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3572:1: ( rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3573:2: rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3603:1: ( rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3604:2: rule__BuiltInCall__Group_1__6__Impl rule__BuiltInCall__Group_1__7
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__6__Impl_in_rule__BuiltInCall__Group_1__67171);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__6__Impl_in_rule__BuiltInCall__Group_1__67233);
             rule__BuiltInCall__Group_1__6__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__7_in_rule__BuiltInCall__Group_1__67174);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__7_in_rule__BuiltInCall__Group_1__67236);
             rule__BuiltInCall__Group_1__7();
             _fsp--;
 
@@ -9101,20 +9183,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__6__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3580:1: rule__BuiltInCall__Group_1__6__Impl : ( ',' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3611:1: rule__BuiltInCall__Group_1__6__Impl : ( ',' ) ;
     public final void rule__BuiltInCall__Group_1__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3584:1: ( ( ',' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3585:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3615:1: ( ( ',' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3616:1: ( ',' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3585:1: ( ',' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3586:1: ','
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3616:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3617:1: ','
             {
              before(grammarAccess.getBuiltInCallAccess().getCommaKeyword_1_6()); 
-            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_1__6__Impl7202); 
+            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_1__6__Impl7264); 
              after(grammarAccess.getBuiltInCallAccess().getCommaKeyword_1_6()); 
 
             }
@@ -9138,20 +9220,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__7
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3599:1: rule__BuiltInCall__Group_1__7 : rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3630:1: rule__BuiltInCall__Group_1__7 : rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8 ;
     public final void rule__BuiltInCall__Group_1__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3603:1: ( rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3604:2: rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3634:1: ( rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3635:2: rule__BuiltInCall__Group_1__7__Impl rule__BuiltInCall__Group_1__8
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__7__Impl_in_rule__BuiltInCall__Group_1__77233);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__7__Impl_in_rule__BuiltInCall__Group_1__77295);
             rule__BuiltInCall__Group_1__7__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__8_in_rule__BuiltInCall__Group_1__77236);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__8_in_rule__BuiltInCall__Group_1__77298);
             rule__BuiltInCall__Group_1__8();
             _fsp--;
 
@@ -9174,23 +9256,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__7__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3611:1: rule__BuiltInCall__Group_1__7__Impl : ( ( rule__BuiltInCall__TAssignment_1_7 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3642:1: rule__BuiltInCall__Group_1__7__Impl : ( ( rule__BuiltInCall__TAssignment_1_7 ) ) ;
     public final void rule__BuiltInCall__Group_1__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3615:1: ( ( ( rule__BuiltInCall__TAssignment_1_7 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3616:1: ( ( rule__BuiltInCall__TAssignment_1_7 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3646:1: ( ( ( rule__BuiltInCall__TAssignment_1_7 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3647:1: ( ( rule__BuiltInCall__TAssignment_1_7 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3616:1: ( ( rule__BuiltInCall__TAssignment_1_7 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3617:1: ( rule__BuiltInCall__TAssignment_1_7 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3647:1: ( ( rule__BuiltInCall__TAssignment_1_7 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3648:1: ( rule__BuiltInCall__TAssignment_1_7 )
             {
              before(grammarAccess.getBuiltInCallAccess().getTAssignment_1_7()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3618:1: ( rule__BuiltInCall__TAssignment_1_7 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3618:2: rule__BuiltInCall__TAssignment_1_7
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3649:1: ( rule__BuiltInCall__TAssignment_1_7 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3649:2: rule__BuiltInCall__TAssignment_1_7
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__TAssignment_1_7_in_rule__BuiltInCall__Group_1__7__Impl7263);
+            pushFollow(FOLLOW_rule__BuiltInCall__TAssignment_1_7_in_rule__BuiltInCall__Group_1__7__Impl7325);
             rule__BuiltInCall__TAssignment_1_7();
             _fsp--;
 
@@ -9220,16 +9302,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__8
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3628:1: rule__BuiltInCall__Group_1__8 : rule__BuiltInCall__Group_1__8__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3659:1: rule__BuiltInCall__Group_1__8 : rule__BuiltInCall__Group_1__8__Impl ;
     public final void rule__BuiltInCall__Group_1__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3632:1: ( rule__BuiltInCall__Group_1__8__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3633:2: rule__BuiltInCall__Group_1__8__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3663:1: ( rule__BuiltInCall__Group_1__8__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3664:2: rule__BuiltInCall__Group_1__8__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__8__Impl_in_rule__BuiltInCall__Group_1__87293);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_1__8__Impl_in_rule__BuiltInCall__Group_1__87355);
             rule__BuiltInCall__Group_1__8__Impl();
             _fsp--;
 
@@ -9252,20 +9334,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_1__8__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3639:1: rule__BuiltInCall__Group_1__8__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3670:1: rule__BuiltInCall__Group_1__8__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_1__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3643:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3644:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3674:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3675:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3644:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3645:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3675:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3676:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_1_8()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_1__8__Impl7321); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_1__8__Impl7383); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_1_8()); 
 
             }
@@ -9289,20 +9371,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3676:1: rule__BuiltInCall__Group_2__0 : rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3707:1: rule__BuiltInCall__Group_2__0 : rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1 ;
     public final void rule__BuiltInCall__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3680:1: ( rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3681:2: rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3711:1: ( rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3712:2: rule__BuiltInCall__Group_2__0__Impl rule__BuiltInCall__Group_2__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__0__Impl_in_rule__BuiltInCall__Group_2__07370);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__0__Impl_in_rule__BuiltInCall__Group_2__07432);
             rule__BuiltInCall__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__1_in_rule__BuiltInCall__Group_2__07373);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__1_in_rule__BuiltInCall__Group_2__07435);
             rule__BuiltInCall__Group_2__1();
             _fsp--;
 
@@ -9325,21 +9407,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3688:1: rule__BuiltInCall__Group_2__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3719:1: rule__BuiltInCall__Group_2__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3692:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3693:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3723:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3724:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3693:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3694:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3724:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3725:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getSINAction_2_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3695:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3697:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3726:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3728:1: 
             {
             }
 
@@ -9362,20 +9444,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3707:1: rule__BuiltInCall__Group_2__1 : rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3738:1: rule__BuiltInCall__Group_2__1 : rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2 ;
     public final void rule__BuiltInCall__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3711:1: ( rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3712:2: rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3742:1: ( rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3743:2: rule__BuiltInCall__Group_2__1__Impl rule__BuiltInCall__Group_2__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__1__Impl_in_rule__BuiltInCall__Group_2__17431);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__1__Impl_in_rule__BuiltInCall__Group_2__17493);
             rule__BuiltInCall__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__2_in_rule__BuiltInCall__Group_2__17434);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__2_in_rule__BuiltInCall__Group_2__17496);
             rule__BuiltInCall__Group_2__2();
             _fsp--;
 
@@ -9398,20 +9480,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3719:1: rule__BuiltInCall__Group_2__1__Impl : ( 'SIN' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3750:1: rule__BuiltInCall__Group_2__1__Impl : ( 'SIN' ) ;
     public final void rule__BuiltInCall__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3723:1: ( ( 'SIN' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3724:1: ( 'SIN' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3754:1: ( ( 'SIN' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3755:1: ( 'SIN' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3724:1: ( 'SIN' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3725:1: 'SIN'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3755:1: ( 'SIN' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3756:1: 'SIN'
             {
              before(grammarAccess.getBuiltInCallAccess().getSINKeyword_2_1()); 
-            match(input,46,FOLLOW_46_in_rule__BuiltInCall__Group_2__1__Impl7462); 
+            match(input,46,FOLLOW_46_in_rule__BuiltInCall__Group_2__1__Impl7524); 
              after(grammarAccess.getBuiltInCallAccess().getSINKeyword_2_1()); 
 
             }
@@ -9435,20 +9517,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3738:1: rule__BuiltInCall__Group_2__2 : rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3769:1: rule__BuiltInCall__Group_2__2 : rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3 ;
     public final void rule__BuiltInCall__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3742:1: ( rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3743:2: rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3773:1: ( rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3774:2: rule__BuiltInCall__Group_2__2__Impl rule__BuiltInCall__Group_2__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__2__Impl_in_rule__BuiltInCall__Group_2__27493);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__2__Impl_in_rule__BuiltInCall__Group_2__27555);
             rule__BuiltInCall__Group_2__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__3_in_rule__BuiltInCall__Group_2__27496);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__3_in_rule__BuiltInCall__Group_2__27558);
             rule__BuiltInCall__Group_2__3();
             _fsp--;
 
@@ -9471,20 +9553,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3750:1: rule__BuiltInCall__Group_2__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3781:1: rule__BuiltInCall__Group_2__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3754:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3755:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3785:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3786:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3755:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3756:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3786:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3787:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_2_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_2__2__Impl7524); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_2__2__Impl7586); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_2_2()); 
 
             }
@@ -9508,20 +9590,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3769:1: rule__BuiltInCall__Group_2__3 : rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3800:1: rule__BuiltInCall__Group_2__3 : rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4 ;
     public final void rule__BuiltInCall__Group_2__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3773:1: ( rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3774:2: rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3804:1: ( rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3805:2: rule__BuiltInCall__Group_2__3__Impl rule__BuiltInCall__Group_2__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__3__Impl_in_rule__BuiltInCall__Group_2__37555);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__3__Impl_in_rule__BuiltInCall__Group_2__37617);
             rule__BuiltInCall__Group_2__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__4_in_rule__BuiltInCall__Group_2__37558);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__4_in_rule__BuiltInCall__Group_2__37620);
             rule__BuiltInCall__Group_2__4();
             _fsp--;
 
@@ -9544,23 +9626,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3781:1: rule__BuiltInCall__Group_2__3__Impl : ( ( rule__BuiltInCall__AAssignment_2_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3812:1: rule__BuiltInCall__Group_2__3__Impl : ( ( rule__BuiltInCall__AAssignment_2_3 ) ) ;
     public final void rule__BuiltInCall__Group_2__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3785:1: ( ( ( rule__BuiltInCall__AAssignment_2_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3786:1: ( ( rule__BuiltInCall__AAssignment_2_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3816:1: ( ( ( rule__BuiltInCall__AAssignment_2_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3817:1: ( ( rule__BuiltInCall__AAssignment_2_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3786:1: ( ( rule__BuiltInCall__AAssignment_2_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3787:1: ( rule__BuiltInCall__AAssignment_2_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3817:1: ( ( rule__BuiltInCall__AAssignment_2_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3818:1: ( rule__BuiltInCall__AAssignment_2_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getAAssignment_2_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3788:1: ( rule__BuiltInCall__AAssignment_2_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3788:2: rule__BuiltInCall__AAssignment_2_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3819:1: ( rule__BuiltInCall__AAssignment_2_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3819:2: rule__BuiltInCall__AAssignment_2_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_2_3_in_rule__BuiltInCall__Group_2__3__Impl7585);
+            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_2_3_in_rule__BuiltInCall__Group_2__3__Impl7647);
             rule__BuiltInCall__AAssignment_2_3();
             _fsp--;
 
@@ -9590,16 +9672,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3798:1: rule__BuiltInCall__Group_2__4 : rule__BuiltInCall__Group_2__4__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3829:1: rule__BuiltInCall__Group_2__4 : rule__BuiltInCall__Group_2__4__Impl ;
     public final void rule__BuiltInCall__Group_2__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3802:1: ( rule__BuiltInCall__Group_2__4__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3803:2: rule__BuiltInCall__Group_2__4__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3833:1: ( rule__BuiltInCall__Group_2__4__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3834:2: rule__BuiltInCall__Group_2__4__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__4__Impl_in_rule__BuiltInCall__Group_2__47615);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_2__4__Impl_in_rule__BuiltInCall__Group_2__47677);
             rule__BuiltInCall__Group_2__4__Impl();
             _fsp--;
 
@@ -9622,20 +9704,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_2__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3809:1: rule__BuiltInCall__Group_2__4__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3840:1: rule__BuiltInCall__Group_2__4__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_2__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3813:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3814:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3844:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3845:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3814:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3815:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3845:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3846:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_2_4()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_2__4__Impl7643); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_2__4__Impl7705); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_2_4()); 
 
             }
@@ -9659,20 +9741,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3838:1: rule__BuiltInCall__Group_3__0 : rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3869:1: rule__BuiltInCall__Group_3__0 : rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1 ;
     public final void rule__BuiltInCall__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3842:1: ( rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3843:2: rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3873:1: ( rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3874:2: rule__BuiltInCall__Group_3__0__Impl rule__BuiltInCall__Group_3__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__0__Impl_in_rule__BuiltInCall__Group_3__07684);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__0__Impl_in_rule__BuiltInCall__Group_3__07746);
             rule__BuiltInCall__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__1_in_rule__BuiltInCall__Group_3__07687);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__1_in_rule__BuiltInCall__Group_3__07749);
             rule__BuiltInCall__Group_3__1();
             _fsp--;
 
@@ -9695,21 +9777,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3850:1: rule__BuiltInCall__Group_3__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3881:1: rule__BuiltInCall__Group_3__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3854:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3855:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3885:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3886:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3855:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3856:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3886:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3887:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getBOOLAction_3_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3857:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3859:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3888:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3890:1: 
             {
             }
 
@@ -9732,20 +9814,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3869:1: rule__BuiltInCall__Group_3__1 : rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3900:1: rule__BuiltInCall__Group_3__1 : rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2 ;
     public final void rule__BuiltInCall__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3873:1: ( rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3874:2: rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3904:1: ( rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3905:2: rule__BuiltInCall__Group_3__1__Impl rule__BuiltInCall__Group_3__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__1__Impl_in_rule__BuiltInCall__Group_3__17745);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__1__Impl_in_rule__BuiltInCall__Group_3__17807);
             rule__BuiltInCall__Group_3__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__2_in_rule__BuiltInCall__Group_3__17748);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__2_in_rule__BuiltInCall__Group_3__17810);
             rule__BuiltInCall__Group_3__2();
             _fsp--;
 
@@ -9768,20 +9850,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3881:1: rule__BuiltInCall__Group_3__1__Impl : ( 'BOOL' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3912:1: rule__BuiltInCall__Group_3__1__Impl : ( 'BOOL' ) ;
     public final void rule__BuiltInCall__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3885:1: ( ( 'BOOL' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3886:1: ( 'BOOL' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3916:1: ( ( 'BOOL' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3917:1: ( 'BOOL' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3886:1: ( 'BOOL' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3887:1: 'BOOL'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3917:1: ( 'BOOL' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3918:1: 'BOOL'
             {
              before(grammarAccess.getBuiltInCallAccess().getBOOLKeyword_3_1()); 
-            match(input,47,FOLLOW_47_in_rule__BuiltInCall__Group_3__1__Impl7776); 
+            match(input,47,FOLLOW_47_in_rule__BuiltInCall__Group_3__1__Impl7838); 
              after(grammarAccess.getBuiltInCallAccess().getBOOLKeyword_3_1()); 
 
             }
@@ -9805,20 +9887,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3900:1: rule__BuiltInCall__Group_3__2 : rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3931:1: rule__BuiltInCall__Group_3__2 : rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3 ;
     public final void rule__BuiltInCall__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3904:1: ( rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3905:2: rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3935:1: ( rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3936:2: rule__BuiltInCall__Group_3__2__Impl rule__BuiltInCall__Group_3__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__2__Impl_in_rule__BuiltInCall__Group_3__27807);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__2__Impl_in_rule__BuiltInCall__Group_3__27869);
             rule__BuiltInCall__Group_3__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__3_in_rule__BuiltInCall__Group_3__27810);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__3_in_rule__BuiltInCall__Group_3__27872);
             rule__BuiltInCall__Group_3__3();
             _fsp--;
 
@@ -9841,20 +9923,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3912:1: rule__BuiltInCall__Group_3__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3943:1: rule__BuiltInCall__Group_3__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3916:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3917:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3947:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3948:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3917:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3918:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3948:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3949:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_3_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_3__2__Impl7838); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_3__2__Impl7900); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_3_2()); 
 
             }
@@ -9878,20 +9960,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3931:1: rule__BuiltInCall__Group_3__3 : rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3962:1: rule__BuiltInCall__Group_3__3 : rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4 ;
     public final void rule__BuiltInCall__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3935:1: ( rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3936:2: rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3966:1: ( rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3967:2: rule__BuiltInCall__Group_3__3__Impl rule__BuiltInCall__Group_3__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__3__Impl_in_rule__BuiltInCall__Group_3__37869);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__3__Impl_in_rule__BuiltInCall__Group_3__37931);
             rule__BuiltInCall__Group_3__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__4_in_rule__BuiltInCall__Group_3__37872);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__4_in_rule__BuiltInCall__Group_3__37934);
             rule__BuiltInCall__Group_3__4();
             _fsp--;
 
@@ -9914,23 +9996,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3943:1: rule__BuiltInCall__Group_3__3__Impl : ( ( rule__BuiltInCall__AAssignment_3_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3974:1: rule__BuiltInCall__Group_3__3__Impl : ( ( rule__BuiltInCall__AAssignment_3_3 ) ) ;
     public final void rule__BuiltInCall__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3947:1: ( ( ( rule__BuiltInCall__AAssignment_3_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3948:1: ( ( rule__BuiltInCall__AAssignment_3_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3978:1: ( ( ( rule__BuiltInCall__AAssignment_3_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3979:1: ( ( rule__BuiltInCall__AAssignment_3_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3948:1: ( ( rule__BuiltInCall__AAssignment_3_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3949:1: ( rule__BuiltInCall__AAssignment_3_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3979:1: ( ( rule__BuiltInCall__AAssignment_3_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3980:1: ( rule__BuiltInCall__AAssignment_3_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getAAssignment_3_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3950:1: ( rule__BuiltInCall__AAssignment_3_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3950:2: rule__BuiltInCall__AAssignment_3_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3981:1: ( rule__BuiltInCall__AAssignment_3_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3981:2: rule__BuiltInCall__AAssignment_3_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_3_3_in_rule__BuiltInCall__Group_3__3__Impl7899);
+            pushFollow(FOLLOW_rule__BuiltInCall__AAssignment_3_3_in_rule__BuiltInCall__Group_3__3__Impl7961);
             rule__BuiltInCall__AAssignment_3_3();
             _fsp--;
 
@@ -9960,16 +10042,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3960:1: rule__BuiltInCall__Group_3__4 : rule__BuiltInCall__Group_3__4__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3991:1: rule__BuiltInCall__Group_3__4 : rule__BuiltInCall__Group_3__4__Impl ;
     public final void rule__BuiltInCall__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3964:1: ( rule__BuiltInCall__Group_3__4__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3965:2: rule__BuiltInCall__Group_3__4__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3995:1: ( rule__BuiltInCall__Group_3__4__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3996:2: rule__BuiltInCall__Group_3__4__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__4__Impl_in_rule__BuiltInCall__Group_3__47929);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_3__4__Impl_in_rule__BuiltInCall__Group_3__47991);
             rule__BuiltInCall__Group_3__4__Impl();
             _fsp--;
 
@@ -9992,20 +10074,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_3__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3971:1: rule__BuiltInCall__Group_3__4__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4002:1: rule__BuiltInCall__Group_3__4__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3975:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3976:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4006:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4007:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3976:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:3977:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4007:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4008:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_3_4()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_3__4__Impl7957); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_3__4__Impl8019); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_3_4()); 
 
             }
@@ -10029,20 +10111,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4000:1: rule__BuiltInCall__Group_4__0 : rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4031:1: rule__BuiltInCall__Group_4__0 : rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1 ;
     public final void rule__BuiltInCall__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4004:1: ( rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4005:2: rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4035:1: ( rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4036:2: rule__BuiltInCall__Group_4__0__Impl rule__BuiltInCall__Group_4__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__0__Impl_in_rule__BuiltInCall__Group_4__07998);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__0__Impl_in_rule__BuiltInCall__Group_4__08060);
             rule__BuiltInCall__Group_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__1_in_rule__BuiltInCall__Group_4__08001);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__1_in_rule__BuiltInCall__Group_4__08063);
             rule__BuiltInCall__Group_4__1();
             _fsp--;
 
@@ -10065,21 +10147,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4012:1: rule__BuiltInCall__Group_4__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4043:1: rule__BuiltInCall__Group_4__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4016:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4017:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4047:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4048:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4017:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4018:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4048:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4049:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getSCALEAction_4_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4019:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4021:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4050:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4052:1: 
             {
             }
 
@@ -10102,20 +10184,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4031:1: rule__BuiltInCall__Group_4__1 : rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4062:1: rule__BuiltInCall__Group_4__1 : rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2 ;
     public final void rule__BuiltInCall__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4035:1: ( rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4036:2: rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4066:1: ( rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4067:2: rule__BuiltInCall__Group_4__1__Impl rule__BuiltInCall__Group_4__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__1__Impl_in_rule__BuiltInCall__Group_4__18059);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__1__Impl_in_rule__BuiltInCall__Group_4__18121);
             rule__BuiltInCall__Group_4__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__2_in_rule__BuiltInCall__Group_4__18062);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__2_in_rule__BuiltInCall__Group_4__18124);
             rule__BuiltInCall__Group_4__2();
             _fsp--;
 
@@ -10138,20 +10220,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4043:1: rule__BuiltInCall__Group_4__1__Impl : ( 'SCALE' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4074:1: rule__BuiltInCall__Group_4__1__Impl : ( 'SCALE' ) ;
     public final void rule__BuiltInCall__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4047:1: ( ( 'SCALE' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4048:1: ( 'SCALE' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4078:1: ( ( 'SCALE' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4079:1: ( 'SCALE' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4048:1: ( 'SCALE' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4049:1: 'SCALE'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4079:1: ( 'SCALE' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4080:1: 'SCALE'
             {
              before(grammarAccess.getBuiltInCallAccess().getSCALEKeyword_4_1()); 
-            match(input,48,FOLLOW_48_in_rule__BuiltInCall__Group_4__1__Impl8090); 
+            match(input,48,FOLLOW_48_in_rule__BuiltInCall__Group_4__1__Impl8152); 
              after(grammarAccess.getBuiltInCallAccess().getSCALEKeyword_4_1()); 
 
             }
@@ -10175,20 +10257,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4062:1: rule__BuiltInCall__Group_4__2 : rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4093:1: rule__BuiltInCall__Group_4__2 : rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3 ;
     public final void rule__BuiltInCall__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4066:1: ( rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4067:2: rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4097:1: ( rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4098:2: rule__BuiltInCall__Group_4__2__Impl rule__BuiltInCall__Group_4__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__2__Impl_in_rule__BuiltInCall__Group_4__28121);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__2__Impl_in_rule__BuiltInCall__Group_4__28183);
             rule__BuiltInCall__Group_4__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__3_in_rule__BuiltInCall__Group_4__28124);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__3_in_rule__BuiltInCall__Group_4__28186);
             rule__BuiltInCall__Group_4__3();
             _fsp--;
 
@@ -10211,20 +10293,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4074:1: rule__BuiltInCall__Group_4__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4105:1: rule__BuiltInCall__Group_4__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4078:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4079:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4109:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4110:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4079:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4080:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4110:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4111:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_4_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_4__2__Impl8152); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_4__2__Impl8214); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_4_2()); 
 
             }
@@ -10248,20 +10330,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4093:1: rule__BuiltInCall__Group_4__3 : rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4124:1: rule__BuiltInCall__Group_4__3 : rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4 ;
     public final void rule__BuiltInCall__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4097:1: ( rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4098:2: rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4128:1: ( rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4129:2: rule__BuiltInCall__Group_4__3__Impl rule__BuiltInCall__Group_4__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__3__Impl_in_rule__BuiltInCall__Group_4__38183);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__3__Impl_in_rule__BuiltInCall__Group_4__38245);
             rule__BuiltInCall__Group_4__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__4_in_rule__BuiltInCall__Group_4__38186);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__4_in_rule__BuiltInCall__Group_4__38248);
             rule__BuiltInCall__Group_4__4();
             _fsp--;
 
@@ -10284,23 +10366,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4105:1: rule__BuiltInCall__Group_4__3__Impl : ( ( rule__BuiltInCall__RateAssignment_4_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4136:1: rule__BuiltInCall__Group_4__3__Impl : ( ( rule__BuiltInCall__RateAssignment_4_3 ) ) ;
     public final void rule__BuiltInCall__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4109:1: ( ( ( rule__BuiltInCall__RateAssignment_4_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4110:1: ( ( rule__BuiltInCall__RateAssignment_4_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4140:1: ( ( ( rule__BuiltInCall__RateAssignment_4_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4141:1: ( ( rule__BuiltInCall__RateAssignment_4_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4110:1: ( ( rule__BuiltInCall__RateAssignment_4_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4111:1: ( rule__BuiltInCall__RateAssignment_4_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4141:1: ( ( rule__BuiltInCall__RateAssignment_4_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4142:1: ( rule__BuiltInCall__RateAssignment_4_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getRateAssignment_4_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4112:1: ( rule__BuiltInCall__RateAssignment_4_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4112:2: rule__BuiltInCall__RateAssignment_4_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4143:1: ( rule__BuiltInCall__RateAssignment_4_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4143:2: rule__BuiltInCall__RateAssignment_4_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__RateAssignment_4_3_in_rule__BuiltInCall__Group_4__3__Impl8213);
+            pushFollow(FOLLOW_rule__BuiltInCall__RateAssignment_4_3_in_rule__BuiltInCall__Group_4__3__Impl8275);
             rule__BuiltInCall__RateAssignment_4_3();
             _fsp--;
 
@@ -10330,20 +10412,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4122:1: rule__BuiltInCall__Group_4__4 : rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4153:1: rule__BuiltInCall__Group_4__4 : rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5 ;
     public final void rule__BuiltInCall__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4126:1: ( rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4127:2: rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4157:1: ( rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4158:2: rule__BuiltInCall__Group_4__4__Impl rule__BuiltInCall__Group_4__5
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__4__Impl_in_rule__BuiltInCall__Group_4__48243);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__4__Impl_in_rule__BuiltInCall__Group_4__48305);
             rule__BuiltInCall__Group_4__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__5_in_rule__BuiltInCall__Group_4__48246);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__5_in_rule__BuiltInCall__Group_4__48308);
             rule__BuiltInCall__Group_4__5();
             _fsp--;
 
@@ -10366,20 +10448,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4134:1: rule__BuiltInCall__Group_4__4__Impl : ( ',' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4165:1: rule__BuiltInCall__Group_4__4__Impl : ( ',' ) ;
     public final void rule__BuiltInCall__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4138:1: ( ( ',' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4139:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4169:1: ( ( ',' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4170:1: ( ',' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4139:1: ( ',' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4140:1: ','
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4170:1: ( ',' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4171:1: ','
             {
              before(grammarAccess.getBuiltInCallAccess().getCommaKeyword_4_4()); 
-            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_4__4__Impl8274); 
+            match(input,45,FOLLOW_45_in_rule__BuiltInCall__Group_4__4__Impl8336); 
              after(grammarAccess.getBuiltInCallAccess().getCommaKeyword_4_4()); 
 
             }
@@ -10403,20 +10485,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4153:1: rule__BuiltInCall__Group_4__5 : rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4184:1: rule__BuiltInCall__Group_4__5 : rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6 ;
     public final void rule__BuiltInCall__Group_4__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4157:1: ( rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4158:2: rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4188:1: ( rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4189:2: rule__BuiltInCall__Group_4__5__Impl rule__BuiltInCall__Group_4__6
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__5__Impl_in_rule__BuiltInCall__Group_4__58305);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__5__Impl_in_rule__BuiltInCall__Group_4__58367);
             rule__BuiltInCall__Group_4__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__6_in_rule__BuiltInCall__Group_4__58308);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__6_in_rule__BuiltInCall__Group_4__58370);
             rule__BuiltInCall__Group_4__6();
             _fsp--;
 
@@ -10439,23 +10521,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__5__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4165:1: rule__BuiltInCall__Group_4__5__Impl : ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4196:1: rule__BuiltInCall__Group_4__5__Impl : ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) ) ;
     public final void rule__BuiltInCall__Group_4__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4169:1: ( ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4170:1: ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4200:1: ( ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4201:1: ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4170:1: ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4171:1: ( rule__BuiltInCall__ExpressionAssignment_4_5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4201:1: ( ( rule__BuiltInCall__ExpressionAssignment_4_5 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4202:1: ( rule__BuiltInCall__ExpressionAssignment_4_5 )
             {
              before(grammarAccess.getBuiltInCallAccess().getExpressionAssignment_4_5()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4172:1: ( rule__BuiltInCall__ExpressionAssignment_4_5 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4172:2: rule__BuiltInCall__ExpressionAssignment_4_5
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4203:1: ( rule__BuiltInCall__ExpressionAssignment_4_5 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4203:2: rule__BuiltInCall__ExpressionAssignment_4_5
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__ExpressionAssignment_4_5_in_rule__BuiltInCall__Group_4__5__Impl8335);
+            pushFollow(FOLLOW_rule__BuiltInCall__ExpressionAssignment_4_5_in_rule__BuiltInCall__Group_4__5__Impl8397);
             rule__BuiltInCall__ExpressionAssignment_4_5();
             _fsp--;
 
@@ -10485,16 +10567,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4182:1: rule__BuiltInCall__Group_4__6 : rule__BuiltInCall__Group_4__6__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4213:1: rule__BuiltInCall__Group_4__6 : rule__BuiltInCall__Group_4__6__Impl ;
     public final void rule__BuiltInCall__Group_4__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4186:1: ( rule__BuiltInCall__Group_4__6__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4187:2: rule__BuiltInCall__Group_4__6__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4217:1: ( rule__BuiltInCall__Group_4__6__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4218:2: rule__BuiltInCall__Group_4__6__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__6__Impl_in_rule__BuiltInCall__Group_4__68365);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_4__6__Impl_in_rule__BuiltInCall__Group_4__68427);
             rule__BuiltInCall__Group_4__6__Impl();
             _fsp--;
 
@@ -10517,20 +10599,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_4__6__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4193:1: rule__BuiltInCall__Group_4__6__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4224:1: rule__BuiltInCall__Group_4__6__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_4__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4197:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4198:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4228:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4229:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4198:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4199:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4229:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4230:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_4_6()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_4__6__Impl8393); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_4__6__Impl8455); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_4_6()); 
 
             }
@@ -10554,20 +10636,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4226:1: rule__BuiltInCall__Group_5__0 : rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4257:1: rule__BuiltInCall__Group_5__0 : rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1 ;
     public final void rule__BuiltInCall__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4230:1: ( rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4231:2: rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4261:1: ( rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4262:2: rule__BuiltInCall__Group_5__0__Impl rule__BuiltInCall__Group_5__1
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__0__Impl_in_rule__BuiltInCall__Group_5__08438);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__0__Impl_in_rule__BuiltInCall__Group_5__08500);
             rule__BuiltInCall__Group_5__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__1_in_rule__BuiltInCall__Group_5__08441);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__1_in_rule__BuiltInCall__Group_5__08503);
             rule__BuiltInCall__Group_5__1();
             _fsp--;
 
@@ -10590,21 +10672,21 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__0__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4238:1: rule__BuiltInCall__Group_5__0__Impl : ( () ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4269:1: rule__BuiltInCall__Group_5__0__Impl : ( () ) ;
     public final void rule__BuiltInCall__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4242:1: ( ( () ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4243:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4273:1: ( ( () ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4274:1: ( () )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4243:1: ( () )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4244:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4274:1: ( () )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4275:1: ()
             {
              before(grammarAccess.getBuiltInCallAccess().getRADIALAction_5_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4245:1: ()
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4247:1: 
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4276:1: ()
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4278:1: 
             {
             }
 
@@ -10627,20 +10709,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4257:1: rule__BuiltInCall__Group_5__1 : rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4288:1: rule__BuiltInCall__Group_5__1 : rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2 ;
     public final void rule__BuiltInCall__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4261:1: ( rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4262:2: rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4292:1: ( rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4293:2: rule__BuiltInCall__Group_5__1__Impl rule__BuiltInCall__Group_5__2
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__1__Impl_in_rule__BuiltInCall__Group_5__18499);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__1__Impl_in_rule__BuiltInCall__Group_5__18561);
             rule__BuiltInCall__Group_5__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__2_in_rule__BuiltInCall__Group_5__18502);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__2_in_rule__BuiltInCall__Group_5__18564);
             rule__BuiltInCall__Group_5__2();
             _fsp--;
 
@@ -10663,20 +10745,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__1__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4269:1: rule__BuiltInCall__Group_5__1__Impl : ( 'RADIAL' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4300:1: rule__BuiltInCall__Group_5__1__Impl : ( 'RADIAL' ) ;
     public final void rule__BuiltInCall__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4273:1: ( ( 'RADIAL' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4274:1: ( 'RADIAL' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4304:1: ( ( 'RADIAL' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4305:1: ( 'RADIAL' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4274:1: ( 'RADIAL' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4275:1: 'RADIAL'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4305:1: ( 'RADIAL' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4306:1: 'RADIAL'
             {
              before(grammarAccess.getBuiltInCallAccess().getRADIALKeyword_5_1()); 
-            match(input,49,FOLLOW_49_in_rule__BuiltInCall__Group_5__1__Impl8530); 
+            match(input,49,FOLLOW_49_in_rule__BuiltInCall__Group_5__1__Impl8592); 
              after(grammarAccess.getBuiltInCallAccess().getRADIALKeyword_5_1()); 
 
             }
@@ -10700,20 +10782,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4288:1: rule__BuiltInCall__Group_5__2 : rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4319:1: rule__BuiltInCall__Group_5__2 : rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3 ;
     public final void rule__BuiltInCall__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4292:1: ( rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4293:2: rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4323:1: ( rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4324:2: rule__BuiltInCall__Group_5__2__Impl rule__BuiltInCall__Group_5__3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__2__Impl_in_rule__BuiltInCall__Group_5__28561);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__2__Impl_in_rule__BuiltInCall__Group_5__28623);
             rule__BuiltInCall__Group_5__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__3_in_rule__BuiltInCall__Group_5__28564);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__3_in_rule__BuiltInCall__Group_5__28626);
             rule__BuiltInCall__Group_5__3();
             _fsp--;
 
@@ -10736,20 +10818,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__2__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4300:1: rule__BuiltInCall__Group_5__2__Impl : ( '(' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4331:1: rule__BuiltInCall__Group_5__2__Impl : ( '(' ) ;
     public final void rule__BuiltInCall__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4304:1: ( ( '(' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4305:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4335:1: ( ( '(' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4336:1: ( '(' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4305:1: ( '(' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4306:1: '('
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4336:1: ( '(' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4337:1: '('
             {
              before(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_5_2()); 
-            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_5__2__Impl8592); 
+            match(input,41,FOLLOW_41_in_rule__BuiltInCall__Group_5__2__Impl8654); 
              after(grammarAccess.getBuiltInCallAccess().getLeftParenthesisKeyword_5_2()); 
 
             }
@@ -10773,20 +10855,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4319:1: rule__BuiltInCall__Group_5__3 : rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4 ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4350:1: rule__BuiltInCall__Group_5__3 : rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4 ;
     public final void rule__BuiltInCall__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4323:1: ( rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4324:2: rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4354:1: ( rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4355:2: rule__BuiltInCall__Group_5__3__Impl rule__BuiltInCall__Group_5__4
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__3__Impl_in_rule__BuiltInCall__Group_5__38623);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__3__Impl_in_rule__BuiltInCall__Group_5__38685);
             rule__BuiltInCall__Group_5__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__4_in_rule__BuiltInCall__Group_5__38626);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__4_in_rule__BuiltInCall__Group_5__38688);
             rule__BuiltInCall__Group_5__4();
             _fsp--;
 
@@ -10809,23 +10891,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__3__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4331:1: rule__BuiltInCall__Group_5__3__Impl : ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4362:1: rule__BuiltInCall__Group_5__3__Impl : ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) ) ;
     public final void rule__BuiltInCall__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4335:1: ( ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4336:1: ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4366:1: ( ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4367:1: ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4336:1: ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4337:1: ( rule__BuiltInCall__ExpressionAssignment_5_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4367:1: ( ( rule__BuiltInCall__ExpressionAssignment_5_3 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4368:1: ( rule__BuiltInCall__ExpressionAssignment_5_3 )
             {
              before(grammarAccess.getBuiltInCallAccess().getExpressionAssignment_5_3()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4338:1: ( rule__BuiltInCall__ExpressionAssignment_5_3 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4338:2: rule__BuiltInCall__ExpressionAssignment_5_3
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4369:1: ( rule__BuiltInCall__ExpressionAssignment_5_3 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4369:2: rule__BuiltInCall__ExpressionAssignment_5_3
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__ExpressionAssignment_5_3_in_rule__BuiltInCall__Group_5__3__Impl8653);
+            pushFollow(FOLLOW_rule__BuiltInCall__ExpressionAssignment_5_3_in_rule__BuiltInCall__Group_5__3__Impl8715);
             rule__BuiltInCall__ExpressionAssignment_5_3();
             _fsp--;
 
@@ -10855,16 +10937,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4348:1: rule__BuiltInCall__Group_5__4 : rule__BuiltInCall__Group_5__4__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4379:1: rule__BuiltInCall__Group_5__4 : rule__BuiltInCall__Group_5__4__Impl ;
     public final void rule__BuiltInCall__Group_5__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4352:1: ( rule__BuiltInCall__Group_5__4__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4353:2: rule__BuiltInCall__Group_5__4__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4383:1: ( rule__BuiltInCall__Group_5__4__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4384:2: rule__BuiltInCall__Group_5__4__Impl
             {
-            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__4__Impl_in_rule__BuiltInCall__Group_5__48683);
+            pushFollow(FOLLOW_rule__BuiltInCall__Group_5__4__Impl_in_rule__BuiltInCall__Group_5__48745);
             rule__BuiltInCall__Group_5__4__Impl();
             _fsp--;
 
@@ -10887,20 +10969,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__Group_5__4__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4359:1: rule__BuiltInCall__Group_5__4__Impl : ( ')' ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4390:1: rule__BuiltInCall__Group_5__4__Impl : ( ')' ) ;
     public final void rule__BuiltInCall__Group_5__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4363:1: ( ( ')' ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4364:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4394:1: ( ( ')' ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4395:1: ( ')' )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4364:1: ( ')' )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4365:1: ')'
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4395:1: ( ')' )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4396:1: ')'
             {
              before(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_5_4()); 
-            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_5__4__Impl8711); 
+            match(input,42,FOLLOW_42_in_rule__BuiltInCall__Group_5__4__Impl8773); 
              after(grammarAccess.getBuiltInCallAccess().getRightParenthesisKeyword_5_4()); 
 
             }
@@ -10924,17 +11006,17 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__UnorderedGroup
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4389:1: rule__Model__UnorderedGroup : ( rule__Model__UnorderedGroup__0 )? ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4420:1: rule__Model__UnorderedGroup : ( rule__Model__UnorderedGroup__0 )? ;
     public final void rule__Model__UnorderedGroup() throws RecognitionException {
 
             	int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getModelAccess().getUnorderedGroup());
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4394:1: ( ( rule__Model__UnorderedGroup__0 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4395:2: ( rule__Model__UnorderedGroup__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4425:1: ( ( rule__Model__UnorderedGroup__0 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4426:2: ( rule__Model__UnorderedGroup__0 )?
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4395:2: ( rule__Model__UnorderedGroup__0 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4426:2: ( rule__Model__UnorderedGroup__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -10946,9 +11028,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4395:2: rule__Model__UnorderedGroup__0
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4426:2: rule__Model__UnorderedGroup__0
                     {
-                    pushFollow(FOLLOW_rule__Model__UnorderedGroup__0_in_rule__Model__UnorderedGroup8753);
+                    pushFollow(FOLLOW_rule__Model__UnorderedGroup__0_in_rule__Model__UnorderedGroup8815);
                     rule__Model__UnorderedGroup__0();
                     _fsp--;
 
@@ -10978,17 +11060,17 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__UnorderedGroup__Impl
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4405:1: rule__Model__UnorderedGroup__Impl : ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4436:1: rule__Model__UnorderedGroup__Impl : ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) ) ;
     public final void rule__Model__UnorderedGroup__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4410:1: ( ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4411:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4441:1: ( ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4442:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4411:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4442:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -11000,22 +11082,22 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("4411:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )", 16, 0, input);
+                    new NoViableAltException("4442:3: ( ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) ) )", 16, 0, input);
 
                 throw nvae;
             }
             switch (alt16) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4413:4: ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4444:4: ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) )
                     {
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4413:4: ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4414:5: {...}? => ( ( ( rule__Model__StageAssignment_0 ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4444:4: ({...}? => ( ( ( rule__Model__StageAssignment_0 ) ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4445:5: {...}? => ( ( ( rule__Model__StageAssignment_0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
                         throw new FailedPredicateException(input, "rule__Model__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0)");
                     }
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4414:100: ( ( ( rule__Model__StageAssignment_0 ) ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4415:6: ( ( rule__Model__StageAssignment_0 ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4445:100: ( ( ( rule__Model__StageAssignment_0 ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4446:6: ( ( rule__Model__StageAssignment_0 ) )
                     {
                      
                     	 				  getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 0);
@@ -11023,14 +11105,14 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
                     	 				  selected = true;
                     	 				
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4421:6: ( ( rule__Model__StageAssignment_0 ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4423:7: ( rule__Model__StageAssignment_0 )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4452:6: ( ( rule__Model__StageAssignment_0 ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4454:7: ( rule__Model__StageAssignment_0 )
                     {
                      before(grammarAccess.getModelAccess().getStageAssignment_0()); 
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4424:7: ( rule__Model__StageAssignment_0 )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4424:8: rule__Model__StageAssignment_0
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4455:7: ( rule__Model__StageAssignment_0 )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4455:8: rule__Model__StageAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Model__StageAssignment_0_in_rule__Model__UnorderedGroup__Impl8840);
+                    pushFollow(FOLLOW_rule__Model__StageAssignment_0_in_rule__Model__UnorderedGroup__Impl8902);
                     rule__Model__StageAssignment_0();
                     _fsp--;
 
@@ -11051,16 +11133,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4430:4: ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4461:4: ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) )
                     {
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4430:4: ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4431:5: {...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4461:4: ({...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4462:5: {...}? => ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
                         throw new FailedPredicateException(input, "rule__Model__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1)");
                     }
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4431:100: ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4432:6: ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4462:100: ( ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4463:6: ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) )
                     {
                      
                     	 				  getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 1);
@@ -11068,17 +11150,17 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
                     	 				  selected = true;
                     	 				
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4438:6: ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4439:6: ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4469:6: ( ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4470:6: ( ( rule__Model__DefsAssignment_1 ) ) ( ( rule__Model__DefsAssignment_1 )* )
                     {
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4439:6: ( ( rule__Model__DefsAssignment_1 ) )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4440:7: ( rule__Model__DefsAssignment_1 )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4470:6: ( ( rule__Model__DefsAssignment_1 ) )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4471:7: ( rule__Model__DefsAssignment_1 )
                     {
                      before(grammarAccess.getModelAccess().getDefsAssignment_1()); 
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4441:7: ( rule__Model__DefsAssignment_1 )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4441:8: rule__Model__DefsAssignment_1
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4472:7: ( rule__Model__DefsAssignment_1 )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4472:8: rule__Model__DefsAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8932);
+                    pushFollow(FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8994);
                     rule__Model__DefsAssignment_1();
                     _fsp--;
 
@@ -11089,11 +11171,11 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
                     }
 
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4444:6: ( ( rule__Model__DefsAssignment_1 )* )
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4445:7: ( rule__Model__DefsAssignment_1 )*
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4475:6: ( ( rule__Model__DefsAssignment_1 )* )
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4476:7: ( rule__Model__DefsAssignment_1 )*
                     {
                      before(grammarAccess.getModelAccess().getDefsAssignment_1()); 
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4446:7: ( rule__Model__DefsAssignment_1 )*
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4477:7: ( rule__Model__DefsAssignment_1 )*
                     loop15:
                     do {
                         int alt15=2;
@@ -12018,9 +12100,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4446:8: rule__Model__DefsAssignment_1
+                    	    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4477:8: rule__Model__DefsAssignment_1
                     	    {
-                    	    pushFollow(FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8972);
+                    	    pushFollow(FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl9034);
                     	    rule__Model__DefsAssignment_1();
                     	    _fsp--;
 
@@ -12073,20 +12155,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__UnorderedGroup__0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4461:1: rule__Model__UnorderedGroup__0 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4492:1: rule__Model__UnorderedGroup__0 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? ;
     public final void rule__Model__UnorderedGroup__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4465:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4466:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4496:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4497:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )?
             {
-            pushFollow(FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__09038);
+            pushFollow(FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__09100);
             rule__Model__UnorderedGroup__Impl();
             _fsp--;
 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4467:2: ( rule__Model__UnorderedGroup__1 )?
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4498:2: ( rule__Model__UnorderedGroup__1 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -12098,9 +12180,9 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4467:2: rule__Model__UnorderedGroup__1
+                    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4498:2: rule__Model__UnorderedGroup__1
                     {
-                    pushFollow(FOLLOW_rule__Model__UnorderedGroup__1_in_rule__Model__UnorderedGroup__09041);
+                    pushFollow(FOLLOW_rule__Model__UnorderedGroup__1_in_rule__Model__UnorderedGroup__09103);
                     rule__Model__UnorderedGroup__1();
                     _fsp--;
 
@@ -12129,16 +12211,16 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__UnorderedGroup__1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4474:1: rule__Model__UnorderedGroup__1 : rule__Model__UnorderedGroup__Impl ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4505:1: rule__Model__UnorderedGroup__1 : rule__Model__UnorderedGroup__Impl ;
     public final void rule__Model__UnorderedGroup__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4478:1: ( rule__Model__UnorderedGroup__Impl )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4479:2: rule__Model__UnorderedGroup__Impl
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4509:1: ( rule__Model__UnorderedGroup__Impl )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4510:2: rule__Model__UnorderedGroup__Impl
             {
-            pushFollow(FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__19066);
+            pushFollow(FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__19128);
             rule__Model__UnorderedGroup__Impl();
             _fsp--;
 
@@ -12161,20 +12243,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__StageAssignment_0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4490:1: rule__Model__StageAssignment_0 : ( ruleStage ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4521:1: rule__Model__StageAssignment_0 : ( ruleStage ) ;
     public final void rule__Model__StageAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4494:1: ( ( ruleStage ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4495:1: ( ruleStage )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4525:1: ( ( ruleStage ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4526:1: ( ruleStage )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4495:1: ( ruleStage )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4496:1: ruleStage
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4526:1: ( ruleStage )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4527:1: ruleStage
             {
              before(grammarAccess.getModelAccess().getStageStageParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleStage_in_rule__Model__StageAssignment_09098);
+            pushFollow(FOLLOW_ruleStage_in_rule__Model__StageAssignment_09160);
             ruleStage();
             _fsp--;
 
@@ -12201,20 +12283,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__DefsAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4505:1: rule__Model__DefsAssignment_1 : ( ruleModuleDef ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4536:1: rule__Model__DefsAssignment_1 : ( ruleModuleDef ) ;
     public final void rule__Model__DefsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4509:1: ( ( ruleModuleDef ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4510:1: ( ruleModuleDef )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4540:1: ( ( ruleModuleDef ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4541:1: ( ruleModuleDef )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4510:1: ( ruleModuleDef )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4511:1: ruleModuleDef
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4541:1: ( ruleModuleDef )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4542:1: ruleModuleDef
             {
              before(grammarAccess.getModelAccess().getDefsModuleDefParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleModuleDef_in_rule__Model__DefsAssignment_19129);
+            pushFollow(FOLLOW_ruleModuleDef_in_rule__Model__DefsAssignment_19191);
             ruleModuleDef();
             _fsp--;
 
@@ -12240,22 +12322,22 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Model__DefsAssignment_1
 
 
-    // $ANTLR start rule__Stage__WidthAssignment_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4520:1: rule__Stage__WidthAssignment_3 : ( RULE_INT ) ;
-    public final void rule__Stage__WidthAssignment_3() throws RecognitionException {
+    // $ANTLR start rule__Stage__NameAssignment_1
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4551:1: rule__Stage__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Stage__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4524:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4525:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4555:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4556:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4525:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4526:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4556:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4557:1: RULE_ID
             {
-             before(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_3_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__WidthAssignment_39160); 
-             after(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_3_0()); 
+             before(grammarAccess.getStageAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Stage__NameAssignment_19222); 
+             after(grammarAccess.getStageAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -12274,25 +12356,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__WidthAssignment_3
+    // $ANTLR end rule__Stage__NameAssignment_1
 
 
-    // $ANTLR start rule__Stage__HeightAssignment_5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4535:1: rule__Stage__HeightAssignment_5 : ( RULE_INT ) ;
-    public final void rule__Stage__HeightAssignment_5() throws RecognitionException {
+    // $ANTLR start rule__Stage__WidthAssignment_4
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4566:1: rule__Stage__WidthAssignment_4 : ( RULE_INT ) ;
+    public final void rule__Stage__WidthAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4539:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4540:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4570:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4571:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4540:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4541:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4571:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4572:1: RULE_INT
             {
-             before(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_5_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__HeightAssignment_59191); 
-             after(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_5_0()); 
+             before(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_4_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__WidthAssignment_49253); 
+             after(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_4_0()); 
 
             }
 
@@ -12311,25 +12393,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__HeightAssignment_5
+    // $ANTLR end rule__Stage__WidthAssignment_4
 
 
-    // $ANTLR start rule__Stage__DepthAssignment_6_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4550:1: rule__Stage__DepthAssignment_6_1 : ( RULE_INT ) ;
-    public final void rule__Stage__DepthAssignment_6_1() throws RecognitionException {
+    // $ANTLR start rule__Stage__HeightAssignment_6
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4581:1: rule__Stage__HeightAssignment_6 : ( RULE_INT ) ;
+    public final void rule__Stage__HeightAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4554:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4555:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4585:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4586:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4555:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4556:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4586:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4587:1: RULE_INT
             {
-             before(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_6_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__DepthAssignment_6_19222); 
-             after(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_6_1_0()); 
+             before(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_6_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__HeightAssignment_69284); 
+             after(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_6_0()); 
 
             }
 
@@ -12348,25 +12430,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__DepthAssignment_6_1
+    // $ANTLR end rule__Stage__HeightAssignment_6
 
 
-    // $ANTLR start rule__Stage__DurationAssignment_7_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4565:1: rule__Stage__DurationAssignment_7_1 : ( RULE_INT ) ;
-    public final void rule__Stage__DurationAssignment_7_1() throws RecognitionException {
+    // $ANTLR start rule__Stage__DepthAssignment_7_1
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4596:1: rule__Stage__DepthAssignment_7_1 : ( RULE_INT ) ;
+    public final void rule__Stage__DepthAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4569:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4570:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4600:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4601:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4570:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4571:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4601:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4602:1: RULE_INT
             {
-             before(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_7_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__DurationAssignment_7_19253); 
-             after(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_7_1_0()); 
+             before(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_7_1_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__DepthAssignment_7_19315); 
+             after(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_7_1_0()); 
 
             }
 
@@ -12385,25 +12467,25 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__DurationAssignment_7_1
+    // $ANTLR end rule__Stage__DepthAssignment_7_1
 
 
-    // $ANTLR start rule__Stage__FpsAssignment_7_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4580:1: rule__Stage__FpsAssignment_7_3 : ( RULE_INT ) ;
-    public final void rule__Stage__FpsAssignment_7_3() throws RecognitionException {
+    // $ANTLR start rule__Stage__DurationAssignment_8_1
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4611:1: rule__Stage__DurationAssignment_8_1 : ( RULE_INT ) ;
+    public final void rule__Stage__DurationAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4584:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4585:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4615:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4616:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4585:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4586:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4616:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4617:1: RULE_INT
             {
-             before(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_7_3_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__FpsAssignment_7_39284); 
-             after(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_7_3_0()); 
+             before(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_8_1_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__DurationAssignment_8_19346); 
+             after(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_8_1_0()); 
 
             }
 
@@ -12422,28 +12504,65 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__FpsAssignment_7_3
+    // $ANTLR end rule__Stage__DurationAssignment_8_1
 
 
-    // $ANTLR start rule__Stage__OutputAssignment_9
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4595:1: rule__Stage__OutputAssignment_9 : ( ruleExpression ) ;
-    public final void rule__Stage__OutputAssignment_9() throws RecognitionException {
+    // $ANTLR start rule__Stage__FpsAssignment_8_3
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4626:1: rule__Stage__FpsAssignment_8_3 : ( RULE_INT ) ;
+    public final void rule__Stage__FpsAssignment_8_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4599:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4600:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4630:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4631:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4600:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4601:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4631:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4632:1: RULE_INT
             {
-             before(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_9_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Stage__OutputAssignment_99315);
+             before(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_8_3_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Stage__FpsAssignment_8_39377); 
+             after(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_8_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Stage__FpsAssignment_8_3
+
+
+    // $ANTLR start rule__Stage__OutputAssignment_10
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4641:1: rule__Stage__OutputAssignment_10 : ( ruleExpression ) ;
+    public final void rule__Stage__OutputAssignment_10() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4645:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4646:1: ( ruleExpression )
+            {
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4646:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4647:1: ruleExpression
+            {
+             before(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_10_0()); 
+            pushFollow(FOLLOW_ruleExpression_in_rule__Stage__OutputAssignment_109408);
             ruleExpression();
             _fsp--;
 
-             after(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_9_0()); 
+             after(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_10_0()); 
 
             }
 
@@ -12462,24 +12581,24 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__Stage__OutputAssignment_9
+    // $ANTLR end rule__Stage__OutputAssignment_10
 
 
     // $ANTLR start rule__ColorDef__NameAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4610:1: rule__ColorDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4656:1: rule__ColorDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ColorDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4614:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4615:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4660:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4661:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4615:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4616:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4661:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4662:1: RULE_ID
             {
              before(grammarAccess.getColorDefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ColorDef__NameAssignment_19346); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ColorDef__NameAssignment_19439); 
              after(grammarAccess.getColorDefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12503,23 +12622,23 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorDef__DefAssignment_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4625:1: rule__ColorDef__DefAssignment_3 : ( ( rule__ColorDef__DefAlternatives_3_0 ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4671:1: rule__ColorDef__DefAssignment_3 : ( ( rule__ColorDef__DefAlternatives_3_0 ) ) ;
     public final void rule__ColorDef__DefAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4629:1: ( ( ( rule__ColorDef__DefAlternatives_3_0 ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4630:1: ( ( rule__ColorDef__DefAlternatives_3_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4675:1: ( ( ( rule__ColorDef__DefAlternatives_3_0 ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4676:1: ( ( rule__ColorDef__DefAlternatives_3_0 ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4630:1: ( ( rule__ColorDef__DefAlternatives_3_0 ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4631:1: ( rule__ColorDef__DefAlternatives_3_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4676:1: ( ( rule__ColorDef__DefAlternatives_3_0 ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4677:1: ( rule__ColorDef__DefAlternatives_3_0 )
             {
              before(grammarAccess.getColorDefAccess().getDefAlternatives_3_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4632:1: ( rule__ColorDef__DefAlternatives_3_0 )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4632:2: rule__ColorDef__DefAlternatives_3_0
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4678:1: ( rule__ColorDef__DefAlternatives_3_0 )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4678:2: rule__ColorDef__DefAlternatives_3_0
             {
-            pushFollow(FOLLOW_rule__ColorDef__DefAlternatives_3_0_in_rule__ColorDef__DefAssignment_39377);
+            pushFollow(FOLLOW_rule__ColorDef__DefAlternatives_3_0_in_rule__ColorDef__DefAssignment_39470);
             rule__ColorDef__DefAlternatives_3_0();
             _fsp--;
 
@@ -12549,20 +12668,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__RAssignment_0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4641:1: rule__ColorFloatDef__RAssignment_0 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4687:1: rule__ColorFloatDef__RAssignment_0 : ( RULE_DECIMAL ) ;
     public final void rule__ColorFloatDef__RAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4645:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4646:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4691:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4692:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4646:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4647:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4692:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4693:1: RULE_DECIMAL
             {
              before(grammarAccess.getColorFloatDefAccess().getRDECIMALTerminalRuleCall_0_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__RAssignment_09410); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__RAssignment_09503); 
              after(grammarAccess.getColorFloatDefAccess().getRDECIMALTerminalRuleCall_0_0()); 
 
             }
@@ -12586,20 +12705,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__GAssignment_1_0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4656:1: rule__ColorFloatDef__GAssignment_1_0 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4702:1: rule__ColorFloatDef__GAssignment_1_0 : ( RULE_DECIMAL ) ;
     public final void rule__ColorFloatDef__GAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4660:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4661:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4706:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4707:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4661:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4662:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4707:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4708:1: RULE_DECIMAL
             {
              before(grammarAccess.getColorFloatDefAccess().getGDECIMALTerminalRuleCall_1_0_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__GAssignment_1_09441); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__GAssignment_1_09534); 
              after(grammarAccess.getColorFloatDefAccess().getGDECIMALTerminalRuleCall_1_0_0()); 
 
             }
@@ -12623,20 +12742,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__BAssignment_1_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4671:1: rule__ColorFloatDef__BAssignment_1_1 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4717:1: rule__ColorFloatDef__BAssignment_1_1 : ( RULE_DECIMAL ) ;
     public final void rule__ColorFloatDef__BAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4675:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4676:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4721:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4722:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4676:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4677:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4722:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4723:1: RULE_DECIMAL
             {
              before(grammarAccess.getColorFloatDefAccess().getBDECIMALTerminalRuleCall_1_1_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__BAssignment_1_19472); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__BAssignment_1_19565); 
              after(grammarAccess.getColorFloatDefAccess().getBDECIMALTerminalRuleCall_1_1_0()); 
 
             }
@@ -12660,20 +12779,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorFloatDef__AAssignment_1_2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4686:1: rule__ColorFloatDef__AAssignment_1_2 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4732:1: rule__ColorFloatDef__AAssignment_1_2 : ( RULE_DECIMAL ) ;
     public final void rule__ColorFloatDef__AAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4690:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4691:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4736:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4737:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4691:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4692:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4737:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4738:1: RULE_DECIMAL
             {
              before(grammarAccess.getColorFloatDefAccess().getADECIMALTerminalRuleCall_1_2_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__AAssignment_1_29503); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__AAssignment_1_29596); 
              after(grammarAccess.getColorFloatDefAccess().getADECIMALTerminalRuleCall_1_2_0()); 
 
             }
@@ -12697,20 +12816,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__RAssignment_0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4701:1: rule__ColorIntDef__RAssignment_0 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4747:1: rule__ColorIntDef__RAssignment_0 : ( RULE_INT ) ;
     public final void rule__ColorIntDef__RAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4705:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4706:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4751:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4752:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4706:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4707:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4752:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4753:1: RULE_INT
             {
              before(grammarAccess.getColorIntDefAccess().getRINTTerminalRuleCall_0_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__RAssignment_09534); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__RAssignment_09627); 
              after(grammarAccess.getColorIntDefAccess().getRINTTerminalRuleCall_0_0()); 
 
             }
@@ -12734,20 +12853,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__GAssignment_1_0
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4716:1: rule__ColorIntDef__GAssignment_1_0 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4762:1: rule__ColorIntDef__GAssignment_1_0 : ( RULE_INT ) ;
     public final void rule__ColorIntDef__GAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4720:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4721:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4766:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4767:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4721:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4722:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4767:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4768:1: RULE_INT
             {
              before(grammarAccess.getColorIntDefAccess().getGINTTerminalRuleCall_1_0_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__GAssignment_1_09565); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__GAssignment_1_09658); 
              after(grammarAccess.getColorIntDefAccess().getGINTTerminalRuleCall_1_0_0()); 
 
             }
@@ -12771,20 +12890,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__BAssignment_1_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4731:1: rule__ColorIntDef__BAssignment_1_1 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4777:1: rule__ColorIntDef__BAssignment_1_1 : ( RULE_INT ) ;
     public final void rule__ColorIntDef__BAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4735:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4736:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4781:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4782:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4736:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4737:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4782:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4783:1: RULE_INT
             {
              before(grammarAccess.getColorIntDefAccess().getBINTTerminalRuleCall_1_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__BAssignment_1_19596); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__BAssignment_1_19689); 
              after(grammarAccess.getColorIntDefAccess().getBINTTerminalRuleCall_1_1_0()); 
 
             }
@@ -12808,20 +12927,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorIntDef__AAssignment_1_2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4746:1: rule__ColorIntDef__AAssignment_1_2 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4792:1: rule__ColorIntDef__AAssignment_1_2 : ( RULE_INT ) ;
     public final void rule__ColorIntDef__AAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4750:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4751:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4796:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4797:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4751:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4752:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4797:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4798:1: RULE_INT
             {
              before(grammarAccess.getColorIntDefAccess().getAINTTerminalRuleCall_1_2_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__AAssignment_1_29627); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__ColorIntDef__AAssignment_1_29720); 
              after(grammarAccess.getColorIntDefAccess().getAINTTerminalRuleCall_1_2_0()); 
 
             }
@@ -12845,20 +12964,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ColorHexaDef__SAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4761:1: rule__ColorHexaDef__SAssignment_1 : ( RULE_STRING ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4807:1: rule__ColorHexaDef__SAssignment_1 : ( RULE_STRING ) ;
     public final void rule__ColorHexaDef__SAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4765:1: ( ( RULE_STRING ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4766:1: ( RULE_STRING )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4811:1: ( ( RULE_STRING ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4812:1: ( RULE_STRING )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4766:1: ( RULE_STRING )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4767:1: RULE_STRING
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4812:1: ( RULE_STRING )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4813:1: RULE_STRING
             {
              before(grammarAccess.getColorHexaDefAccess().getSSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ColorHexaDef__SAssignment_19658); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ColorHexaDef__SAssignment_19751); 
              after(grammarAccess.getColorHexaDefAccess().getSSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -12882,20 +13001,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__NameAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4776:1: rule__OperationDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4822:1: rule__OperationDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__OperationDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4780:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4781:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4826:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4827:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4781:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4782:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4827:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4828:1: RULE_ID
             {
              before(grammarAccess.getOperationDefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__OperationDef__NameAssignment_19689); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__OperationDef__NameAssignment_19782); 
              after(grammarAccess.getOperationDefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12919,20 +13038,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__OperationDef__OutputAssignment_4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4791:1: rule__OperationDef__OutputAssignment_4 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4837:1: rule__OperationDef__OutputAssignment_4 : ( ruleExpression ) ;
     public final void rule__OperationDef__OutputAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4795:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4796:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4841:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4842:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4796:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4797:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4842:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4843:1: ruleExpression
             {
              before(grammarAccess.getOperationDefAccess().getOutputExpressionParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__OperationDef__OutputAssignment_49720);
+            pushFollow(FOLLOW_ruleExpression_in_rule__OperationDef__OutputAssignment_49813);
             ruleExpression();
             _fsp--;
 
@@ -12959,20 +13078,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__NameAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4806:1: rule__NoiseDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4852:1: rule__NoiseDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__NoiseDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4810:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4811:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4856:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4857:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4811:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4812:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4857:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4858:1: RULE_ID
             {
              before(grammarAccess.getNoiseDefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NoiseDef__NameAssignment_19751); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__NoiseDef__NameAssignment_19844); 
              after(grammarAccess.getNoiseDefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12996,20 +13115,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__SeedAssignment_4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4821:1: rule__NoiseDef__SeedAssignment_4 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4867:1: rule__NoiseDef__SeedAssignment_4 : ( RULE_INT ) ;
     public final void rule__NoiseDef__SeedAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4825:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4826:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4871:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4872:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4826:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4827:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4872:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4873:1: RULE_INT
             {
              before(grammarAccess.getNoiseDefAccess().getSeedINTTerminalRuleCall_4_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NoiseDef__SeedAssignment_49782); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NoiseDef__SeedAssignment_49875); 
              after(grammarAccess.getNoiseDefAccess().getSeedINTTerminalRuleCall_4_0()); 
 
             }
@@ -13033,20 +13152,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__NoiseDef__FrequencyAssignment_6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4836:1: rule__NoiseDef__FrequencyAssignment_6 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4882:1: rule__NoiseDef__FrequencyAssignment_6 : ( RULE_INT ) ;
     public final void rule__NoiseDef__FrequencyAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4840:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4841:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4886:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4887:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4841:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4842:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4887:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4888:1: RULE_INT
             {
              before(grammarAccess.getNoiseDefAccess().getFrequencyINTTerminalRuleCall_6_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NoiseDef__FrequencyAssignment_69813); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__NoiseDef__FrequencyAssignment_69906); 
              after(grammarAccess.getNoiseDefAccess().getFrequencyINTTerminalRuleCall_6_0()); 
 
             }
@@ -13070,20 +13189,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__NameAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4851:1: rule__PerlinDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4897:1: rule__PerlinDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__PerlinDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4855:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4856:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4901:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4902:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4856:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4857:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4902:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4903:1: RULE_ID
             {
              before(grammarAccess.getPerlinDefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PerlinDef__NameAssignment_19844); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PerlinDef__NameAssignment_19937); 
              after(grammarAccess.getPerlinDefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -13107,20 +13226,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__SeedAssignment_4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4866:1: rule__PerlinDef__SeedAssignment_4 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4912:1: rule__PerlinDef__SeedAssignment_4 : ( RULE_INT ) ;
     public final void rule__PerlinDef__SeedAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4870:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4871:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4916:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4917:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4871:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4872:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4917:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4918:1: RULE_INT
             {
              before(grammarAccess.getPerlinDefAccess().getSeedINTTerminalRuleCall_4_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PerlinDef__SeedAssignment_49875); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PerlinDef__SeedAssignment_49968); 
              after(grammarAccess.getPerlinDefAccess().getSeedINTTerminalRuleCall_4_0()); 
 
             }
@@ -13144,20 +13263,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__IterationsAssignment_6
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4881:1: rule__PerlinDef__IterationsAssignment_6 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4927:1: rule__PerlinDef__IterationsAssignment_6 : ( RULE_INT ) ;
     public final void rule__PerlinDef__IterationsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4885:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4886:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4931:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4932:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4886:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4887:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4932:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4933:1: RULE_INT
             {
              before(grammarAccess.getPerlinDefAccess().getIterationsINTTerminalRuleCall_6_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PerlinDef__IterationsAssignment_69906); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PerlinDef__IterationsAssignment_69999); 
              after(grammarAccess.getPerlinDefAccess().getIterationsINTTerminalRuleCall_6_0()); 
 
             }
@@ -13181,20 +13300,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__PerlinDef__TurbulenceAssignment_8
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4896:1: rule__PerlinDef__TurbulenceAssignment_8 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4942:1: rule__PerlinDef__TurbulenceAssignment_8 : ( RULE_DECIMAL ) ;
     public final void rule__PerlinDef__TurbulenceAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4900:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4901:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4946:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4947:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4901:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4902:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4947:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4948:1: RULE_DECIMAL
             {
              before(grammarAccess.getPerlinDefAccess().getTurbulenceDECIMALTerminalRuleCall_8_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__PerlinDef__TurbulenceAssignment_89937); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__PerlinDef__TurbulenceAssignment_810030); 
              after(grammarAccess.getPerlinDefAccess().getTurbulenceDECIMALTerminalRuleCall_8_0()); 
 
             }
@@ -13218,20 +13337,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__NameAssignment_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4911:1: rule__MarbleDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4957:1: rule__MarbleDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__MarbleDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4915:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4916:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4961:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4962:1: ( RULE_ID )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4916:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4917:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4962:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4963:1: RULE_ID
             {
              before(grammarAccess.getMarbleDefAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MarbleDef__NameAssignment_19968); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MarbleDef__NameAssignment_110061); 
              after(grammarAccess.getMarbleDefAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -13255,20 +13374,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__MarbleDef__SeedAssignment_4
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4926:1: rule__MarbleDef__SeedAssignment_4 : ( RULE_INT ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4972:1: rule__MarbleDef__SeedAssignment_4 : ( RULE_INT ) ;
     public final void rule__MarbleDef__SeedAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4930:1: ( ( RULE_INT ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4931:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4976:1: ( ( RULE_INT ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4977:1: ( RULE_INT )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4931:1: ( RULE_INT )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4932:1: RULE_INT
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4977:1: ( RULE_INT )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4978:1: RULE_INT
             {
              before(grammarAccess.getMarbleDefAccess().getSeedINTTerminalRuleCall_4_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__MarbleDef__SeedAssignment_49999); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__MarbleDef__SeedAssignment_410092); 
              after(grammarAccess.getMarbleDefAccess().getSeedINTTerminalRuleCall_4_0()); 
 
             }
@@ -13292,20 +13411,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__OpAssignment_1_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4941:1: rule__Expression__OpAssignment_1_1 : ( ruleBOP ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4987:1: rule__Expression__OpAssignment_1_1 : ( ruleBOP ) ;
     public final void rule__Expression__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4945:1: ( ( ruleBOP ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4946:1: ( ruleBOP )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4991:1: ( ( ruleBOP ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4992:1: ( ruleBOP )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4946:1: ( ruleBOP )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4947:1: ruleBOP
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4992:1: ( ruleBOP )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4993:1: ruleBOP
             {
              before(grammarAccess.getExpressionAccess().getOpBOPParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleBOP_in_rule__Expression__OpAssignment_1_110030);
+            pushFollow(FOLLOW_ruleBOP_in_rule__Expression__OpAssignment_1_110123);
             ruleBOP();
             _fsp--;
 
@@ -13332,20 +13451,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Expression__RightAssignment_1_2
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4956:1: rule__Expression__RightAssignment_1_2 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5002:1: rule__Expression__RightAssignment_1_2 : ( ruleExpression ) ;
     public final void rule__Expression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4960:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4961:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5006:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5007:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4961:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4962:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5007:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5008:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getRightExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_210061);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_210154);
             ruleExpression();
             _fsp--;
 
@@ -13372,24 +13491,24 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__RefAssignment_1_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4971:1: rule__TerminalExpression__RefAssignment_1_1 : ( ( RULE_ID ) ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5017:1: rule__TerminalExpression__RefAssignment_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalExpression__RefAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4975:1: ( ( ( RULE_ID ) ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4976:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5021:1: ( ( ( RULE_ID ) ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5022:1: ( ( RULE_ID ) )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4976:1: ( ( RULE_ID ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4977:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5022:1: ( ( RULE_ID ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5023:1: ( RULE_ID )
             {
              before(grammarAccess.getTerminalExpressionAccess().getRefModuleDefCrossReference_1_1_0()); 
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4978:1: ( RULE_ID )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4979:1: RULE_ID
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5024:1: ( RULE_ID )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5025:1: RULE_ID
             {
              before(grammarAccess.getTerminalExpressionAccess().getRefModuleDefIDTerminalRuleCall_1_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TerminalExpression__RefAssignment_1_110096); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TerminalExpression__RefAssignment_1_110189); 
              after(grammarAccess.getTerminalExpressionAccess().getRefModuleDefIDTerminalRuleCall_1_1_0_1()); 
 
             }
@@ -13417,20 +13536,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__VariantAssignment_3_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4990:1: rule__TerminalExpression__VariantAssignment_3_1 : ( ruleVariant ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5036:1: rule__TerminalExpression__VariantAssignment_3_1 : ( ruleVariant ) ;
     public final void rule__TerminalExpression__VariantAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4994:1: ( ( ruleVariant ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4995:1: ( ruleVariant )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5040:1: ( ( ruleVariant ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5041:1: ( ruleVariant )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4995:1: ( ruleVariant )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:4996:1: ruleVariant
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5041:1: ( ruleVariant )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5042:1: ruleVariant
             {
              before(grammarAccess.getTerminalExpressionAccess().getVariantVariantEnumRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleVariant_in_rule__TerminalExpression__VariantAssignment_3_110131);
+            pushFollow(FOLLOW_ruleVariant_in_rule__TerminalExpression__VariantAssignment_3_110224);
             ruleVariant();
             _fsp--;
 
@@ -13457,20 +13576,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__TerminalExpression__ValueAssignment_4_1
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5005:1: rule__TerminalExpression__ValueAssignment_4_1 : ( RULE_DECIMAL ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5051:1: rule__TerminalExpression__ValueAssignment_4_1 : ( RULE_DECIMAL ) ;
     public final void rule__TerminalExpression__ValueAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5009:1: ( ( RULE_DECIMAL ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5010:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5055:1: ( ( RULE_DECIMAL ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5056:1: ( RULE_DECIMAL )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5010:1: ( RULE_DECIMAL )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5011:1: RULE_DECIMAL
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5056:1: ( RULE_DECIMAL )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5057:1: RULE_DECIMAL
             {
              before(grammarAccess.getTerminalExpressionAccess().getValueDECIMALTerminalRuleCall_4_1_0()); 
-            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__TerminalExpression__ValueAssignment_4_110162); 
+            match(input,RULE_DECIMAL,FOLLOW_RULE_DECIMAL_in_rule__TerminalExpression__ValueAssignment_4_110255); 
              after(grammarAccess.getTerminalExpressionAccess().getValueDECIMALTerminalRuleCall_4_1_0()); 
 
             }
@@ -13494,20 +13613,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__AAssignment_0_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5020:1: rule__BuiltInCall__AAssignment_0_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5066:1: rule__BuiltInCall__AAssignment_0_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__AAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5024:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5025:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5070:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5071:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5025:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5026:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5071:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5072:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getAExpressionParserRuleCall_0_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_0_310193);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_0_310286);
             ruleExpression();
             _fsp--;
 
@@ -13534,20 +13653,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__AAssignment_1_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5035:1: rule__BuiltInCall__AAssignment_1_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5081:1: rule__BuiltInCall__AAssignment_1_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__AAssignment_1_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5039:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5040:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5085:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5086:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5040:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5041:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5086:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5087:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getAExpressionParserRuleCall_1_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_1_310224);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_1_310317);
             ruleExpression();
             _fsp--;
 
@@ -13574,20 +13693,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__BAssignment_1_5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5050:1: rule__BuiltInCall__BAssignment_1_5 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5096:1: rule__BuiltInCall__BAssignment_1_5 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__BAssignment_1_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5054:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5055:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5100:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5101:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5055:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5056:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5101:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5102:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getBExpressionParserRuleCall_1_5_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__BAssignment_1_510255);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__BAssignment_1_510348);
             ruleExpression();
             _fsp--;
 
@@ -13614,20 +13733,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__TAssignment_1_7
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5065:1: rule__BuiltInCall__TAssignment_1_7 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5111:1: rule__BuiltInCall__TAssignment_1_7 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__TAssignment_1_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5069:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5070:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5115:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5116:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5070:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5071:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5116:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5117:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getTExpressionParserRuleCall_1_7_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__TAssignment_1_710286);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__TAssignment_1_710379);
             ruleExpression();
             _fsp--;
 
@@ -13654,20 +13773,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__AAssignment_2_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5080:1: rule__BuiltInCall__AAssignment_2_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5126:1: rule__BuiltInCall__AAssignment_2_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__AAssignment_2_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5084:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5085:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5130:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5131:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5085:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5086:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5131:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5132:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getAExpressionParserRuleCall_2_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_2_310317);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_2_310410);
             ruleExpression();
             _fsp--;
 
@@ -13694,20 +13813,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__AAssignment_3_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5095:1: rule__BuiltInCall__AAssignment_3_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5141:1: rule__BuiltInCall__AAssignment_3_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__AAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5099:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5100:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5145:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5146:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5100:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5101:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5146:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5147:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getAExpressionParserRuleCall_3_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_3_310348);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_3_310441);
             ruleExpression();
             _fsp--;
 
@@ -13734,20 +13853,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__RateAssignment_4_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5110:1: rule__BuiltInCall__RateAssignment_4_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5156:1: rule__BuiltInCall__RateAssignment_4_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__RateAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5114:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5115:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5160:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5161:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5115:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5116:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5161:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5162:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getRateExpressionParserRuleCall_4_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__RateAssignment_4_310379);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__RateAssignment_4_310472);
             ruleExpression();
             _fsp--;
 
@@ -13774,20 +13893,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__ExpressionAssignment_4_5
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5125:1: rule__BuiltInCall__ExpressionAssignment_4_5 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5171:1: rule__BuiltInCall__ExpressionAssignment_4_5 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__ExpressionAssignment_4_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5129:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5130:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5175:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5176:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5130:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5131:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5176:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5177:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getExpressionExpressionParserRuleCall_4_5_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_4_510410);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_4_510503);
             ruleExpression();
             _fsp--;
 
@@ -13814,20 +13933,20 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__BuiltInCall__ExpressionAssignment_5_3
-    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5140:1: rule__BuiltInCall__ExpressionAssignment_5_3 : ( ruleExpression ) ;
+    // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5186:1: rule__BuiltInCall__ExpressionAssignment_5_3 : ( ruleExpression ) ;
     public final void rule__BuiltInCall__ExpressionAssignment_5_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5144:1: ( ( ruleExpression ) )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5145:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5190:1: ( ( ruleExpression ) )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5191:1: ( ruleExpression )
             {
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5145:1: ( ruleExpression )
-            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5146:1: ruleExpression
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5191:1: ( ruleExpression )
+            // ../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g:5192:1: ruleExpression
             {
              before(grammarAccess.getBuiltInCallAccess().getExpressionExpressionParserRuleCall_5_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_5_310441);
+            pushFollow(FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_5_310534);
             ruleExpression();
             _fsp--;
 
@@ -13930,363 +14049,367 @@ public class InternalPmDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_19_in_rule__Variant__Alternatives1559 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_20_in_rule__Variant__Alternatives1580 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_rule__Variant__Alternatives1601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__0__Impl_in_rule__Stage__Group__01634 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__0__Impl_in_rule__Stage__Group__01634 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Stage__Group__1_in_rule__Stage__Group__01637 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_rule__Stage__Group__0__Impl1665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__1__Impl_in_rule__Stage__Group__11696 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__1__Impl_in_rule__Stage__Group__11696 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_rule__Stage__Group__2_in_rule__Stage__Group__11699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Stage__Group__1__Impl1727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__2__Impl_in_rule__Stage__Group__21758 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Stage__Group__3_in_rule__Stage__Group__21761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Stage__Group__2__Impl1789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__3__Impl_in_rule__Stage__Group__31820 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Stage__Group__4_in_rule__Stage__Group__31823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__WidthAssignment_3_in_rule__Stage__Group__3__Impl1850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__4__Impl_in_rule__Stage__Group__41880 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Stage__NameAssignment_1_in_rule__Stage__Group__1__Impl1726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__2__Impl_in_rule__Stage__Group__21756 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__3_in_rule__Stage__Group__21759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Stage__Group__2__Impl1787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__3__Impl_in_rule__Stage__Group__31818 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Stage__Group__4_in_rule__Stage__Group__31821 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Stage__Group__3__Impl1849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__4__Impl_in_rule__Stage__Group__41880 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_rule__Stage__Group__5_in_rule__Stage__Group__41883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Stage__Group__4__Impl1911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__5__Impl_in_rule__Stage__Group__51942 = new BitSet(new long[]{0x0000000034000000L});
-    public static final BitSet FOLLOW_rule__Stage__Group__6_in_rule__Stage__Group__51945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__HeightAssignment_5_in_rule__Stage__Group__5__Impl1972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__6__Impl_in_rule__Stage__Group__62002 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_rule__Stage__WidthAssignment_4_in_rule__Stage__Group__4__Impl1910 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__5__Impl_in_rule__Stage__Group__51940 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Stage__Group__6_in_rule__Stage__Group__51943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Stage__Group__5__Impl1971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__6__Impl_in_rule__Stage__Group__62002 = new BitSet(new long[]{0x0000000034000000L});
     public static final BitSet FOLLOW_rule__Stage__Group__7_in_rule__Stage__Group__62005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_6__0_in_rule__Stage__Group__6__Impl2032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__7__Impl_in_rule__Stage__Group__72063 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Stage__Group__8_in_rule__Stage__Group__72066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__0_in_rule__Stage__Group__7__Impl2093 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__8__Impl_in_rule__Stage__Group__82124 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__Stage__Group__9_in_rule__Stage__Group__82127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Stage__Group__8__Impl2155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__9__Impl_in_rule__Stage__Group__92186 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Stage__Group__10_in_rule__Stage__Group__92189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__OutputAssignment_9_in_rule__Stage__Group__9__Impl2216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group__10__Impl_in_rule__Stage__Group__102246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Stage__Group__10__Impl2274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_6__0__Impl_in_rule__Stage__Group_6__02327 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Stage__Group_6__1_in_rule__Stage__Group_6__02330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Stage__Group_6__0__Impl2358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_6__1__Impl_in_rule__Stage__Group_6__12389 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__DepthAssignment_6_1_in_rule__Stage__Group_6__1__Impl2416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__0__Impl_in_rule__Stage__Group_7__02450 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__1_in_rule__Stage__Group_7__02453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Stage__Group_7__0__Impl2481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__1__Impl_in_rule__Stage__Group_7__12512 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__2_in_rule__Stage__Group_7__12515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__DurationAssignment_7_1_in_rule__Stage__Group_7__1__Impl2542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__2__Impl_in_rule__Stage__Group_7__22572 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__3_in_rule__Stage__Group_7__22575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Stage__Group_7__2__Impl2603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__Group_7__3__Impl_in_rule__Stage__Group_7__32634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Stage__FpsAssignment_7_3_in_rule__Stage__Group_7__3__Impl2661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__0__Impl_in_rule__ColorDef__Group__02699 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__1_in_rule__ColorDef__Group__02702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__ColorDef__Group__0__Impl2730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__1__Impl_in_rule__ColorDef__Group__12761 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__2_in_rule__ColorDef__Group__12764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__NameAssignment_1_in_rule__ColorDef__Group__1__Impl2791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__2__Impl_in_rule__ColorDef__Group__22821 = new BitSet(new long[]{0x0000000100000050L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__3_in_rule__ColorDef__Group__22824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__ColorDef__Group__2__Impl2852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__3__Impl_in_rule__ColorDef__Group__32883 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__4_in_rule__ColorDef__Group__32886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__DefAssignment_3_in_rule__ColorDef__Group__3__Impl2913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__Group__4__Impl_in_rule__ColorDef__Group__42943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__ColorDef__Group__4__Impl2971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__0__Impl_in_rule__ColorFloatDef__Group__03012 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__1_in_rule__ColorFloatDef__Group__03015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__RAssignment_0_in_rule__ColorFloatDef__Group__0__Impl3042 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__1__Impl_in_rule__ColorFloatDef__Group__13072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__0_in_rule__ColorFloatDef__Group__1__Impl3099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__0__Impl_in_rule__ColorFloatDef__Group_1__03134 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__1_in_rule__ColorFloatDef__Group_1__03137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__GAssignment_1_0_in_rule__ColorFloatDef__Group_1__0__Impl3164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__1__Impl_in_rule__ColorFloatDef__Group_1__13194 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__2_in_rule__ColorFloatDef__Group_1__13197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__BAssignment_1_1_in_rule__ColorFloatDef__Group_1__1__Impl3224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__2__Impl_in_rule__ColorFloatDef__Group_1__23254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorFloatDef__AAssignment_1_2_in_rule__ColorFloatDef__Group_1__2__Impl3281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group__0__Impl_in_rule__ColorIntDef__Group__03318 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group__1_in_rule__ColorIntDef__Group__03321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__RAssignment_0_in_rule__ColorIntDef__Group__0__Impl3348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group__1__Impl_in_rule__ColorIntDef__Group__13378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__0_in_rule__ColorIntDef__Group__1__Impl3405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__0__Impl_in_rule__ColorIntDef__Group_1__03440 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__1_in_rule__ColorIntDef__Group_1__03443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__GAssignment_1_0_in_rule__ColorIntDef__Group_1__0__Impl3470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__1__Impl_in_rule__ColorIntDef__Group_1__13500 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__2_in_rule__ColorIntDef__Group_1__13503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__BAssignment_1_1_in_rule__ColorIntDef__Group_1__1__Impl3530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__2__Impl_in_rule__ColorIntDef__Group_1__23560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorIntDef__AAssignment_1_2_in_rule__ColorIntDef__Group_1__2__Impl3587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__0__Impl_in_rule__ColorHexaDef__Group__03624 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__1_in_rule__ColorHexaDef__Group__03627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__ColorHexaDef__Group__0__Impl3655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__1__Impl_in_rule__ColorHexaDef__Group__13686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorHexaDef__SAssignment_1_in_rule__ColorHexaDef__Group__1__Impl3713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__0__Impl_in_rule__OperationDef__Group__03747 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__1_in_rule__OperationDef__Group__03750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__OperationDef__Group__0__Impl3778 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__1__Impl_in_rule__OperationDef__Group__13809 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__2_in_rule__OperationDef__Group__13812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__NameAssignment_1_in_rule__OperationDef__Group__1__Impl3839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__2__Impl_in_rule__OperationDef__Group__23869 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__3_in_rule__OperationDef__Group__23872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__OperationDef__Group__2__Impl3900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__3__Impl_in_rule__OperationDef__Group__33931 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__4_in_rule__OperationDef__Group__33934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__OperationDef__Group__3__Impl3962 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__4__Impl_in_rule__OperationDef__Group__43993 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__5_in_rule__OperationDef__Group__43996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__OutputAssignment_4_in_rule__OperationDef__Group__4__Impl4023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OperationDef__Group__5__Impl_in_rule__OperationDef__Group__54053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__OperationDef__Group__5__Impl4081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__0__Impl_in_rule__NoiseDef__Group__04124 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__1_in_rule__NoiseDef__Group__04127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__NoiseDef__Group__0__Impl4155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__1__Impl_in_rule__NoiseDef__Group__14186 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__2_in_rule__NoiseDef__Group__14189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__NameAssignment_1_in_rule__NoiseDef__Group__1__Impl4216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__2__Impl_in_rule__NoiseDef__Group__24246 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__3_in_rule__NoiseDef__Group__24249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__NoiseDef__Group__2__Impl4277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__3__Impl_in_rule__NoiseDef__Group__34308 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__4_in_rule__NoiseDef__Group__34311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__NoiseDef__Group__3__Impl4339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__4__Impl_in_rule__NoiseDef__Group__44370 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__5_in_rule__NoiseDef__Group__44373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__SeedAssignment_4_in_rule__NoiseDef__Group__4__Impl4400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__5__Impl_in_rule__NoiseDef__Group__54430 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__6_in_rule__NoiseDef__Group__54433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__NoiseDef__Group__5__Impl4461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__6__Impl_in_rule__NoiseDef__Group__64492 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__7_in_rule__NoiseDef__Group__64495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__FrequencyAssignment_6_in_rule__NoiseDef__Group__6__Impl4522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NoiseDef__Group__7__Impl_in_rule__NoiseDef__Group__74552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__NoiseDef__Group__7__Impl4580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__0__Impl_in_rule__PerlinDef__Group__04627 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__1_in_rule__PerlinDef__Group__04630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__PerlinDef__Group__0__Impl4658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__1__Impl_in_rule__PerlinDef__Group__14689 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__2_in_rule__PerlinDef__Group__14692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__NameAssignment_1_in_rule__PerlinDef__Group__1__Impl4719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__2__Impl_in_rule__PerlinDef__Group__24749 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__3_in_rule__PerlinDef__Group__24752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__PerlinDef__Group__2__Impl4780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__3__Impl_in_rule__PerlinDef__Group__34811 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__4_in_rule__PerlinDef__Group__34814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__PerlinDef__Group__3__Impl4842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__4__Impl_in_rule__PerlinDef__Group__44873 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__5_in_rule__PerlinDef__Group__44876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__SeedAssignment_4_in_rule__PerlinDef__Group__4__Impl4903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__5__Impl_in_rule__PerlinDef__Group__54933 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__6_in_rule__PerlinDef__Group__54936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__PerlinDef__Group__5__Impl4964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__6__Impl_in_rule__PerlinDef__Group__64995 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__7_in_rule__PerlinDef__Group__64998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__IterationsAssignment_6_in_rule__PerlinDef__Group__6__Impl5025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__7__Impl_in_rule__PerlinDef__Group__75055 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__8_in_rule__PerlinDef__Group__75058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__PerlinDef__Group__7__Impl5086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__8__Impl_in_rule__PerlinDef__Group__85117 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__9_in_rule__PerlinDef__Group__85120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__TurbulenceAssignment_8_in_rule__PerlinDef__Group__8__Impl5147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PerlinDef__Group__9__Impl_in_rule__PerlinDef__Group__95177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__PerlinDef__Group__9__Impl5205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__0__Impl_in_rule__MarbleDef__Group__05256 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__1_in_rule__MarbleDef__Group__05259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__MarbleDef__Group__0__Impl5287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__1__Impl_in_rule__MarbleDef__Group__15318 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__2_in_rule__MarbleDef__Group__15321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__NameAssignment_1_in_rule__MarbleDef__Group__1__Impl5348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__2__Impl_in_rule__MarbleDef__Group__25378 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__3_in_rule__MarbleDef__Group__25381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__MarbleDef__Group__2__Impl5409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__3__Impl_in_rule__MarbleDef__Group__35440 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__4_in_rule__MarbleDef__Group__35443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__MarbleDef__Group__3__Impl5471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__4__Impl_in_rule__MarbleDef__Group__45502 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__5_in_rule__MarbleDef__Group__45505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__SeedAssignment_4_in_rule__MarbleDef__Group__4__Impl5532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MarbleDef__Group__5__Impl_in_rule__MarbleDef__Group__55562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__MarbleDef__Group__5__Impl5590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05633 = new BitSet(new long[]{0x0000000000007002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__Expression__Group__0__Impl5663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05754 = new BitSet(new long[]{0x0000000000007000L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15815 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__05938 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__05941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__TerminalExpression__Group_0__0__Impl5969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16000 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__TerminalExpression__Group_0__2__Impl6087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__06124 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__06127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__16185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__RefAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl6212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06246 = new BitSet(new long[]{0x00000000003F8000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__VariantAssignment_3_1_in_rule__TerminalExpression__Group_3__1__Impl6334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06368 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__0__Impl_in_rule__BuiltInCall__Group_0__06490 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__1_in_rule__BuiltInCall__Group_0__06493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__1__Impl_in_rule__BuiltInCall__Group_0__16551 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__2_in_rule__BuiltInCall__Group_0__16554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__BuiltInCall__Group_0__1__Impl6582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__2__Impl_in_rule__BuiltInCall__Group_0__26613 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__3_in_rule__BuiltInCall__Group_0__26616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_0__2__Impl6644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__3__Impl_in_rule__BuiltInCall__Group_0__36675 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__4_in_rule__BuiltInCall__Group_0__36678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_0_3_in_rule__BuiltInCall__Group_0__3__Impl6705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__4__Impl_in_rule__BuiltInCall__Group_0__46735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_0__4__Impl6763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__0__Impl_in_rule__BuiltInCall__Group_1__06804 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__1_in_rule__BuiltInCall__Group_1__06807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__1__Impl_in_rule__BuiltInCall__Group_1__16865 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__2_in_rule__BuiltInCall__Group_1__16868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__BuiltInCall__Group_1__1__Impl6896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__2__Impl_in_rule__BuiltInCall__Group_1__26927 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__3_in_rule__BuiltInCall__Group_1__26930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_1__2__Impl6958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__3__Impl_in_rule__BuiltInCall__Group_1__36989 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__4_in_rule__BuiltInCall__Group_1__36992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_1_3_in_rule__BuiltInCall__Group_1__3__Impl7019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__4__Impl_in_rule__BuiltInCall__Group_1__47049 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__5_in_rule__BuiltInCall__Group_1__47052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_1__4__Impl7080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__5__Impl_in_rule__BuiltInCall__Group_1__57111 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__6_in_rule__BuiltInCall__Group_1__57114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__BAssignment_1_5_in_rule__BuiltInCall__Group_1__5__Impl7141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__6__Impl_in_rule__BuiltInCall__Group_1__67171 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__7_in_rule__BuiltInCall__Group_1__67174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_1__6__Impl7202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__7__Impl_in_rule__BuiltInCall__Group_1__77233 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__8_in_rule__BuiltInCall__Group_1__77236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__TAssignment_1_7_in_rule__BuiltInCall__Group_1__7__Impl7263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__8__Impl_in_rule__BuiltInCall__Group_1__87293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_1__8__Impl7321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__0__Impl_in_rule__BuiltInCall__Group_2__07370 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__1_in_rule__BuiltInCall__Group_2__07373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__1__Impl_in_rule__BuiltInCall__Group_2__17431 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__2_in_rule__BuiltInCall__Group_2__17434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__BuiltInCall__Group_2__1__Impl7462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__2__Impl_in_rule__BuiltInCall__Group_2__27493 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__3_in_rule__BuiltInCall__Group_2__27496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_2__2__Impl7524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__3__Impl_in_rule__BuiltInCall__Group_2__37555 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__4_in_rule__BuiltInCall__Group_2__37558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_2_3_in_rule__BuiltInCall__Group_2__3__Impl7585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__4__Impl_in_rule__BuiltInCall__Group_2__47615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_2__4__Impl7643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__0__Impl_in_rule__BuiltInCall__Group_3__07684 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__1_in_rule__BuiltInCall__Group_3__07687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__1__Impl_in_rule__BuiltInCall__Group_3__17745 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__2_in_rule__BuiltInCall__Group_3__17748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__BuiltInCall__Group_3__1__Impl7776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__2__Impl_in_rule__BuiltInCall__Group_3__27807 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__3_in_rule__BuiltInCall__Group_3__27810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_3__2__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__3__Impl_in_rule__BuiltInCall__Group_3__37869 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__4_in_rule__BuiltInCall__Group_3__37872 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_3_3_in_rule__BuiltInCall__Group_3__3__Impl7899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__4__Impl_in_rule__BuiltInCall__Group_3__47929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_3__4__Impl7957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__0__Impl_in_rule__BuiltInCall__Group_4__07998 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__1_in_rule__BuiltInCall__Group_4__08001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__1__Impl_in_rule__BuiltInCall__Group_4__18059 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__2_in_rule__BuiltInCall__Group_4__18062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__BuiltInCall__Group_4__1__Impl8090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__2__Impl_in_rule__BuiltInCall__Group_4__28121 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__3_in_rule__BuiltInCall__Group_4__28124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_4__2__Impl8152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__3__Impl_in_rule__BuiltInCall__Group_4__38183 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__4_in_rule__BuiltInCall__Group_4__38186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__RateAssignment_4_3_in_rule__BuiltInCall__Group_4__3__Impl8213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__4__Impl_in_rule__BuiltInCall__Group_4__48243 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__5_in_rule__BuiltInCall__Group_4__48246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_4__4__Impl8274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__5__Impl_in_rule__BuiltInCall__Group_4__58305 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__6_in_rule__BuiltInCall__Group_4__58308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__ExpressionAssignment_4_5_in_rule__BuiltInCall__Group_4__5__Impl8335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__6__Impl_in_rule__BuiltInCall__Group_4__68365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_4__6__Impl8393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__0__Impl_in_rule__BuiltInCall__Group_5__08438 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__1_in_rule__BuiltInCall__Group_5__08441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__1__Impl_in_rule__BuiltInCall__Group_5__18499 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__2_in_rule__BuiltInCall__Group_5__18502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__BuiltInCall__Group_5__1__Impl8530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__2__Impl_in_rule__BuiltInCall__Group_5__28561 = new BitSet(new long[]{0x0003DA00003F8060L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__3_in_rule__BuiltInCall__Group_5__28564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_5__2__Impl8592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__3__Impl_in_rule__BuiltInCall__Group_5__38623 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__4_in_rule__BuiltInCall__Group_5__38626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__ExpressionAssignment_5_3_in_rule__BuiltInCall__Group_5__3__Impl8653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__4__Impl_in_rule__BuiltInCall__Group_5__48683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_5__4__Impl8711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__0_in_rule__Model__UnorderedGroup8753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__StageAssignment_0_in_rule__Model__UnorderedGroup__Impl8840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8932 = new BitSet(new long[]{0x0000012680000002L});
-    public static final BitSet FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8972 = new BitSet(new long[]{0x0000012680000002L});
-    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__09038 = new BitSet(new long[]{0x0000012680400002L});
-    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__1_in_rule__Model__UnorderedGroup__09041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__19066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStage_in_rule__Model__StageAssignment_09098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModuleDef_in_rule__Model__DefsAssignment_19129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__WidthAssignment_39160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__HeightAssignment_59191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__DepthAssignment_6_19222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__DurationAssignment_7_19253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__FpsAssignment_7_39284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Stage__OutputAssignment_99315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ColorDef__NameAssignment_19346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColorDef__DefAlternatives_3_0_in_rule__ColorDef__DefAssignment_39377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__RAssignment_09410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__GAssignment_1_09441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__BAssignment_1_19472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__AAssignment_1_29503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__RAssignment_09534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__GAssignment_1_09565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__BAssignment_1_19596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__AAssignment_1_29627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ColorHexaDef__SAssignment_19658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__OperationDef__NameAssignment_19689 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__OperationDef__OutputAssignment_49720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__NoiseDef__NameAssignment_19751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NoiseDef__SeedAssignment_49782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__NoiseDef__FrequencyAssignment_69813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PerlinDef__NameAssignment_19844 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__PerlinDef__SeedAssignment_49875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__PerlinDef__IterationsAssignment_69906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__PerlinDef__TurbulenceAssignment_89937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MarbleDef__NameAssignment_19968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__MarbleDef__SeedAssignment_49999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOP_in_rule__Expression__OpAssignment_1_110030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_210061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TerminalExpression__RefAssignment_1_110096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariant_in_rule__TerminalExpression__VariantAssignment_3_110131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__TerminalExpression__ValueAssignment_4_110162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_0_310193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_1_310224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__BAssignment_1_510255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__TAssignment_1_710286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_2_310317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_3_310348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__RateAssignment_4_310379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_4_510410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_5_310441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__HeightAssignment_6_in_rule__Stage__Group__6__Impl2032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__7__Impl_in_rule__Stage__Group__72062 = new BitSet(new long[]{0x0000000024000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__8_in_rule__Stage__Group__72065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_7__0_in_rule__Stage__Group__7__Impl2092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__8__Impl_in_rule__Stage__Group__82123 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__9_in_rule__Stage__Group__82126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__0_in_rule__Stage__Group__8__Impl2153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__9__Impl_in_rule__Stage__Group__92184 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__Stage__Group__10_in_rule__Stage__Group__92187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Stage__Group__9__Impl2215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__10__Impl_in_rule__Stage__Group__102246 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group__11_in_rule__Stage__Group__102249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__OutputAssignment_10_in_rule__Stage__Group__10__Impl2276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group__11__Impl_in_rule__Stage__Group__112306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Stage__Group__11__Impl2334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_7__0__Impl_in_rule__Stage__Group_7__02389 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Stage__Group_7__1_in_rule__Stage__Group_7__02392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Stage__Group_7__0__Impl2420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_7__1__Impl_in_rule__Stage__Group_7__12451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__DepthAssignment_7_1_in_rule__Stage__Group_7__1__Impl2478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__0__Impl_in_rule__Stage__Group_8__02512 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__1_in_rule__Stage__Group_8__02515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Stage__Group_8__0__Impl2543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__1__Impl_in_rule__Stage__Group_8__12574 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__2_in_rule__Stage__Group_8__12577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__DurationAssignment_8_1_in_rule__Stage__Group_8__1__Impl2604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__2__Impl_in_rule__Stage__Group_8__22634 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__3_in_rule__Stage__Group_8__22637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Stage__Group_8__2__Impl2665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__Group_8__3__Impl_in_rule__Stage__Group_8__32696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Stage__FpsAssignment_8_3_in_rule__Stage__Group_8__3__Impl2723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__0__Impl_in_rule__ColorDef__Group__02761 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__1_in_rule__ColorDef__Group__02764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__ColorDef__Group__0__Impl2792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__1__Impl_in_rule__ColorDef__Group__12823 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__2_in_rule__ColorDef__Group__12826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__NameAssignment_1_in_rule__ColorDef__Group__1__Impl2853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__2__Impl_in_rule__ColorDef__Group__22883 = new BitSet(new long[]{0x0000000100000060L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__3_in_rule__ColorDef__Group__22886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ColorDef__Group__2__Impl2914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__3__Impl_in_rule__ColorDef__Group__32945 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__4_in_rule__ColorDef__Group__32948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__DefAssignment_3_in_rule__ColorDef__Group__3__Impl2975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__Group__4__Impl_in_rule__ColorDef__Group__43005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__ColorDef__Group__4__Impl3033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__0__Impl_in_rule__ColorFloatDef__Group__03074 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__1_in_rule__ColorFloatDef__Group__03077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__RAssignment_0_in_rule__ColorFloatDef__Group__0__Impl3104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group__1__Impl_in_rule__ColorFloatDef__Group__13134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__0_in_rule__ColorFloatDef__Group__1__Impl3161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__0__Impl_in_rule__ColorFloatDef__Group_1__03196 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__1_in_rule__ColorFloatDef__Group_1__03199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__GAssignment_1_0_in_rule__ColorFloatDef__Group_1__0__Impl3226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__1__Impl_in_rule__ColorFloatDef__Group_1__13256 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__2_in_rule__ColorFloatDef__Group_1__13259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__BAssignment_1_1_in_rule__ColorFloatDef__Group_1__1__Impl3286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__Group_1__2__Impl_in_rule__ColorFloatDef__Group_1__23316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorFloatDef__AAssignment_1_2_in_rule__ColorFloatDef__Group_1__2__Impl3343 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group__0__Impl_in_rule__ColorIntDef__Group__03380 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group__1_in_rule__ColorIntDef__Group__03383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__RAssignment_0_in_rule__ColorIntDef__Group__0__Impl3410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group__1__Impl_in_rule__ColorIntDef__Group__13440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__0_in_rule__ColorIntDef__Group__1__Impl3467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__0__Impl_in_rule__ColorIntDef__Group_1__03502 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__1_in_rule__ColorIntDef__Group_1__03505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__GAssignment_1_0_in_rule__ColorIntDef__Group_1__0__Impl3532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__1__Impl_in_rule__ColorIntDef__Group_1__13562 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__2_in_rule__ColorIntDef__Group_1__13565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__BAssignment_1_1_in_rule__ColorIntDef__Group_1__1__Impl3592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__Group_1__2__Impl_in_rule__ColorIntDef__Group_1__23622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorIntDef__AAssignment_1_2_in_rule__ColorIntDef__Group_1__2__Impl3649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__0__Impl_in_rule__ColorHexaDef__Group__03686 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__1_in_rule__ColorHexaDef__Group__03689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__ColorHexaDef__Group__0__Impl3717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorHexaDef__Group__1__Impl_in_rule__ColorHexaDef__Group__13748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorHexaDef__SAssignment_1_in_rule__ColorHexaDef__Group__1__Impl3775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__0__Impl_in_rule__OperationDef__Group__03809 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__1_in_rule__OperationDef__Group__03812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__OperationDef__Group__0__Impl3840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__1__Impl_in_rule__OperationDef__Group__13871 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__2_in_rule__OperationDef__Group__13874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__NameAssignment_1_in_rule__OperationDef__Group__1__Impl3901 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__2__Impl_in_rule__OperationDef__Group__23931 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__3_in_rule__OperationDef__Group__23934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__OperationDef__Group__2__Impl3962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__3__Impl_in_rule__OperationDef__Group__33993 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__4_in_rule__OperationDef__Group__33996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__OperationDef__Group__3__Impl4024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__4__Impl_in_rule__OperationDef__Group__44055 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__5_in_rule__OperationDef__Group__44058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__OutputAssignment_4_in_rule__OperationDef__Group__4__Impl4085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OperationDef__Group__5__Impl_in_rule__OperationDef__Group__54115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__OperationDef__Group__5__Impl4143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__0__Impl_in_rule__NoiseDef__Group__04186 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__1_in_rule__NoiseDef__Group__04189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__NoiseDef__Group__0__Impl4217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__1__Impl_in_rule__NoiseDef__Group__14248 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__2_in_rule__NoiseDef__Group__14251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__NameAssignment_1_in_rule__NoiseDef__Group__1__Impl4278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__2__Impl_in_rule__NoiseDef__Group__24308 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__3_in_rule__NoiseDef__Group__24311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__NoiseDef__Group__2__Impl4339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__3__Impl_in_rule__NoiseDef__Group__34370 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__4_in_rule__NoiseDef__Group__34373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__NoiseDef__Group__3__Impl4401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__4__Impl_in_rule__NoiseDef__Group__44432 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__5_in_rule__NoiseDef__Group__44435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__SeedAssignment_4_in_rule__NoiseDef__Group__4__Impl4462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__5__Impl_in_rule__NoiseDef__Group__54492 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__6_in_rule__NoiseDef__Group__54495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__NoiseDef__Group__5__Impl4523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__6__Impl_in_rule__NoiseDef__Group__64554 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__7_in_rule__NoiseDef__Group__64557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__FrequencyAssignment_6_in_rule__NoiseDef__Group__6__Impl4584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NoiseDef__Group__7__Impl_in_rule__NoiseDef__Group__74614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__NoiseDef__Group__7__Impl4642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__0__Impl_in_rule__PerlinDef__Group__04689 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__1_in_rule__PerlinDef__Group__04692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__PerlinDef__Group__0__Impl4720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__1__Impl_in_rule__PerlinDef__Group__14751 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__2_in_rule__PerlinDef__Group__14754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__NameAssignment_1_in_rule__PerlinDef__Group__1__Impl4781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__2__Impl_in_rule__PerlinDef__Group__24811 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__3_in_rule__PerlinDef__Group__24814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__PerlinDef__Group__2__Impl4842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__3__Impl_in_rule__PerlinDef__Group__34873 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__4_in_rule__PerlinDef__Group__34876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__PerlinDef__Group__3__Impl4904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__4__Impl_in_rule__PerlinDef__Group__44935 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__5_in_rule__PerlinDef__Group__44938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__SeedAssignment_4_in_rule__PerlinDef__Group__4__Impl4965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__5__Impl_in_rule__PerlinDef__Group__54995 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__6_in_rule__PerlinDef__Group__54998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__PerlinDef__Group__5__Impl5026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__6__Impl_in_rule__PerlinDef__Group__65057 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__7_in_rule__PerlinDef__Group__65060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__IterationsAssignment_6_in_rule__PerlinDef__Group__6__Impl5087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__7__Impl_in_rule__PerlinDef__Group__75117 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__8_in_rule__PerlinDef__Group__75120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__PerlinDef__Group__7__Impl5148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__8__Impl_in_rule__PerlinDef__Group__85179 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__9_in_rule__PerlinDef__Group__85182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__TurbulenceAssignment_8_in_rule__PerlinDef__Group__8__Impl5209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PerlinDef__Group__9__Impl_in_rule__PerlinDef__Group__95239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__PerlinDef__Group__9__Impl5267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__0__Impl_in_rule__MarbleDef__Group__05318 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__1_in_rule__MarbleDef__Group__05321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__MarbleDef__Group__0__Impl5349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__1__Impl_in_rule__MarbleDef__Group__15380 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__2_in_rule__MarbleDef__Group__15383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__NameAssignment_1_in_rule__MarbleDef__Group__1__Impl5410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__2__Impl_in_rule__MarbleDef__Group__25440 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__3_in_rule__MarbleDef__Group__25443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__MarbleDef__Group__2__Impl5471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__3__Impl_in_rule__MarbleDef__Group__35502 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__4_in_rule__MarbleDef__Group__35505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__MarbleDef__Group__3__Impl5533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__4__Impl_in_rule__MarbleDef__Group__45564 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__5_in_rule__MarbleDef__Group__45567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__SeedAssignment_4_in_rule__MarbleDef__Group__4__Impl5594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MarbleDef__Group__5__Impl_in_rule__MarbleDef__Group__55624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__MarbleDef__Group__5__Impl5652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05695 = new BitSet(new long[]{0x0000000000007002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__Expression__Group__0__Impl5725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05816 = new BitSet(new long[]{0x0000000000007000L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15877 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06000 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__TerminalExpression__Group_0__0__Impl6031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16062 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__TerminalExpression__Group_0__2__Impl6149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__0__Impl_in_rule__TerminalExpression__Group_1__06186 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1_in_rule__TerminalExpression__Group_1__06189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_1__1__Impl_in_rule__TerminalExpression__Group_1__16247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__RefAssignment_1_1_in_rule__TerminalExpression__Group_1__1__Impl6274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06308 = new BitSet(new long[]{0x00000000003F8000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__VariantAssignment_3_1_in_rule__TerminalExpression__Group_3__1__Impl6396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06430 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ValueAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__0__Impl_in_rule__BuiltInCall__Group_0__06552 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__1_in_rule__BuiltInCall__Group_0__06555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__1__Impl_in_rule__BuiltInCall__Group_0__16613 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__2_in_rule__BuiltInCall__Group_0__16616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__BuiltInCall__Group_0__1__Impl6644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__2__Impl_in_rule__BuiltInCall__Group_0__26675 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__3_in_rule__BuiltInCall__Group_0__26678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_0__2__Impl6706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__3__Impl_in_rule__BuiltInCall__Group_0__36737 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__4_in_rule__BuiltInCall__Group_0__36740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_0_3_in_rule__BuiltInCall__Group_0__3__Impl6767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_0__4__Impl_in_rule__BuiltInCall__Group_0__46797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_0__4__Impl6825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__0__Impl_in_rule__BuiltInCall__Group_1__06866 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__1_in_rule__BuiltInCall__Group_1__06869 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__1__Impl_in_rule__BuiltInCall__Group_1__16927 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__2_in_rule__BuiltInCall__Group_1__16930 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__BuiltInCall__Group_1__1__Impl6958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__2__Impl_in_rule__BuiltInCall__Group_1__26989 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__3_in_rule__BuiltInCall__Group_1__26992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_1__2__Impl7020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__3__Impl_in_rule__BuiltInCall__Group_1__37051 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__4_in_rule__BuiltInCall__Group_1__37054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_1_3_in_rule__BuiltInCall__Group_1__3__Impl7081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__4__Impl_in_rule__BuiltInCall__Group_1__47111 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__5_in_rule__BuiltInCall__Group_1__47114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_1__4__Impl7142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__5__Impl_in_rule__BuiltInCall__Group_1__57173 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__6_in_rule__BuiltInCall__Group_1__57176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__BAssignment_1_5_in_rule__BuiltInCall__Group_1__5__Impl7203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__6__Impl_in_rule__BuiltInCall__Group_1__67233 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__7_in_rule__BuiltInCall__Group_1__67236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_1__6__Impl7264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__7__Impl_in_rule__BuiltInCall__Group_1__77295 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__8_in_rule__BuiltInCall__Group_1__77298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__TAssignment_1_7_in_rule__BuiltInCall__Group_1__7__Impl7325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_1__8__Impl_in_rule__BuiltInCall__Group_1__87355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_1__8__Impl7383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__0__Impl_in_rule__BuiltInCall__Group_2__07432 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__1_in_rule__BuiltInCall__Group_2__07435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__1__Impl_in_rule__BuiltInCall__Group_2__17493 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__2_in_rule__BuiltInCall__Group_2__17496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__BuiltInCall__Group_2__1__Impl7524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__2__Impl_in_rule__BuiltInCall__Group_2__27555 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__3_in_rule__BuiltInCall__Group_2__27558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_2__2__Impl7586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__3__Impl_in_rule__BuiltInCall__Group_2__37617 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__4_in_rule__BuiltInCall__Group_2__37620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_2_3_in_rule__BuiltInCall__Group_2__3__Impl7647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_2__4__Impl_in_rule__BuiltInCall__Group_2__47677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_2__4__Impl7705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__0__Impl_in_rule__BuiltInCall__Group_3__07746 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__1_in_rule__BuiltInCall__Group_3__07749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__1__Impl_in_rule__BuiltInCall__Group_3__17807 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__2_in_rule__BuiltInCall__Group_3__17810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__BuiltInCall__Group_3__1__Impl7838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__2__Impl_in_rule__BuiltInCall__Group_3__27869 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__3_in_rule__BuiltInCall__Group_3__27872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_3__2__Impl7900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__3__Impl_in_rule__BuiltInCall__Group_3__37931 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__4_in_rule__BuiltInCall__Group_3__37934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__AAssignment_3_3_in_rule__BuiltInCall__Group_3__3__Impl7961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_3__4__Impl_in_rule__BuiltInCall__Group_3__47991 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_3__4__Impl8019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__0__Impl_in_rule__BuiltInCall__Group_4__08060 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__1_in_rule__BuiltInCall__Group_4__08063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__1__Impl_in_rule__BuiltInCall__Group_4__18121 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__2_in_rule__BuiltInCall__Group_4__18124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__BuiltInCall__Group_4__1__Impl8152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__2__Impl_in_rule__BuiltInCall__Group_4__28183 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__3_in_rule__BuiltInCall__Group_4__28186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_4__2__Impl8214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__3__Impl_in_rule__BuiltInCall__Group_4__38245 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__4_in_rule__BuiltInCall__Group_4__38248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__RateAssignment_4_3_in_rule__BuiltInCall__Group_4__3__Impl8275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__4__Impl_in_rule__BuiltInCall__Group_4__48305 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__5_in_rule__BuiltInCall__Group_4__48308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__BuiltInCall__Group_4__4__Impl8336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__5__Impl_in_rule__BuiltInCall__Group_4__58367 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__6_in_rule__BuiltInCall__Group_4__58370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__ExpressionAssignment_4_5_in_rule__BuiltInCall__Group_4__5__Impl8397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_4__6__Impl_in_rule__BuiltInCall__Group_4__68427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_4__6__Impl8455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__0__Impl_in_rule__BuiltInCall__Group_5__08500 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__1_in_rule__BuiltInCall__Group_5__08503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__1__Impl_in_rule__BuiltInCall__Group_5__18561 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__2_in_rule__BuiltInCall__Group_5__18564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__BuiltInCall__Group_5__1__Impl8592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__2__Impl_in_rule__BuiltInCall__Group_5__28623 = new BitSet(new long[]{0x0003DA00003F8050L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__3_in_rule__BuiltInCall__Group_5__28626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__BuiltInCall__Group_5__2__Impl8654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__3__Impl_in_rule__BuiltInCall__Group_5__38685 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__4_in_rule__BuiltInCall__Group_5__38688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__ExpressionAssignment_5_3_in_rule__BuiltInCall__Group_5__3__Impl8715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BuiltInCall__Group_5__4__Impl_in_rule__BuiltInCall__Group_5__48745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__BuiltInCall__Group_5__4__Impl8773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__0_in_rule__Model__UnorderedGroup8815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__StageAssignment_0_in_rule__Model__UnorderedGroup__Impl8902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl8994 = new BitSet(new long[]{0x0000012680000002L});
+    public static final BitSet FOLLOW_rule__Model__DefsAssignment_1_in_rule__Model__UnorderedGroup__Impl9034 = new BitSet(new long[]{0x0000012680000002L});
+    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__09100 = new BitSet(new long[]{0x0000012680400002L});
+    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__1_in_rule__Model__UnorderedGroup__09103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__UnorderedGroup__Impl_in_rule__Model__UnorderedGroup__19128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStage_in_rule__Model__StageAssignment_09160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModuleDef_in_rule__Model__DefsAssignment_19191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Stage__NameAssignment_19222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__WidthAssignment_49253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__HeightAssignment_69284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__DepthAssignment_7_19315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__DurationAssignment_8_19346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Stage__FpsAssignment_8_39377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Stage__OutputAssignment_109408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ColorDef__NameAssignment_19439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColorDef__DefAlternatives_3_0_in_rule__ColorDef__DefAssignment_39470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__RAssignment_09503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__GAssignment_1_09534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__BAssignment_1_19565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__ColorFloatDef__AAssignment_1_29596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__RAssignment_09627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__GAssignment_1_09658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__BAssignment_1_19689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__ColorIntDef__AAssignment_1_29720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ColorHexaDef__SAssignment_19751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__OperationDef__NameAssignment_19782 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__OperationDef__OutputAssignment_49813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__NoiseDef__NameAssignment_19844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NoiseDef__SeedAssignment_49875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__NoiseDef__FrequencyAssignment_69906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PerlinDef__NameAssignment_19937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__PerlinDef__SeedAssignment_49968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__PerlinDef__IterationsAssignment_69999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__PerlinDef__TurbulenceAssignment_810030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MarbleDef__NameAssignment_110061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__MarbleDef__SeedAssignment_410092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOP_in_rule__Expression__OpAssignment_1_110123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_210154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__TerminalExpression__RefAssignment_1_110189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariant_in_rule__TerminalExpression__VariantAssignment_3_110224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_DECIMAL_in_rule__TerminalExpression__ValueAssignment_4_110255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_0_310286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_1_310317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__BAssignment_1_510348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__TAssignment_1_710379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_2_310410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__AAssignment_3_310441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__RateAssignment_4_310472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_4_510503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__BuiltInCall__ExpressionAssignment_5_310534 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -9,7 +9,7 @@ Model:
 ;
 
 Stage :
-	'Stage' '{'
+	'Stage' name=ID '{'
 	'width' width=INT
 	'height' height=INT
 	('depth' depth=INT)?

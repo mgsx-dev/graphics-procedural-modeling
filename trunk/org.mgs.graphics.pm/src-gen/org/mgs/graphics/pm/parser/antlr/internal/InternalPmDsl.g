@@ -205,19 +205,43 @@ ruleStage returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getStageAccess().getStageKeyword_0(), null); 
     }
-	'{' 
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			createLeafNode(grammarAccess.getStageAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getStageRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"name",
+	        		lv_name_1_0, 
+	        		"ID", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+)	'{' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_1(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getLeftCurlyBracketKeyword_2(), null); 
     }
 	'width' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getWidthKeyword_2(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getWidthKeyword_3(), null); 
     }
 (
 (
-		lv_width_3_0=RULE_INT
+		lv_width_4_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_3_0(), "width"); 
+			createLeafNode(grammarAccess.getStageAccess().getWidthINTTerminalRuleCall_4_0(), "width"); 
 		}
 		{
 	        if ($current==null) {
@@ -228,7 +252,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"width",
-	        		lv_width_3_0, 
+	        		lv_width_4_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -239,13 +263,13 @@ ruleStage returns [EObject current=null]
 )
 )	'height' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getHeightKeyword_4(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getHeightKeyword_5(), null); 
     }
 (
 (
-		lv_height_5_0=RULE_INT
+		lv_height_6_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_5_0(), "height"); 
+			createLeafNode(grammarAccess.getStageAccess().getHeightINTTerminalRuleCall_6_0(), "height"); 
 		}
 		{
 	        if ($current==null) {
@@ -256,7 +280,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"height",
-	        		lv_height_5_0, 
+	        		lv_height_6_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -267,13 +291,13 @@ ruleStage returns [EObject current=null]
 )
 )(	'depth' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getDepthKeyword_6_0(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getDepthKeyword_7_0(), null); 
     }
 (
 (
-		lv_depth_7_0=RULE_INT
+		lv_depth_8_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_6_1_0(), "depth"); 
+			createLeafNode(grammarAccess.getStageAccess().getDepthINTTerminalRuleCall_7_1_0(), "depth"); 
 		}
 		{
 	        if ($current==null) {
@@ -284,7 +308,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"depth",
-	        		lv_depth_7_0, 
+	        		lv_depth_8_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -295,13 +319,13 @@ ruleStage returns [EObject current=null]
 )
 ))?(	'duration' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getDurationKeyword_7_0(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getDurationKeyword_8_0(), null); 
     }
 (
 (
-		lv_duration_9_0=RULE_INT
+		lv_duration_10_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_7_1_0(), "duration"); 
+			createLeafNode(grammarAccess.getStageAccess().getDurationINTTerminalRuleCall_8_1_0(), "duration"); 
 		}
 		{
 	        if ($current==null) {
@@ -312,7 +336,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"duration",
-	        		lv_duration_9_0, 
+	        		lv_duration_10_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -323,13 +347,13 @@ ruleStage returns [EObject current=null]
 )
 )	'fps' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getFpsKeyword_7_2(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getFpsKeyword_8_2(), null); 
     }
 (
 (
-		lv_fps_11_0=RULE_INT
+		lv_fps_12_0=RULE_INT
 		{
-			createLeafNode(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_7_3_0(), "fps"); 
+			createLeafNode(grammarAccess.getStageAccess().getFpsINTTerminalRuleCall_8_3_0(), "fps"); 
 		}
 		{
 	        if ($current==null) {
@@ -340,7 +364,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"fps",
-	        		lv_fps_11_0, 
+	        		lv_fps_12_0, 
 	        		"INT", 
 	        		lastConsumedNode);
 	        } catch (ValueConverterException vce) {
@@ -351,14 +375,14 @@ ruleStage returns [EObject current=null]
 )
 ))?	'output' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getOutputKeyword_8(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getOutputKeyword_9(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_9_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getStageAccess().getOutputExpressionParserRuleCall_10_0(), currentNode); 
 	    }
-		lv_output_13_0=ruleExpression		{
+		lv_output_14_0=ruleExpression		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getStageRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -367,7 +391,7 @@ ruleStage returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"output",
-	        		lv_output_13_0, 
+	        		lv_output_14_0, 
 	        		"Expression", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -379,7 +403,7 @@ ruleStage returns [EObject current=null]
 )
 )	'}' 
     {
-        createLeafNode(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_10(), null); 
+        createLeafNode(grammarAccess.getStageAccess().getRightCurlyBracketKeyword_11(), null); 
     }
 )
 ;

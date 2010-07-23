@@ -108,13 +108,22 @@ public interface PmDslPackage extends EPackage
   int STAGE = 1;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STAGE__NAME = 0;
+
+  /**
    * The feature id for the '<em><b>Width</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STAGE__WIDTH = 0;
+  int STAGE__WIDTH = 1;
 
   /**
    * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -123,7 +132,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE__HEIGHT = 1;
+  int STAGE__HEIGHT = 2;
 
   /**
    * The feature id for the '<em><b>Depth</b></em>' attribute.
@@ -132,7 +141,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE__DEPTH = 2;
+  int STAGE__DEPTH = 3;
 
   /**
    * The feature id for the '<em><b>Duration</b></em>' attribute.
@@ -141,7 +150,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE__DURATION = 3;
+  int STAGE__DURATION = 4;
 
   /**
    * The feature id for the '<em><b>Fps</b></em>' attribute.
@@ -150,7 +159,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE__FPS = 4;
+  int STAGE__FPS = 5;
 
   /**
    * The feature id for the '<em><b>Output</b></em>' containment reference.
@@ -159,7 +168,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE__OUTPUT = 5;
+  int STAGE__OUTPUT = 6;
 
   /**
    * The number of structural features of the '<em>Stage</em>' class.
@@ -168,7 +177,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STAGE_FEATURE_COUNT = 6;
+  int STAGE_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link org.mgs.graphics.pm.pmDsl.impl.ModuleDefImpl <em>Module Def</em>}' class.
@@ -965,6 +974,17 @@ public interface PmDslPackage extends EPackage
   EClass getStage();
 
   /**
+   * Returns the meta object for the attribute '{@link org.mgs.graphics.pm.pmDsl.Stage#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.mgs.graphics.pm.pmDsl.Stage#getName()
+   * @see #getStage()
+   * @generated
+   */
+  EAttribute getStage_Name();
+
+  /**
    * Returns the meta object for the attribute '{@link org.mgs.graphics.pm.pmDsl.Stage#getWidth <em>Width</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1671,6 +1691,14 @@ public interface PmDslPackage extends EPackage
      * @generated
      */
     EClass STAGE = eINSTANCE.getStage();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STAGE__NAME = eINSTANCE.getStage_Name();
 
     /**
      * The meta object literal for the '<em><b>Width</b></em>' attribute feature.

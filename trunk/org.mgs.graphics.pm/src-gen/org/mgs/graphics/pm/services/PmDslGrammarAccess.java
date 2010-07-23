@@ -49,106 +49,114 @@ public class PmDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Stage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStageKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cWidthKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cWidthAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cWidthINTTerminalRuleCall_3_0 = (RuleCall)cWidthAssignment_3.eContents().get(0);
-		private final Keyword cHeightKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cHeightAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cHeightINTTerminalRuleCall_5_0 = (RuleCall)cHeightAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cDepthKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cDepthAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cDepthINTTerminalRuleCall_6_1_0 = (RuleCall)cDepthAssignment_6_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cWidthKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cWidthAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cWidthINTTerminalRuleCall_4_0 = (RuleCall)cWidthAssignment_4.eContents().get(0);
+		private final Keyword cHeightKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cHeightAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cHeightINTTerminalRuleCall_6_0 = (RuleCall)cHeightAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cDurationKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cDurationAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cDurationINTTerminalRuleCall_7_1_0 = (RuleCall)cDurationAssignment_7_1.eContents().get(0);
-		private final Keyword cFpsKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
-		private final Assignment cFpsAssignment_7_3 = (Assignment)cGroup_7.eContents().get(3);
-		private final RuleCall cFpsINTTerminalRuleCall_7_3_0 = (RuleCall)cFpsAssignment_7_3.eContents().get(0);
-		private final Keyword cOutputKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cOutputAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cOutputExpressionParserRuleCall_9_0 = (RuleCall)cOutputAssignment_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cDepthKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cDepthAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cDepthINTTerminalRuleCall_7_1_0 = (RuleCall)cDepthAssignment_7_1.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cDurationKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cDurationAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cDurationINTTerminalRuleCall_8_1_0 = (RuleCall)cDurationAssignment_8_1.eContents().get(0);
+		private final Keyword cFpsKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
+		private final Assignment cFpsAssignment_8_3 = (Assignment)cGroup_8.eContents().get(3);
+		private final RuleCall cFpsINTTerminalRuleCall_8_3_0 = (RuleCall)cFpsAssignment_8_3.eContents().get(0);
+		private final Keyword cOutputKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cOutputAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cOutputExpressionParserRuleCall_10_0 = (RuleCall)cOutputAssignment_10.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//Stage:
-		//	"Stage" "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps" fps=INT)?
-		//	"output" output=Expression "}";
+		//	"Stage" name=ID "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps"
+		//	fps=INT)? "output" output=Expression "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Stage" "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps" fps=INT)? "output"
-		//output=Expression "}"
+		//"Stage" name=ID "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps" fps=INT)?
+		//"output" output=Expression "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Stage"
 		public Keyword getStageKeyword_0() { return cStageKeyword_0; }
 
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//"width"
-		public Keyword getWidthKeyword_2() { return cWidthKeyword_2; }
+		public Keyword getWidthKeyword_3() { return cWidthKeyword_3; }
 
 		//width=INT
-		public Assignment getWidthAssignment_3() { return cWidthAssignment_3; }
+		public Assignment getWidthAssignment_4() { return cWidthAssignment_4; }
 
 		//INT
-		public RuleCall getWidthINTTerminalRuleCall_3_0() { return cWidthINTTerminalRuleCall_3_0; }
+		public RuleCall getWidthINTTerminalRuleCall_4_0() { return cWidthINTTerminalRuleCall_4_0; }
 
 		//"height"
-		public Keyword getHeightKeyword_4() { return cHeightKeyword_4; }
+		public Keyword getHeightKeyword_5() { return cHeightKeyword_5; }
 
 		//height=INT
-		public Assignment getHeightAssignment_5() { return cHeightAssignment_5; }
+		public Assignment getHeightAssignment_6() { return cHeightAssignment_6; }
 
 		//INT
-		public RuleCall getHeightINTTerminalRuleCall_5_0() { return cHeightINTTerminalRuleCall_5_0; }
+		public RuleCall getHeightINTTerminalRuleCall_6_0() { return cHeightINTTerminalRuleCall_6_0; }
 
 		//("depth" depth=INT)?
-		public Group getGroup_6() { return cGroup_6; }
-
-		//"depth"
-		public Keyword getDepthKeyword_6_0() { return cDepthKeyword_6_0; }
-
-		//depth=INT
-		public Assignment getDepthAssignment_6_1() { return cDepthAssignment_6_1; }
-
-		//INT
-		public RuleCall getDepthINTTerminalRuleCall_6_1_0() { return cDepthINTTerminalRuleCall_6_1_0; }
-
-		//("duration" duration=INT "fps" fps=INT)?
 		public Group getGroup_7() { return cGroup_7; }
 
+		//"depth"
+		public Keyword getDepthKeyword_7_0() { return cDepthKeyword_7_0; }
+
+		//depth=INT
+		public Assignment getDepthAssignment_7_1() { return cDepthAssignment_7_1; }
+
+		//INT
+		public RuleCall getDepthINTTerminalRuleCall_7_1_0() { return cDepthINTTerminalRuleCall_7_1_0; }
+
+		//("duration" duration=INT "fps" fps=INT)?
+		public Group getGroup_8() { return cGroup_8; }
+
 		//"duration"
-		public Keyword getDurationKeyword_7_0() { return cDurationKeyword_7_0; }
+		public Keyword getDurationKeyword_8_0() { return cDurationKeyword_8_0; }
 
 		//duration=INT
-		public Assignment getDurationAssignment_7_1() { return cDurationAssignment_7_1; }
+		public Assignment getDurationAssignment_8_1() { return cDurationAssignment_8_1; }
 
 		//INT
-		public RuleCall getDurationINTTerminalRuleCall_7_1_0() { return cDurationINTTerminalRuleCall_7_1_0; }
+		public RuleCall getDurationINTTerminalRuleCall_8_1_0() { return cDurationINTTerminalRuleCall_8_1_0; }
 
 		//"fps"
-		public Keyword getFpsKeyword_7_2() { return cFpsKeyword_7_2; }
+		public Keyword getFpsKeyword_8_2() { return cFpsKeyword_8_2; }
 
 		//fps=INT
-		public Assignment getFpsAssignment_7_3() { return cFpsAssignment_7_3; }
+		public Assignment getFpsAssignment_8_3() { return cFpsAssignment_8_3; }
 
 		//INT
-		public RuleCall getFpsINTTerminalRuleCall_7_3_0() { return cFpsINTTerminalRuleCall_7_3_0; }
+		public RuleCall getFpsINTTerminalRuleCall_8_3_0() { return cFpsINTTerminalRuleCall_8_3_0; }
 
 		//"output"
-		public Keyword getOutputKeyword_8() { return cOutputKeyword_8; }
+		public Keyword getOutputKeyword_9() { return cOutputKeyword_9; }
 
 		//output=Expression
-		public Assignment getOutputAssignment_9() { return cOutputAssignment_9; }
+		public Assignment getOutputAssignment_10() { return cOutputAssignment_10; }
 
 		//Expression
-		public RuleCall getOutputExpressionParserRuleCall_9_0() { return cOutputExpressionParserRuleCall_9_0; }
+		public RuleCall getOutputExpressionParserRuleCall_10_0() { return cOutputExpressionParserRuleCall_10_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class ModuleDefElements extends AbstractParserRuleElementFinder {
@@ -1056,8 +1064,8 @@ public class PmDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Stage:
-	//	"Stage" "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps" fps=INT)?
-	//	"output" output=Expression "}";
+	//	"Stage" name=ID "{" "width" width=INT "height" height=INT ("depth" depth=INT)? ("duration" duration=INT "fps"
+	//	fps=INT)? "output" output=Expression "}";
 	public StageElements getStageAccess() {
 		return (pStage != null) ? pStage : (pStage = new StageElements());
 	}
