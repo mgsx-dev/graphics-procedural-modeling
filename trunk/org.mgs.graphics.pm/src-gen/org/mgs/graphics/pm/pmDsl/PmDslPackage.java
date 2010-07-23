@@ -71,13 +71,22 @@ public interface PmDslPackage extends EPackage
   int MODEL = 0;
 
   /**
+   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__IMPORTS = 0;
+
+  /**
    * The feature id for the '<em><b>Stage</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__STAGE = 0;
+  int MODEL__STAGE = 1;
 
   /**
    * The feature id for the '<em><b>Defs</b></em>' containment reference list.
@@ -86,7 +95,7 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__DEFS = 1;
+  int MODEL__DEFS = 2;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -95,7 +104,35 @@ public interface PmDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 2;
+  int MODEL_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.mgs.graphics.pm.pmDsl.impl.ImportImpl <em>Import</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.mgs.graphics.pm.pmDsl.impl.ImportImpl
+   * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getImport()
+   * @generated
+   */
+  int IMPORT = 1;
+
+  /**
+   * The feature id for the '<em><b>Import URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT__IMPORT_URI = 0;
+
+  /**
+   * The number of structural features of the '<em>Import</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl <em>Stage</em>}' class.
@@ -105,7 +142,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getStage()
    * @generated
    */
-  int STAGE = 1;
+  int STAGE = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -187,7 +224,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getModuleDef()
    * @generated
    */
-  int MODULE_DEF = 2;
+  int MODULE_DEF = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -215,7 +252,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getColorDef()
    * @generated
    */
-  int COLOR_DEF = 3;
+  int COLOR_DEF = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -252,7 +289,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getColorFloatDef()
    * @generated
    */
-  int COLOR_FLOAT_DEF = 4;
+  int COLOR_FLOAT_DEF = 5;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -307,7 +344,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getColorIntDef()
    * @generated
    */
-  int COLOR_INT_DEF = 5;
+  int COLOR_INT_DEF = 6;
 
   /**
    * The feature id for the '<em><b>R</b></em>' attribute.
@@ -362,7 +399,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getColorHexaDef()
    * @generated
    */
-  int COLOR_HEXA_DEF = 6;
+  int COLOR_HEXA_DEF = 7;
 
   /**
    * The feature id for the '<em><b>S</b></em>' attribute.
@@ -390,7 +427,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getOperationDef()
    * @generated
    */
-  int OPERATION_DEF = 7;
+  int OPERATION_DEF = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -427,7 +464,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getNoiseDef()
    * @generated
    */
-  int NOISE_DEF = 8;
+  int NOISE_DEF = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -473,7 +510,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getPerlinDef()
    * @generated
    */
-  int PERLIN_DEF = 9;
+  int PERLIN_DEF = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -528,7 +565,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getMarbleDef()
    * @generated
    */
-  int MARBLE_DEF = 10;
+  int MARBLE_DEF = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -565,7 +602,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 11;
+  int EXPRESSION = 12;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -584,7 +621,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getBuiltInCall()
    * @generated
    */
-  int BUILT_IN_CALL = 12;
+  int BUILT_IN_CALL = 13;
 
   /**
    * The number of structural features of the '<em>Built In Call</em>' class.
@@ -603,7 +640,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 13;
+  int OPERATION = 14;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -649,7 +686,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getModuleCall()
    * @generated
    */
-  int MODULE_CALL = 14;
+  int MODULE_CALL = 15;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -677,7 +714,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getVariantExpression()
    * @generated
    */
-  int VARIANT_EXPRESSION = 15;
+  int VARIANT_EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>Variant</b></em>' attribute.
@@ -705,7 +742,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getLiteralExpression()
    * @generated
    */
-  int LITERAL_EXPRESSION = 16;
+  int LITERAL_EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -733,7 +770,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getINV()
    * @generated
    */
-  int INV = 17;
+  int INV = 18;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -761,7 +798,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getMIX()
    * @generated
    */
-  int MIX = 18;
+  int MIX = 19;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -807,7 +844,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getSIN()
    * @generated
    */
-  int SIN = 19;
+  int SIN = 20;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -835,7 +872,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getBOOL()
    * @generated
    */
-  int BOOL = 20;
+  int BOOL = 21;
 
   /**
    * The feature id for the '<em><b>A</b></em>' containment reference.
@@ -863,7 +900,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getSCALE()
    * @generated
    */
-  int SCALE = 21;
+  int SCALE = 22;
 
   /**
    * The feature id for the '<em><b>Rate</b></em>' containment reference.
@@ -900,7 +937,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getRADIAL()
    * @generated
    */
-  int RADIAL = 22;
+  int RADIAL = 23;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -928,7 +965,7 @@ public interface PmDslPackage extends EPackage
    * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getVariant()
    * @generated
    */
-  int VARIANT = 23;
+  int VARIANT = 24;
 
 
   /**
@@ -940,6 +977,17 @@ public interface PmDslPackage extends EPackage
    * @generated
    */
   EClass getModel();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.mgs.graphics.pm.pmDsl.Model#getImports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Imports</em>'.
+   * @see org.mgs.graphics.pm.pmDsl.Model#getImports()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Imports();
 
   /**
    * Returns the meta object for the containment reference '{@link org.mgs.graphics.pm.pmDsl.Model#getStage <em>Stage</em>}'.
@@ -962,6 +1010,27 @@ public interface PmDslPackage extends EPackage
    * @generated
    */
   EReference getModel_Defs();
+
+  /**
+   * Returns the meta object for class '{@link org.mgs.graphics.pm.pmDsl.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Import</em>'.
+   * @see org.mgs.graphics.pm.pmDsl.Import
+   * @generated
+   */
+  EClass getImport();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.mgs.graphics.pm.pmDsl.Import#getImportURI <em>Import URI</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Import URI</em>'.
+   * @see org.mgs.graphics.pm.pmDsl.Import#getImportURI()
+   * @see #getImport()
+   * @generated
+   */
+  EAttribute getImport_ImportURI();
 
   /**
    * Returns the meta object for class '{@link org.mgs.graphics.pm.pmDsl.Stage <em>Stage</em>}'.
@@ -1667,6 +1736,14 @@ public interface PmDslPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
+     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__IMPORTS = eINSTANCE.getModel_Imports();
+
+    /**
      * The meta object literal for the '<em><b>Stage</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1681,6 +1758,24 @@ public interface PmDslPackage extends EPackage
      * @generated
      */
     EReference MODEL__DEFS = eINSTANCE.getModel_Defs();
+
+    /**
+     * The meta object literal for the '{@link org.mgs.graphics.pm.pmDsl.impl.ImportImpl <em>Import</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.mgs.graphics.pm.pmDsl.impl.ImportImpl
+     * @see org.mgs.graphics.pm.pmDsl.impl.PmDslPackageImpl#getImport()
+     * @generated
+     */
+    EClass IMPORT = eINSTANCE.getImport();
+
+    /**
+     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
 
     /**
      * The meta object literal for the '{@link org.mgs.graphics.pm.pmDsl.impl.StageImpl <em>Stage</em>}' class.

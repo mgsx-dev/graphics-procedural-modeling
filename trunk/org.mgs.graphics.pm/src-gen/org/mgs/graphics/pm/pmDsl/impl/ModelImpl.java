@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.mgs.graphics.pm.pmDsl.Import;
 import org.mgs.graphics.pm.pmDsl.Model;
 import org.mgs.graphics.pm.pmDsl.ModuleDef;
 import org.mgs.graphics.pm.pmDsl.PmDslPackage;
@@ -33,6 +34,7 @@ import org.mgs.graphics.pm.pmDsl.Stage;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.ModelImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.ModelImpl#getStage <em>Stage</em>}</li>
  *   <li>{@link org.mgs.graphics.pm.pmDsl.impl.ModelImpl#getDefs <em>Defs</em>}</li>
  * </ul>
@@ -42,6 +44,16 @@ import org.mgs.graphics.pm.pmDsl.Stage;
  */
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
+  /**
+   * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getImports()
+   * @generated
+   * @ordered
+   */
+  protected EList<Import> imports;
+
   /**
    * The cached value of the '{@link #getStage() <em>Stage</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -81,6 +93,20 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected EClass eStaticClass()
   {
     return PmDslPackage.Literals.MODEL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Import> getImports()
+  {
+    if (imports == null)
+    {
+      imports = new EObjectContainmentEList<Import>(Import.class, this, PmDslPackage.MODEL__IMPORTS);
+    }
+    return imports;
   }
 
   /**
@@ -155,6 +181,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case PmDslPackage.MODEL__IMPORTS:
+        return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
       case PmDslPackage.MODEL__STAGE:
         return basicSetStage(null, msgs);
       case PmDslPackage.MODEL__DEFS:
@@ -173,6 +201,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case PmDslPackage.MODEL__IMPORTS:
+        return getImports();
       case PmDslPackage.MODEL__STAGE:
         return getStage();
       case PmDslPackage.MODEL__DEFS:
@@ -192,6 +222,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case PmDslPackage.MODEL__IMPORTS:
+        getImports().clear();
+        getImports().addAll((Collection<? extends Import>)newValue);
+        return;
       case PmDslPackage.MODEL__STAGE:
         setStage((Stage)newValue);
         return;
@@ -213,6 +247,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case PmDslPackage.MODEL__IMPORTS:
+        getImports().clear();
+        return;
       case PmDslPackage.MODEL__STAGE:
         setStage((Stage)null);
         return;
@@ -233,6 +270,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case PmDslPackage.MODEL__IMPORTS:
+        return imports != null && !imports.isEmpty();
       case PmDslPackage.MODEL__STAGE:
         return stage != null;
       case PmDslPackage.MODEL__DEFS:

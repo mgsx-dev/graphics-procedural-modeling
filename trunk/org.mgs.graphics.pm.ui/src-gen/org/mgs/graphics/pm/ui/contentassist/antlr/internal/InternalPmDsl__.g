@@ -17,57 +17,58 @@ T18 : 'U' ;
 T19 : 'V' ;
 T20 : 'W' ;
 T21 : 'T' ;
-T22 : 'Stage' ;
-T23 : '{' ;
-T24 : 'width' ;
-T25 : 'height' ;
-T26 : 'output' ;
-T27 : '}' ;
-T28 : 'depth' ;
-T29 : 'duration' ;
-T30 : 'fps' ;
-T31 : 'Color' ;
-T32 : '#' ;
-T33 : 'Operation' ;
-T34 : 'Noise' ;
-T35 : 'seed' ;
-T36 : 'frequency' ;
-T37 : 'Perlin' ;
-T38 : 'iterations' ;
-T39 : 'turbulence' ;
-T40 : 'Marble' ;
-T41 : '(' ;
-T42 : ')' ;
-T43 : 'INV' ;
-T44 : 'MIX' ;
-T45 : ',' ;
-T46 : 'SIN' ;
-T47 : 'BOOL' ;
-T48 : 'SCALE' ;
-T49 : 'RADIAL' ;
+T22 : 'import' ;
+T23 : 'Stage' ;
+T24 : '{' ;
+T25 : 'width' ;
+T26 : 'height' ;
+T27 : 'output' ;
+T28 : '}' ;
+T29 : 'depth' ;
+T30 : 'duration' ;
+T31 : 'fps' ;
+T32 : 'Color' ;
+T33 : '#' ;
+T34 : 'Operation' ;
+T35 : 'Noise' ;
+T36 : 'seed' ;
+T37 : 'frequency' ;
+T38 : 'Perlin' ;
+T39 : 'iterations' ;
+T40 : 'turbulence' ;
+T41 : 'Marble' ;
+T42 : '(' ;
+T43 : ')' ;
+T44 : 'INV' ;
+T45 : 'MIX' ;
+T46 : ',' ;
+T47 : 'SIN' ;
+T48 : 'BOOL' ;
+T49 : 'SCALE' ;
+T50 : 'RADIAL' ;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5202
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5385
 RULE_DECIMAL : ('0'..'9')* '.' ('0'..'9')*;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5204
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5387
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5206
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5389
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5208
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5391
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5210
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5393
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5212
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5395
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5214
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5397
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5216
+// $ANTLR src "../org.mgs.graphics.pm.ui/src-gen/org/mgs/graphics/pm/ui/contentassist/antlr/internal/InternalPmDsl.g" 5399
 RULE_ANY_OTHER : .;
 
 

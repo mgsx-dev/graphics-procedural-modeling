@@ -83,6 +83,11 @@ public class PmDslAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
+      }
+      @Override
       public Adapter caseStage(Stage object)
       {
         return createStageAdapter();
@@ -225,6 +230,21 @@ public class PmDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.mgs.graphics.pm.pmDsl.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.mgs.graphics.pm.pmDsl.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
   {
     return null;
   }

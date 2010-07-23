@@ -104,12 +104,36 @@ ruleModel returns [EObject current=null]
 					{ 
 	 				  getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 0);
 	 				}
-					(
+					((
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getStageStageParserRuleCall_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_0_0_0(), currentNode); 
 	    }
-		lv_stage_1_0=ruleStage		{
+		lv_imports_1_0=ruleImport		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		add(
+	       			$current, 
+	       			"imports",
+	        		lv_imports_1_0, 
+	        		"Import", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)*(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getStageStageParserRuleCall_0_1_0(), currentNode); 
+	    }
+		lv_stage_2_0=ruleStage		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -118,7 +142,7 @@ ruleModel returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"stage",
-	        		lv_stage_1_0, 
+	        		lv_stage_2_0, 
 	        		"Stage", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -128,7 +152,7 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)
+)?)
 					{ 
 	 				  getUnorderedGroupHelper().returnFromSelection(grammarAccess.getModelAccess().getUnorderedGroup());
 	 				}
@@ -145,7 +169,7 @@ ruleModel returns [EObject current=null]
 		{ 
 	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDefsModuleDefParserRuleCall_1_0(), currentNode); 
 	    }
-		lv_defs_2_0=ruleModuleDef		{
+		lv_defs_3_0=ruleModuleDef		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -154,7 +178,7 @@ ruleModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"defs",
-	        		lv_defs_2_0, 
+	        		lv_defs_3_0, 
 	        		"ModuleDef", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -171,7 +195,8 @@ ruleModel returns [EObject current=null]
  				)
 			)  
 
-		)*	
+		)+
+	  	{getUnorderedGroupHelper().canLeave(grammarAccess.getModelAccess().getUnorderedGroup())}?	
 	)
 )
 	{ 
@@ -179,6 +204,57 @@ ruleModel returns [EObject current=null]
 	}
 
 )
+;
+
+
+
+
+
+// Entry rule entryRuleImport
+entryRuleImport returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getImportRule(), currentNode); }
+	 iv_ruleImport=ruleImport 
+	 { $current=$iv_ruleImport.current; } 
+	 EOF 
+;
+
+// Rule Import
+ruleImport returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(	'import' 
+    {
+        createLeafNode(grammarAccess.getImportAccess().getImportKeyword_0(), null); 
+    }
+(
+(
+		lv_importURI_1_0=RULE_STRING
+		{
+			createLeafNode(grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0(), "importURI"); 
+		}
+		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getImportRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"importURI",
+	        		lv_importURI_1_0, 
+	        		"STRING", 
+	        		lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
+))
 ;
 
 

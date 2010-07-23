@@ -43,6 +43,8 @@ public class PmDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBuiltInCallAccess().getAlternatives(), "rule__BuiltInCall__Alternatives");
 					put(grammarAccess.getBOPAccess().getAlternatives(), "rule__BOP__Alternatives");
 					put(grammarAccess.getVariantAccess().getAlternatives(), "rule__Variant__Alternatives");
+					put(grammarAccess.getModelAccess().getGroup_0(), "rule__Model__Group_0__0");
+					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getStageAccess().getGroup(), "rule__Stage__Group__0");
 					put(grammarAccess.getStageAccess().getGroup_7(), "rule__Stage__Group_7__0");
 					put(grammarAccess.getStageAccess().getGroup_8(), "rule__Stage__Group_8__0");
@@ -68,8 +70,10 @@ public class PmDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBuiltInCallAccess().getGroup_3(), "rule__BuiltInCall__Group_3__0");
 					put(grammarAccess.getBuiltInCallAccess().getGroup_4(), "rule__BuiltInCall__Group_4__0");
 					put(grammarAccess.getBuiltInCallAccess().getGroup_5(), "rule__BuiltInCall__Group_5__0");
-					put(grammarAccess.getModelAccess().getStageAssignment_0(), "rule__Model__StageAssignment_0");
+					put(grammarAccess.getModelAccess().getImportsAssignment_0_0(), "rule__Model__ImportsAssignment_0_0");
+					put(grammarAccess.getModelAccess().getStageAssignment_0_1(), "rule__Model__StageAssignment_0_1");
 					put(grammarAccess.getModelAccess().getDefsAssignment_1(), "rule__Model__DefsAssignment_1");
+					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 					put(grammarAccess.getStageAccess().getNameAssignment_1(), "rule__Stage__NameAssignment_1");
 					put(grammarAccess.getStageAccess().getWidthAssignment_4(), "rule__Stage__WidthAssignment_4");
 					put(grammarAccess.getStageAccess().getHeightAssignment_6(), "rule__Stage__HeightAssignment_6");
