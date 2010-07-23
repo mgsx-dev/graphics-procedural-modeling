@@ -7,67 +7,68 @@ package org.mgs.graphics.pm.parser.antlr.internal;
 import org.eclipse.xtext.parser.antlr.Lexer;
 }
 
-T12 : 'Stage' ;
-T13 : '{' ;
-T14 : 'width' ;
-T15 : 'height' ;
-T16 : 'depth' ;
-T17 : 'duration' ;
-T18 : 'fps' ;
-T19 : 'output' ;
-T20 : '}' ;
-T21 : 'Color' ;
-T22 : '#' ;
-T23 : 'Operation' ;
-T24 : 'Noise' ;
-T25 : 'seed' ;
-T26 : 'frequency' ;
-T27 : 'Perlin' ;
-T28 : 'iterations' ;
-T29 : 'turbulence' ;
-T30 : 'Marble' ;
-T31 : '(' ;
-T32 : ')' ;
-T33 : 'INV' ;
-T34 : 'MIX' ;
-T35 : ',' ;
-T36 : 'SIN' ;
-T37 : 'BOOL' ;
-T38 : 'SCALE' ;
-T39 : 'RADIAL' ;
-T40 : '+' ;
-T41 : '-' ;
-T42 : '*' ;
-T43 : 'X' ;
-T44 : 'Y' ;
-T45 : 'Z' ;
-T46 : 'U' ;
-T47 : 'V' ;
-T48 : 'W' ;
-T49 : 'T' ;
+T12 : 'import' ;
+T13 : 'Stage' ;
+T14 : '{' ;
+T15 : 'width' ;
+T16 : 'height' ;
+T17 : 'depth' ;
+T18 : 'duration' ;
+T19 : 'fps' ;
+T20 : 'output' ;
+T21 : '}' ;
+T22 : 'Color' ;
+T23 : '#' ;
+T24 : 'Operation' ;
+T25 : 'Noise' ;
+T26 : 'seed' ;
+T27 : 'frequency' ;
+T28 : 'Perlin' ;
+T29 : 'iterations' ;
+T30 : 'turbulence' ;
+T31 : 'Marble' ;
+T32 : '(' ;
+T33 : ')' ;
+T34 : 'INV' ;
+T35 : 'MIX' ;
+T36 : ',' ;
+T37 : 'SIN' ;
+T38 : 'BOOL' ;
+T39 : 'SCALE' ;
+T40 : 'RADIAL' ;
+T41 : '+' ;
+T42 : '-' ;
+T43 : '*' ;
+T44 : 'X' ;
+T45 : 'Y' ;
+T46 : 'Z' ;
+T47 : 'U' ;
+T48 : 'V' ;
+T49 : 'W' ;
+T50 : 'T' ;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2068
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2144
 RULE_DECIMAL : ('0'..'9')* '.' ('0'..'9')*;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2070
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2146
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2072
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2148
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2074
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2150
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2076
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2152
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2078
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2154
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2080
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2156
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2082
+// $ANTLR src "../org.mgs.graphics.pm/src-gen/org/mgs/graphics/pm/parser/antlr/internal/InternalPmDsl.g" 2158
 RULE_ANY_OTHER : .;
 
 

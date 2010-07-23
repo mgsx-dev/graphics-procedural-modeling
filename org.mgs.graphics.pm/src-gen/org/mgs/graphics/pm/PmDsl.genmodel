@@ -18,8 +18,12 @@
       <genEnumLiterals ecoreEnumLiteral="PmDsl.ecore#//Variant/T"/>
     </genEnums>
     <genClasses ecoreClass="PmDsl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Model/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Model/stage"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PmDsl.ecore#//Model/defs"/>
+    </genClasses>
+    <genClasses ecoreClass="PmDsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Import/importURI"/>
     </genClasses>
     <genClasses ecoreClass="PmDsl.ecore#//Stage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PmDsl.ecore#//Stage/name"/>

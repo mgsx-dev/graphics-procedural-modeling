@@ -69,6 +69,7 @@ public class PmDslFactoryImpl extends EFactoryImpl implements PmDslFactory
     switch (eClass.getClassifierID())
     {
       case PmDslPackage.MODEL: return createModel();
+      case PmDslPackage.IMPORT: return createImport();
       case PmDslPackage.STAGE: return createStage();
       case PmDslPackage.MODULE_DEF: return createModuleDef();
       case PmDslPackage.COLOR_DEF: return createColorDef();
@@ -139,6 +140,17 @@ public class PmDslFactoryImpl extends EFactoryImpl implements PmDslFactory
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**

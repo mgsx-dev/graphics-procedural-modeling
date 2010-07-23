@@ -19,6 +19,7 @@ import org.mgs.graphics.pm.pmDsl.ColorFloatDef;
 import org.mgs.graphics.pm.pmDsl.ColorHexaDef;
 import org.mgs.graphics.pm.pmDsl.ColorIntDef;
 import org.mgs.graphics.pm.pmDsl.Expression;
+import org.mgs.graphics.pm.pmDsl.Import;
 import org.mgs.graphics.pm.pmDsl.LiteralExpression;
 import org.mgs.graphics.pm.pmDsl.MarbleDef;
 import org.mgs.graphics.pm.pmDsl.Model;
@@ -48,6 +49,13 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * @generated
    */
   private EClass modelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -288,7 +296,7 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Stage()
+  public EReference getModel_Imports()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -298,9 +306,39 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Defs()
+  public EReference getModel_Stage()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModel_Defs()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImport()
+  {
+    return importEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImport_ImportURI()
+  {
+    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -964,8 +1002,12 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
+    createEReference(modelEClass, MODEL__IMPORTS);
     createEReference(modelEClass, MODEL__STAGE);
     createEReference(modelEClass, MODEL__DEFS);
+
+    importEClass = createEClass(IMPORT);
+    createEAttribute(importEClass, IMPORT__IMPORT_URI);
 
     stageEClass = createEClass(STAGE);
     createEAttribute(stageEClass, STAGE__NAME);
@@ -1103,8 +1145,12 @@ public class PmDslPackageImpl extends EPackageImpl implements PmDslPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getModel_Imports(), this.getImport(), null, "imports", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Stage(), this.getStage(), null, "stage", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_Defs(), this.getModuleDef(), null, "defs", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stageEClass, Stage.class, "Stage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Stage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

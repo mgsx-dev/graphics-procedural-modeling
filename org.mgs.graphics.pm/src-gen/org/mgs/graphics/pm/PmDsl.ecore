@@ -4,10 +4,15 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pmDsl"
     nsURI="http://www.mgs.org/graphics/pm/PmDsl" nsPrefix="pmDsl">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
+        eType="#//Import" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stage" eType="#//Stage"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defs" upperBound="-1" eType="#//ModuleDef"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Import">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

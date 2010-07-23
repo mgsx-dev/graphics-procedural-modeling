@@ -20,29 +20,65 @@ public class PmDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
 		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Assignment cStageAssignment_0 = (Assignment)cUnorderedGroup.eContents().get(0);
-		private final RuleCall cStageStageParserRuleCall_0_0 = (RuleCall)cStageAssignment_0.eContents().get(0);
+		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Assignment cImportsAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cImportsImportParserRuleCall_0_0_0 = (RuleCall)cImportsAssignment_0_0.eContents().get(0);
+		private final Assignment cStageAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cStageStageParserRuleCall_0_1_0 = (RuleCall)cStageAssignment_0_1.eContents().get(0);
 		private final Assignment cDefsAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
 		private final RuleCall cDefsModuleDefParserRuleCall_1_0 = (RuleCall)cDefsAssignment_1.eContents().get(0);
 		
 		//Model:
-		//	stage=Stage? & defs+=ModuleDef*;
+		//	imports+=Import* stage=Stage? & defs+=ModuleDef*;
 		public ParserRule getRule() { return rule; }
 
-		//stage=Stage? & defs+=ModuleDef*
+		//imports+=Import* stage=Stage? & defs+=ModuleDef*
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 
+		//imports+=Import* stage=Stage?
+		public Group getGroup_0() { return cGroup_0; }
+
+		//imports+=Import*
+		public Assignment getImportsAssignment_0_0() { return cImportsAssignment_0_0; }
+
+		//Import
+		public RuleCall getImportsImportParserRuleCall_0_0_0() { return cImportsImportParserRuleCall_0_0_0; }
+
 		//stage=Stage?
-		public Assignment getStageAssignment_0() { return cStageAssignment_0; }
+		public Assignment getStageAssignment_0_1() { return cStageAssignment_0_1; }
 
 		//Stage
-		public RuleCall getStageStageParserRuleCall_0_0() { return cStageStageParserRuleCall_0_0; }
+		public RuleCall getStageStageParserRuleCall_0_1_0() { return cStageStageParserRuleCall_0_1_0; }
 
 		//defs+=ModuleDef*
 		public Assignment getDefsAssignment_1() { return cDefsAssignment_1; }
 
 		//ModuleDef
 		public RuleCall getDefsModuleDefParserRuleCall_1_0() { return cDefsModuleDefParserRuleCall_1_0; }
+	}
+
+	public class ImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImportURIAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportURISTRINGTerminalRuleCall_1_0 = (RuleCall)cImportURIAssignment_1.eContents().get(0);
+		
+		//Import:
+		//	"import" importURI=STRING;
+		public ParserRule getRule() { return rule; }
+
+		//"import" importURI=STRING
+		public Group getGroup() { return cGroup; }
+
+		//"import"
+		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+
+		//importURI=STRING
+		public Assignment getImportURIAssignment_1() { return cImportURIAssignment_1; }
+
+		//STRING
+		public RuleCall getImportURISTRINGTerminalRuleCall_1_0() { return cImportURISTRINGTerminalRuleCall_1_0; }
 	}
 
 	public class StageElements extends AbstractParserRuleElementFinder {
@@ -1015,6 +1051,7 @@ public class PmDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private ModelElements pModel;
+	private ImportElements pImport;
 	private StageElements pStage;
 	private ModuleDefElements pModuleDef;
 	private ColorDefElements pColorDef;
@@ -1054,13 +1091,23 @@ public class PmDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	stage=Stage? & defs+=ModuleDef*;
+	//	imports+=Import* stage=Stage? & defs+=ModuleDef*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
 	
 	public ParserRule getModelRule() {
 		return getModelAccess().getRule();
+	}
+
+	//Import:
+	//	"import" importURI=STRING;
+	public ImportElements getImportAccess() {
+		return (pImport != null) ? pImport : (pImport = new ImportElements());
+	}
+	
+	public ParserRule getImportRule() {
+		return getImportAccess().getRule();
 	}
 
 	//Stage:
