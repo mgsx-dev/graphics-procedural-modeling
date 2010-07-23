@@ -53,6 +53,7 @@ public class SampleView extends ViewPart {
 
 	private Canvas renderingZone;
 	private Image image;
+	private IXtextDocument document;
 	
 	/**
 	 * The constructor.
@@ -112,7 +113,7 @@ public class SampleView extends ViewPart {
 		IEditorPart editor = getSite().getWorkbenchWindow().getActivePage().getActiveEditor();
 		if(editor instanceof XtextEditor){
 			XtextEditor xte = (XtextEditor)editor;
-			final IXtextDocument document = xte.getDocument();
+			document = xte.getDocument();
 			
 			document.addModelListener(getModelListener());
 			
@@ -180,6 +181,11 @@ public class SampleView extends ViewPart {
 	public void setFocus() {
 	}
 	
+	@Override
+	public void dispose() {
+		super.dispose();
+		document.removeModelListener(getModelListener());
+	}
 	
 
 }
