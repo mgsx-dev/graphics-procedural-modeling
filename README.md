@@ -14,3 +14,7 @@ Language features :
 * Variant access (X, Y)
 * Built-In algorithms (Perlin noise, Marble)
 * Script imports
+
+Screenshot :
+
+![Screenshot](https://raw.githubusercontent.com/mgsx-dev/graphics-procedural-modeling/master/img/CaptureMini.png)
